@@ -32,13 +32,15 @@ function App() {
     <ThemeProvider theme={theme === "lightTheme" ? lightTheme : darkTheme}>
       <Container fluid={true} className="App">
         <GlobalStyles />
-        <Row className="header d-flex flex-column ">
+        <Row className="wrapper_header d-flex flex-column ">
           <Head toggleTheme={toggleTheme} themeName={themeName} />
           <Home />
         </Row>
         <Projects />
         <About />
-        <Contact />
+        <Row className="wrapper_contact ">
+          <Contact />
+        </Row>
         <Footer />
       </Container>
     </ThemeProvider>

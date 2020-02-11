@@ -8,3 +8,34 @@
   margin-right: 20px;
   transform: rotate(90deg);
 }
+
+.profil {
+  border: 2px solid;
+  border-radius: 10px;
+  height: 250px;
+  width: 250px;
+  background-color: slateblue;
+  position: relative;
+}
+
+.profil::after {
+  content: "";
+  border: 2px solid;
+  border-radius: 10px;
+  height: 250px;
+  width: 250px;
+  top: -30px;
+  left: 30px;
+  position: absolute;
+  z-index: 0;
+  background-image: url(../assets/Profil.jpg);
+  background-origin: content-box;
+  background-size: contain;
+  opacity: 0.99;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.profil:hover::after {
+  transform: translateX(-20px) translateY(20px);
+}

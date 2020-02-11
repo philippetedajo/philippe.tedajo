@@ -1,6 +1,7 @@
 import React from "react";
 import "./Home.css";
 import { Container } from "react-bootstrap";
+import { Parallax, ParallaxLayer } from "react-spring/renderprops-addons";
 
 function Home() {
   return (
