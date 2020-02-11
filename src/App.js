@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { ThemeProvider } from "styled-components";
 import { lightTheme, darkTheme } from "./theme/Theme";
 import { GlobalStyles } from "./theme/GlobalStyles";
@@ -11,40 +11,51 @@ import Head from "./components/Head";
 import Home from "./components/Home";
 import { ReactComponent as Sun } from "./assets/icons/sun-regular.svg";
 import { ReactComponent as Moon } from "./assets/icons/moon-regular.svg";
+import Loader from "./toolsComponents/Loader";
 
 function App() {
   const [theme, setTheme] = useState("lightTheme");
   const [themeName, setThemeName] = useState(<Moon />);
+  const [loading, setloading] = useState(true);
 
   const toggleTheme = () => {
-    // if the theme is not light, then set it to dark
     if (theme === "lightTheme") {
       setTheme("darkTheme");
       setThemeName(<Sun />);
-      // otherwise, it should be light
     } else {
       setTheme("lightTheme");
       setThemeName(<Moon />);
     }
   };
-
-  return (
-    <ThemeProvider theme={theme === "lightTheme" ? lightTheme : darkTheme}>
-      <Container fluid={true} className="App">
-        <GlobalStyles />
-        <Row className="wrapper_header d-flex flex-column ">
-          <Head toggleTheme={toggleTheme} themeName={themeName} />
-          <Home />
-        </Row>
-        <Projects />
-        <About />
-        <Row className="wrapper_contact ">
-          <Contact />
-        </Row>
-        <Footer />
-      </Container>
-    </ThemeProvider>
-  );
+  /*
+  useEffect(() => {
+    setTimeout(() => {
+      console.log("Our data is fetched");
+      setloading(false);
+    }, 2000);
+  });
+*/
+  if (loading) {
+    return <Loader />;
+  } else {
+    return (
+      <ThemeProvider theme={theme === "lightTheme" ? lightTheme : darkTheme}>
+        <Container fluid={true} className="App">
+          <GlobalStyles />
+          <Row className="wrapper_header d-flex flex-column ">
+            <Head toggleTheme={toggleTheme} themeName={themeName} />
+            <Home />
+          </Row>
+          <Projects />
+          <About />
+          <Row className="wrapper_contact ">
+            <Contact />
+          </Row>
+          <Footer />
+        </Container>
+      </ThemeProvider>
+    );
+  }
 }
 
 export default App;

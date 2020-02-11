@@ -32,7 +32,7 @@
   background-origin: content-box;
   background-size: contain;
   opacity: 0.99;
-  transition: all 0.3s;
+  transition: all 0.5s;
   cursor: pointer;
 }
 

@@ -1,5 +1,5 @@
 export const lightTheme = {
-  body: " #FCFCFC",
+  body: "#FCFCFC",
   text: "black"
 };
 
