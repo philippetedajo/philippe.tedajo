@@ -1,0 +1,10 @@
+.skills {
+  list-style: none;
+}
+
+.skills > li::before {
+  content: "▶";
+  color: slateblue;
+  margin-right: 20px;
+  transform: rotate(90deg);
+}

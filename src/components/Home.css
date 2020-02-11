@@ -1,0 +1,29 @@
+.name {
+  font-size: 80px;
+  font-weight: bold;
+}
+
+.subtitle {
+  font-size: 60px;
+  color: slateblue;
+  font-weight: bold;
+  opacity: 0.9;
+}
+
+.title-description {
+  font-size: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .name {
+    font-size: 55px;
+  }
+
+  .subtitle {
+    font-size: 30px;
+  }
+
+  .title-description {
+    font-size: 17px;
+  }
+}

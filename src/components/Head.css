@@ -1,0 +1,36 @@
+.head {
+  height: 60px;
+}
+
+.profil-link {
+  font-family: "Slabo 27px", serif;
+  font-size: 23px;
+  font-weight: bold;
+}
+
+.blog-link {
+  cursor: pointer;
+  transition: all 0.3s;
+  border: 3px solid slateblue;
+  padding: 5px 10px;
+  font-weight: bold;
+}
+
+.blog-link:hover {
+  transform: scale(1.05);
+}
+
+.blog-link:active {
+  transform: scale(0.97);
+}
+
+.themeBtn {
+  background-color: #fff;
+  transition: all 0.3s;
+}
+
+.dark-light {
+  width: 23px;
+  height: 23px;
+  transition: all 0.3s;
+}

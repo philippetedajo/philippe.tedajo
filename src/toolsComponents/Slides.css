@@ -1,0 +1,27 @@
+.slides {
+  min-height: 450px;
+  border-radius: 15px;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+  background-color: black;
+}
+
+.sl {
+  min-height: 450px;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.sl1 {
+  background-image: url(../assets/samp1.png);
+}
+
+.sl2 {
+  background-image: url(../assets/samp2.png);
+}
+
+.sl3 {
+  background-image: url(../assets/samp3.png);
+}
