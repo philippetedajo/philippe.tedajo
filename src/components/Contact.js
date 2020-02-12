@@ -9,7 +9,7 @@ function Contact() {
       <Hero title="Contact" />
       <Row>
         <Col>
-          <Form>
+          <Form className="mb-5">
             <Form.Group
               className="d-flex flex-column align-items-center"
               controlId="exampleForm.ControlInput1"
@@ -52,7 +52,7 @@ function Contact() {
 
             <Form.Group className="d-flex flex-column align-items-center">
               <Button
-                className="submit-btn col-md-8 shadow-none"
+                className="submit_btn submit-btn col-md-8 shadow-none"
                 variant="primary"
                 type="submit"
               >

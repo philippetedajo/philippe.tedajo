@@ -8,7 +8,7 @@ import { ReactComponent as Youtube } from "../assets/icons/youtube-brands.svg";
 
 function Footer() {
   return (
-    <Row className="footer d-flex flex-column mt-4 pt-3">
+    <Row className="footer d-flex flex-column pt-3">
       <Col className="d-flex align-items-center justify-content-center">
         <a
           href="https://github.com/philippetedajo"

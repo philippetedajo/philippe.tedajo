@@ -25,10 +25,18 @@ export const GlobalStyles = createGlobalStyle`
 
   }
 
-  .header{
+  .wrapper_header{
   background-image: url("https://www3.assets.heroku.com/assets/home/heroku-is-for-bg-44f6c029946d5cb6d1c7f62360495a078a6e6b42acf3b1428d7cc08573c8b13b.png");
   background-repeat: no-repeat;
   background-size: 1550px;
   background-position:  center -90px ;
   }
+
+  .wrapper_contact {
+  background-image: url("https://www3.assets.heroku.com/assets/home/heroku-is-for-bg-44f6c029946d5cb6d1c7f62360495a078a6e6b42acf3b1428d7cc08573c8b13b.png");
+  background-repeat: no-repeat;
+  background-size: 1550px;
+  background-position:  center 90px ;
+  }
+  
   `;
