@@ -27,14 +27,14 @@ function App() {
       setThemeName(<Moon />);
     }
   };
-  /*
+
   useEffect(() => {
     setTimeout(() => {
-      console.log("Our data is fetched");
+      console.log("data fetched");
       setloading(false);
     }, 2000);
   });
-*/
+
   if (loading) {
     return <Loader />;
   } else {
