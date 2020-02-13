@@ -24,10 +24,10 @@
   border-radius: 10px;
   height: 250px;
   width: 250px;
-  top: -30px;
-  left: 30px;
+  top: -25px;
+  left: 25px;
+  display: block;
   position: absolute;
-  z-index: 0;
   background-image: url(../assets/Profil.jpg);
   background-origin: content-box;
   background-size: contain;
@@ -37,5 +37,5 @@
 }
 
 .profil:hover::after {
-  transform: translateX(-20px) translateY(20px);
+  transform: translateX(-15px) translateY(15px);
 }
