@@ -7,7 +7,7 @@ function About() {
   return (
     <Container className="about " style={{ minHeight: "600px" }}>
       <Hero title="About me" />
-      <Row className="d-flex flex-column-reverse flex-md-row">
+      <Row className="d-flex align-items-center flex-column-reverse flex-md-row">
         <Col className=" col-lg-8 col-md-7 text-justify ">
           Also known as Phil, I am a self-taught Full Stack JavaScript
           Developer, specialize in React framework. My learning path is quite
@@ -26,9 +26,7 @@ function About() {
             <li>Styled component</li>
           </ul>
         </Col>
-        <Col className="col-lg-4 col-md-5 mt-3 mb-5 d-flex justify-content-center align-items-center">
-          <div className="profil"></div>
-        </Col>
+        <div className="profil mb-5 mt-4 ml-md-5"></div>
       </Row>
     </Container>
   );
