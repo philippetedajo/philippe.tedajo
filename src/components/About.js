@@ -26,7 +26,7 @@ function About() {
             <li>Styled component</li>
           </ul>
         </Col>
-        <div className="profil mb-5 mt-4 ml-md-5"></div>
+        <div className="profil mb-5 mt-4 ml-md-5 shadow"></div>
       </Row>
     </Container>
   );
