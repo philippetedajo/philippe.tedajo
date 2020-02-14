@@ -9,7 +9,7 @@ function Contact() {
       <Hero title="Contact" />
       <Row>
         <Col>
-          <Form className="mb-5">
+          <Form method="POST" data-netlify="true" className="mb-5">
             <Form.Group
               className="d-flex flex-column align-items-center"
               controlId="exampleForm.ControlInput1"
