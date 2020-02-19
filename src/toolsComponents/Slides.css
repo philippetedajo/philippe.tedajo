@@ -1,21 +1,27 @@
 .slides {
-  min-height: 450px;
+  min-height: 550px;
   border-radius: 15px;
   background-position: center;
   background-size: cover;
   overflow: hidden;
   background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center !important;
 }
 
 .sl {
   min-height: 450px;
+  width: 80% !important;
   background-position: center;
   background-size: cover;
   overflow: hidden;
+  margin-left: 10%;
+  border-radius: 10px;
 }
 
 .sl1 {
-  background-image: url(../assets/samp1.png);
+  background-image: url(../assets/previewPic.png);
 }
 
 .sl2 {
@@ -24,4 +30,9 @@
 
 .sl3 {
   background-image: url(../assets/samp3.png);
+}
+
+.caption > .git1 {
+  color: black;
+  font-weight: bold;
 }

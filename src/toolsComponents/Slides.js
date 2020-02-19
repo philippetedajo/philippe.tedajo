@@ -4,10 +4,10 @@ import { Carousel } from "react-bootstrap";
 
 function Slides() {
   return (
-    <Carousel className="mt-5 mb-5 shadow slides ">
-      <Carousel.Item className="sl sl1">
+    <Carousel className="mt-5 mb-5 shadow slides">
+      <Carousel.Item className="sl sl1 brd">
         <Carousel.Caption className="caption">
-          <p className="m-lg-0">libero</p>
+          <p className="m-lg-0 git1">React Quote Player</p>
         </Carousel.Caption>
       </Carousel.Item>
 
