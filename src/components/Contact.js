@@ -14,7 +14,7 @@ function Contact() {
               className="d-flex flex-column align-items-center"
               controlId="exampleForm.ControlInput1"
             >
-              <Form.Label className="col-md-8 f16 pl-0">Full Name</Form.Label>
+              <Form.Label className="col-md-8 f16 pl-0 text-bold">Full Name</Form.Label>
               <Form.Control className="col-md-8 shadow-none" type="text" />
             </Form.Group>
 
@@ -22,7 +22,7 @@ function Contact() {
               className="d-flex flex-column align-items-center"
               controlId="exampleForm.ControlInput2"
             >
-              <Form.Label className="col-md-8 f16 pl-0">
+              <Form.Label className="col-md-8 f16 pl-0 text-bold">
                 Phone Number
               </Form.Label>
               <Form.Control className="col-md-8 shadow-none" type="number" />
@@ -32,7 +32,7 @@ function Contact() {
               className="d-flex flex-column align-items-center"
               controlId="exampleForm.ControlInput3"
             >
-              <Form.Label className="col-md-8 f16 pl-0">
+              <Form.Label className="col-md-8 f16 pl-0 text-bold">
                 Email address
               </Form.Label>
               <Form.Control className="col-md-8 shadow-none" type="email" />
@@ -42,7 +42,7 @@ function Contact() {
               className="d-flex flex-column align-items-center"
               controlId="exampleForm.ControlTextarea1"
             >
-              <Form.Label className="col-md-8 f16 pl-0">Message</Form.Label>
+              <Form.Label className="col-md-8 f16 pl-0 text-bold">Message</Form.Label>
               <Form.Control
                 className="col-md-8 shadow-none"
                 as="textarea"

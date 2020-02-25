@@ -1,20 +1,19 @@
 import React, { useEffect, useState } from "react";
-import "./Loader.css";
+import "./Lotties.css";
 import Lottie from "react-lottie";
-import animationData from "../assets/anim/loader.json";
 
-function Loader() {
+function Lotties(props) {
   const defaultOptions = {
     loop: true,
     autoplay: true,
-    animationData: animationData,
+    animationData: props.animationData,
     rendererSettings: {
       preserveAspectRatio: "xMidYMid slice"
     }
   };
 
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-
+ 
   const updateWindowWidth = () => {
     setWindowWidth(window.innerWidth);
   };
@@ -27,16 +26,16 @@ function Loader() {
   if (windowWidth > 768) {
     return (
       <div className="loader d-flex justify-content-center align-items-center">
-        <Lottie options={defaultOptions} height={"25vw"} width={"25vw"} />
+        <Lottie options={defaultOptions} height={props.lh} width={props.lw} />
       </div>
     );
   } else {
     return (
       <div className="loader d-flex justify-content-center align-items-center">
-        <Lottie options={defaultOptions} height={"50vw"} width={"50vw"} />
+        <Lottie options={defaultOptions} height={props.mh} width={props.mw} />
       </div>
     );
   }
 }
 
-export default Loader;
+export default Lotties;

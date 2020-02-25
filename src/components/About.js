@@ -8,7 +8,7 @@ function About() {
     <Container className="about " style={{ minHeight: "600px" }}>
       <Hero title="About me" />
       <Row className="d-flex align-items-center flex-column-reverse flex-md-row">
-        <Col className=" col-lg-8 col-md-7 text-justify ">
+        <Col className=" col-lg-8 col-md-7 text-justify text-bold ">
           I am a self-taught Full Stack JavaScript
           Developer, specialised in React framework. My learning path is quite
           unconventional, after a financial engineering Master degree, I found a

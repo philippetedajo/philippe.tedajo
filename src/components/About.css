@@ -1,6 +1,7 @@
 .skills {
   list-style: none;
-  height: 9rem;
+  height: auto;
+  padding: 0;
 }
 
 .skills > li{
@@ -41,3 +42,4 @@
 .profil:hover::after {
   transform: translateX(-15px) translateY(15px);
 }
+
