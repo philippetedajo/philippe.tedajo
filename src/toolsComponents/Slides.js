@@ -14,7 +14,7 @@ function Slides() {
 
   return (
     <div>
-      caroussel
+      
     </div>
   );
 }

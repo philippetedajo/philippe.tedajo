@@ -47,16 +47,12 @@ export const GlobalStyles = createGlobalStyle`
     color: ${({theme}) => theme.textColorInverse}
   }
   
-  .subtitle {
-    color: ${({theme}) => theme.textColor} !important;
-  }
-  
   .hero > p {
     border-color : ${({theme}) => theme.borderColor}
   }
 
   .profil {
-    background-color: ${({theme}) => theme.bgColorOp} ;
+    background: ${({theme}) => theme.bgColorGrad} ;
   }
 ;
   .skills > li{

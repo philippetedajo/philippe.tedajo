@@ -1,16 +1,31 @@
+.hi{
+  background: -webkit-linear-gradient(#fff 60%, #333);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .name {
   font-size: 80px;
   font-weight: bold;
+  background: -webkit-linear-gradient(#fff 60%, #333);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .subtitle {
   font-size: 60px;
   font-weight: bold;
   opacity: 0.9;
+  background: -webkit-linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .title-description {
   font-size: 20px;
+  background: -webkit-linear-gradient(#fff 60%, #333);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 @media screen and (max-width: 768px) {
@@ -25,8 +40,4 @@
   .title-description {
     font-size: 17px;
   }
-}
-
-.brd{
-  border: 2px solid #fff;
 }
