@@ -76,5 +76,4 @@ export const GlobalStyles = createGlobalStyle`
   .footer {
     background:  ${({theme}) => theme.bgColorInverse};
   }
-  
   `;
