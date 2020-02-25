@@ -1,21 +1,22 @@
 .skills {
   list-style: none;
-  
+  height: 9rem;
 }
 
-.skills > li::before {
-  content: "▶";
-  color: slateblue;
-  margin-right: 20px;
-  transform: rotate(90deg);
+.skills > li{
+  display: inline-flex;
+  border: 2px solid;
+  margin: 1rem;
+  border-radius: 3px;
+  padding: 0 5px;
 }
+
 
 .profil {
   border: 2px solid;
   border-radius: 10px;
   height: 250px; 
   width: 250px;
-  background-color: slateblue;
   position: relative;
 }
 

@@ -51,17 +51,26 @@ export const GlobalStyles = createGlobalStyle`
     border-color : ${({theme}) => theme.borderColor}
   }
 
+  .profil {
+    background-color: ${({theme}) => theme.bgColorOp} ;
+  }
+;
+  .skills > li{
+    border-color: ${({theme}) => theme.bgColorOp} ;
+  }
+
   input:focus,
   textarea:focus {
     border-color : ${({theme}) => theme.btnBgColor} !important;
   }
+
 
   button {
     background-color: ${({theme}) => theme.btnBgColor} !important;
   }
 
   button:hover {
-    background-color: ${({theme}) => theme.bgColor} !important;
+    background-color: ${({theme}) => theme.btnBgColorOp} !important;
   }
 
   .footer {

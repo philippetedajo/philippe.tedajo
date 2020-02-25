@@ -18,7 +18,8 @@ function About() {
           are few technologies I've been working with recently:
           <ul className="skills mt-3">
             <li>JavaScript (ES6+)</li>
-            <li>HTML & (S)CSS</li>
+            <li>HTML &</li>
+            <li>(S)CSS</li>
             <li>React</li>
             <li>React Native</li>
             <li>Node.js</li>
