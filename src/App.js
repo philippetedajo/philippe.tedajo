@@ -3,21 +3,23 @@ import { ThemeProvider } from "styled-components";
 import { lightTheme, darkTheme } from "./theme/Theme";
 import { GlobalStyles } from "./theme/GlobalStyles";
 import { Container, Row } from "react-bootstrap";
+import LoadingScreen from "./toolsComponents/LoadingScreen"
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import About from "./components/About";
 import Projects from "./components/Projects";
 import Head from "./components/Head";
 import Home from "./components/Home";
+
+
 import { ReactComponent as Sun } from "./assets/icons/sun-regular.svg";
 import { ReactComponent as Moon } from "./assets/icons/moon-regular.svg";
-import Lotties from "./toolsComponents/Lotties";
-import Loader from "./assets/anim/loader.json";
+
 
 function App() {
   const [theme, setTheme] = useState("lightTheme");
   const [themeName, setThemeName] = useState(<Moon />);
-  const [loading, setloading] = useState(false);
+  const [loading, setloading] = useState(true);
 
   const toggleTheme = () => {
     if (theme === "lightTheme") {
@@ -37,7 +39,9 @@ function App() {
   }); 
 
   if (loading) {
-    return <Lotties animationData = {Loader} lh ="25vw" lw = "25vw" mh= "40vw" mw="40vw"/>; 
+    return(
+      <LoadingScreen/>
+    )
   } else {
     return (
       <ThemeProvider theme={theme === "lightTheme" ? lightTheme : darkTheme}>
