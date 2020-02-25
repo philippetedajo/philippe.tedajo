@@ -4,7 +4,7 @@ import { Row, Col } from "react-bootstrap";
 
 function Head(props) {
   return (
-    <Row>
+    <Row className="head-container">
       <Col className="head d-flex justify-content-between align-items-center mt-2">
         <p className="profil-link pl-4">Phil</p>
         <div className="d-flex pr-4">

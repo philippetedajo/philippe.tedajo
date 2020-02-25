@@ -9,7 +9,7 @@ function About() {
       <Hero title="About me" />
       <Row className="d-flex align-items-center flex-column-reverse flex-md-row">
         <Col className=" col-lg-8 col-md-7 text-justify ">
-          Also known as Phil, I am a self-taught Full Stack JavaScript
+          I am a self-taught Full Stack JavaScript
           Developer, specialised in React framework. My learning path is quite
           unconventional, after a financial engineering Master degree, I found a
           passion in web application development and I started to learn
@@ -20,6 +20,7 @@ function About() {
             <li>JavaScript (ES6+)</li>
             <li>HTML & (S)CSS</li>
             <li>React</li>
+            <li>React Native</li>
             <li>Node.js</li>
             <li>Express</li>
             <li>Bootstrap</li>

@@ -32,7 +32,7 @@ function App() {
     setTimeout(() => {
       console.log("data fetched");
       setloading(false);
-    }, 2000);
+    }, 100);
   });
 
   if (loading) {

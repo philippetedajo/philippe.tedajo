@@ -1,5 +1,6 @@
 .skills {
   list-style: none;
+  
 }
 
 .skills > li::before {
@@ -12,7 +13,7 @@
 .profil {
   border: 2px solid;
   border-radius: 10px;
-  height: 250px;
+  height: 250px; 
   width: 250px;
   background-color: slateblue;
   position: relative;

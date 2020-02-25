@@ -11,7 +11,7 @@
 .blog-link {
   cursor: pointer;
   transition: all 0.3s;
-  border: 3px solid slateblue;
+  border: 3px solid;
   padding: 5px 10px;
   font-weight: bold;
 }

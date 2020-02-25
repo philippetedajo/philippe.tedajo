@@ -8,22 +8,17 @@ textarea {
 
 input:focus,
 textarea:focus {
-  border: 3px solid slateblue !important;
+  border: 3px solid !important;
   color: unset !important;
 }
 
 button {
-  background-color: rgb(106, 90, 205, 0.9) !important;
   border: none !important;
   transition: all 0.3s !important;
 }
 
 button:active {
   transform: scale(0.97);
-}
-
-button:hover {
-  background-color: slateblue !important;
 }
 
 button:focus {
