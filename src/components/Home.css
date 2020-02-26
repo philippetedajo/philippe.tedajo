@@ -1,17 +1,6 @@
-.hi {
-  background: -webkit-linear-gradient(#fff 60%, #333);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
 .name {
   font-size: 80px;
   font-weight: bold;
-  background: -webkit-linear-gradient(#fff 60%, #333);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 .subtitle {
@@ -26,10 +15,6 @@
 
 .title-description {
   font-size: 20px;
-  background: -webkit-linear-gradient(#fff 60%, #333);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 @media screen and (max-width: 768px) {

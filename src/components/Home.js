@@ -9,7 +9,7 @@ function Home() {
     <Container
       fluid={true}
       className="home d-flex align-items-center justify-content-center"
-      style={{ minHeight: "470px" }}
+      style={{ minHeight: "calc(100vh - 65px)" }}
     >
       <Row className="d-flex flex-column flex-lg-row w-100">
         <Col className="col-4 d-flex justify-content-center align-items-center splash-container">

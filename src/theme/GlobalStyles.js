@@ -45,11 +45,14 @@ export const GlobalStyles = createGlobalStyle`
   }
   
   .hi, .name, .title-description  {
-    color: ${({ theme }) => theme.textColorInverse}
+    background:  ${({ theme }) => theme.bgtext};
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
   
   .hero > p {
-    border-color : ${({ theme }) => theme.borderColor}
+    border-color : ${({ theme }) => theme.borderColor};
   }
 
   .profil {
@@ -76,5 +79,18 @@ export const GlobalStyles = createGlobalStyle`
 
   .footer {
     background:  ${({ theme }) => theme.bgColorInverse};
+  }
+
+  .copyright {
+    font-size: 13px;
+    background:  ${({ theme }) => theme.bgtext};
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .repo {
+    border:  ${({ theme }) => theme.repoBorder};
+    background-color:  ${({ theme }) => theme.repoBg};
   }
   `;
