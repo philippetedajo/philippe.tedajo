@@ -9,13 +9,13 @@ function About() {
       <Hero title="About me" />
       <Row className="d-flex align-items-center flex-column-reverse flex-md-row">
         <Col className=" col-lg-8 col-md-7 text-justify text-bold ">
-          I am a self-taught Full Stack JavaScript
-          Developer, specialised in React framework. My learning path is quite
-          unconventional, after a financial engineering Master degree, I found a
-          passion in web application development and I started to learn
-          programming from scratch, from FreeCodeCamp to Pluralsight with a lot
-          of sleepless nights. I built a solid foundation in Javascript. Here
-          are few technologies I've been working with recently:
+          I am a self-taught Full Stack JavaScript Developer, specialised in
+          React framework. My learning path is quite unconventional, after a
+          financial engineering Master degree, I found a passion in web
+          application development and I started to learn programming from
+          scratch, from FreeCodeCamp to Pluralsight with a lot of sleepless
+          nights. I built a solid foundation in Javascript. Here are few
+          technologies I've been working with recently:
           <ul className="skills mt-3">
             <li>JavaScript (ES6+)</li>
             <li>HTML &</li>

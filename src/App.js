@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { ThemeProvider } from "styled-components";
 import { lightTheme, darkTheme } from "./theme/Theme";
 import { GlobalStyles } from "./theme/GlobalStyles";
 import { Container, Row } from "react-bootstrap";
-import LoadingScreen from "./toolsComponents/LoadingScreen";
+
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import About from "./components/About";
@@ -17,7 +17,6 @@ import { ReactComponent as Moon } from "./assets/icons/moon-regular.svg";
 function App() {
   const [theme, setTheme] = useState("lightTheme");
   const [themeName, setThemeName] = useState(<Moon />);
-  const [loading, setloading] = useState(true);
 
   const toggleTheme = () => {
     if (theme === "lightTheme") {
@@ -29,34 +28,23 @@ function App() {
     }
   };
 
-  useEffect(() => {
-    setTimeout(() => {
-      console.log("data fetched");
-      setloading(false);
-    }, 2000);
-  });
-
-  if (loading) {
-    return <LoadingScreen />;
-  } else {
-    return (
-      <ThemeProvider theme={theme === "lightTheme" ? lightTheme : darkTheme}>
-        <Container fluid={true} className="App">
-          <GlobalStyles />
-          <Row className="wrapper_header d-flex flex-column ">
-            <Head toggleTheme={toggleTheme} themeName={themeName} />
-            <Home />
-          </Row>
-          <Projects />
-          <About />
-          <Row className="wrapper_contact ">
-            <Contact />
-          </Row>
-          <Footer />
-        </Container>
-      </ThemeProvider>
-    );
-  }
+  return (
+    <ThemeProvider theme={theme === "lightTheme" ? lightTheme : darkTheme}>
+      <Container fluid={true} className="App">
+        <GlobalStyles />
+        <Row className="wrapper_header d-flex flex-column ">
+          <Head toggleTheme={toggleTheme} themeName={themeName} />
+          <Home />
+        </Row>
+        <Projects />
+        <About />
+        <Row className="wrapper_contact ">
+          <Contact />
+        </Row>
+        <Footer />
+      </Container>
+    </ThemeProvider>
+  );
 }
 
 export default App;

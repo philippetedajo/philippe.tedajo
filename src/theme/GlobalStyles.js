@@ -43,6 +43,7 @@ export const GlobalStyles = createGlobalStyle`
   background-size: 1550px;
   background-position:  center 90px ;
   }
+  
   .hi, .name, .title-description  {
     color: ${({ theme }) => theme.textColorInverse}
   }
