@@ -17,7 +17,7 @@ import { ReactComponent as Moon } from "./assets/icons/moon-regular.svg";
 function App() {
   const [theme, setTheme] = useState("lightTheme");
   const [themeName, setThemeName] = useState(<Moon />);
-  const [loading, setloading] = useState(false);
+  const [loading, setloading] = useState(true);
 
   const toggleTheme = () => {
     if (theme === "lightTheme") {
