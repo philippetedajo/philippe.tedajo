@@ -1835,6 +1835,13 @@
   resolved "https://registry.yarnpkg.com/@nodelib/fs.stat/-/fs.stat-1.1.3.tgz#2b5a3ab3f918cca48a8c754c08168e3f03eba61b"
   integrity sha512-shAmDyaQC4H92APFoIaVDHCx5bStIocgvbwQyxPRrbUY20V1EYTbSDchWbuwlMG3V17cprZhA6+78JfB+3DTPw==
 
+"@primer/octicons-react@^9.4.0":
+  version "9.4.0"
+  resolved "https://registry.yarnpkg.com/@primer/octicons-react/-/octicons-react-9.4.0.tgz#19f6ed2eab82e78c2762315d19c7ce1677fcf4ed"
+  integrity sha512-TAPjzQaIrPqI5TpxNKkBTxS7b8Y1v7iMuiN5ZshhSp9GHbdymWKtCXRDk13lo6woDeSn/8tIdZTSerTR3c0bQA==
+  dependencies:
+    prop-types "^15.6.1"
+
 "@restart/context@^2.1.4":
   version "2.1.4"
   resolved "https://registry.yarnpkg.com/@restart/context/-/context-2.1.4.tgz#a99d87c299a34c28bd85bb489cb07bfd23149c02"
@@ -9413,7 +9420,7 @@ prop-types-extra@^1.1.0:
     react-is "^16.3.2"
     warning "^4.0.0"
 
-prop-types@^15.6.2, prop-types@^15.7.2:
+prop-types@^15.6.1, prop-types@^15.6.2, prop-types@^15.7.2:
   version "15.7.2"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.7.2.tgz#52c41e75b8c87e72b9d9360e0206b99dcbffa6c5"
   integrity sha512-8QQikdH7//R2vurIJSutZ1smHYTcLpRWEOlHnzcWHmBYrOGUysKwSsrC89BCiFj3CbrfJ/nXFdJepOVrY1GCHQ==

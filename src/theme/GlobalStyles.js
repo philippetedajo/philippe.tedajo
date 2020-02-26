@@ -30,11 +30,11 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   .head-container{
-    background-color: ${({theme}) => theme.bgColor} !important;
+    background-color: ${({ theme }) => theme.bgColor} !important;
   }
 
   .wrapper_header{
-  background-color: ${({theme}) => theme.bgColorInverse};
+  background-color: ${({ theme }) => theme.bgColorInverse};
   }
 
   .wrapper_contact {
@@ -44,36 +44,36 @@ export const GlobalStyles = createGlobalStyle`
   background-position:  center 90px ;
   }
   .hi, .name, .title-description  {
-    color: ${({theme}) => theme.textColorInverse}
+    color: ${({ theme }) => theme.textColorInverse}
   }
   
   .hero > p {
-    border-color : ${({theme}) => theme.borderColor}
+    border-color : ${({ theme }) => theme.borderColor}
   }
 
   .profil {
-    background: ${({theme}) => theme.bgColorGrad} ;
+    background: ${({ theme }) => theme.bgColorGrad} ;
   }
 ;
   .skills > li{
-    border-color: ${({theme}) => theme.bgColorOp} ;
+    border-color: ${({ theme }) => theme.bgColorOp} ;
   }
 
   input:focus,
   textarea:focus {
-    border-color : ${({theme}) => theme.btnBgColor} !important;
+    border-color : ${({ theme }) => theme.btnBgColor} !important;
   }
 
 
   button {
-    background-color: ${({theme}) => theme.btnBgColor} !important;
+    background-color: ${({ theme }) => theme.btnBgColor} !important;
   }
 
   button:hover {
-    background-color: ${({theme}) => theme.btnBgColorOp} !important;
+    background-color: ${({ theme }) => theme.btnBgColorOp} !important;
   }
 
   .footer {
-    background:  ${({theme}) => theme.bgColorInverse};
+    background:  ${({ theme }) => theme.bgColorInverse};
   }
   `;

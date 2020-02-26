@@ -1,0 +1,54 @@
+.repos-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.repo {
+  border: 2px solid;
+  height: 10rem;
+  width: 17rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 15px;
+  margin: 1rem;
+}
+
+.repo > div > p {
+  margin: 0;
+}
+
+.repo-title {
+  padding: 0 1rem;
+}
+
+.repo-name {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.repo-description {
+  font-weight: 500;
+}
+
+.repo-details {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 1rem;
+}
+
+.repo-details > span {
+  margin: 0 5px;
+}
+
+.repo-details-items {
+  display: flex;
+}
+
+.details-items {
+  display: inline-flex;
+}
+
+.repo-icon {
+  height: 20px;
+  width: 20px;
+}

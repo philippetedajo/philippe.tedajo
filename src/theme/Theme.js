@@ -10,7 +10,6 @@ export const lightTheme = {
   borderColor: "#0b4495",
   btnBgColor: "#0148C6",
   btnBgColorOp: "rgb(1, 72, 198, .9)"
-  
 };
 
 export const darkTheme = {
@@ -18,4 +17,3 @@ export const darkTheme = {
   text: "#FCFCFC",
   border: "slateblue"
 };
- 

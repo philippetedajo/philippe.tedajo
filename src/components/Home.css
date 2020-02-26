@@ -1,5 +1,6 @@
-.hi{
+.hi {
   background: -webkit-linear-gradient(#fff 60%, #333);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -8,6 +9,7 @@
   font-size: 80px;
   font-weight: bold;
   background: -webkit-linear-gradient(#fff 60%, #333);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -17,6 +19,7 @@
   font-weight: bold;
   opacity: 0.9;
   background: -webkit-linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -24,6 +27,7 @@
 .title-description {
   font-size: 20px;
   background: -webkit-linear-gradient(#fff 60%, #333);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -41,4 +45,3 @@
     font-size: 17px;
   }
 }
-
