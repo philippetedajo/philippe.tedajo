@@ -93,4 +93,7 @@ export const GlobalStyles = createGlobalStyle`
     border:  ${({ theme }) => theme.repoBorder};
     background-color:  ${({ theme }) => theme.repoBg};
   }
+  .icon-swt{
+    cursor: pointer
+  }
   `;

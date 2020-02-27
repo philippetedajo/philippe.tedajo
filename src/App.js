@@ -21,10 +21,10 @@ function App() {
   const toggleTheme = () => {
     if (theme === "lightTheme") {
       setTheme("darkTheme");
-      setThemeName(<Sun />);
+      setThemeName(<Sun className="icon-swt" />);
     } else {
       setTheme("lightTheme");
-      setThemeName(<Moon />);
+      setThemeName(<Moon className="icon-swt" />);
     }
   };
 
