@@ -8,7 +8,7 @@
   </a>
 </p>
 
-A is a responsive [React](http://facebook.github.io/react/index.html) portofolio for developers
+A responsive [React](http://facebook.github.io/react/index.html) portofolio for developers
 
 ## 🚀 Installation
 
