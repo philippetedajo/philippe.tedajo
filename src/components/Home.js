@@ -8,16 +8,16 @@ function Home() {
   return (
     <Container
       fluid={true}
-      className="home d-flex align-items-center justify-content-center"
+      className="d-flex align-items-center justify-content-center"
       style={{ minHeight: "calc(100vh - 65px)" }}
     >
-      <Row className="d-flex flex-column flex-lg-row w-100">
-        <Col className="col-4 d-flex justify-content-center align-items-center splash-container">
+      <Row className="home-container d-flex flex-column flex-lg-row w-100">
+        <Col className="home-animation col-4 d-flex justify-content-center align-items-center splash-container">
           <Lotties
             animationData={Splash}
             lh="20rem"
             lw="50rem"
-            mh="15rem"
+            mh="18rem"
             mw="50rem"
           />
         </Col>

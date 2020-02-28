@@ -29,4 +29,11 @@
   .title-description {
     font-size: 17px;
   }
+
+  .home-animation {
+    position: absolute !important;
+    opacity: 0.8;
+    right: 40px;
+    top: 90px;
+  }
 }
