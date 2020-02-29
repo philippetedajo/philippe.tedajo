@@ -1,5 +1,5 @@
 import React from "react";
-import "./Contact.css";
+import "./styles/Contact.css";
 import Hero from "../toolsComponents/Hero";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
 

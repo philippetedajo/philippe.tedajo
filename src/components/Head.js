@@ -1,5 +1,5 @@
 import React from "react";
-import "./Head.css";
+import "./styles/Head.css";
 import { Row, Col } from "react-bootstrap";
 
 function Head(props) {

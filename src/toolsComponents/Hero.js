@@ -1,5 +1,5 @@
 import React from "react";
-import "./Hero.css";
+import "./styles/Hero.css";
 import { Row, Col } from "react-bootstrap";
 
 function Hero(props) {

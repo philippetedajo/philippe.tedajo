@@ -1,5 +1,5 @@
 import React from "react";
-import "./About.css";
+import "./styles/About.css";
 import Hero from "../toolsComponents/Hero";
 import { Container, Row, Col } from "react-bootstrap";
 
@@ -18,7 +18,7 @@ function About() {
           technologies I've been working with recently:
           <ul className="skills mt-3">
             <li>JavaScript (ES6+)</li>
-            <li>HTML &</li>
+            <li>HTML</li>
             <li>(S)CSS</li>
             <li>React</li>
             <li>React Native</li>

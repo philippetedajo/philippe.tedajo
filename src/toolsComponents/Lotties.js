@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./Lotties.css";
+import "./styles/Lotties.css";
 import Lottie from "react-lottie";
 
 function Lotties(props) {
@@ -13,7 +13,7 @@ function Lotties(props) {
   };
 
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
- 
+
   const updateWindowWidth = () => {
     setWindowWidth(window.innerWidth);
   };

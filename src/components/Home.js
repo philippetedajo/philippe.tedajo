@@ -1,5 +1,5 @@
 import React from "react";
-import "./Home.css";
+import "./styles/Home.css";
 import { Container, Row, Col } from "react-bootstrap";
 import Lotties from "../toolsComponents/Lotties";
 import Splash from "../assets/anim/splash.json";

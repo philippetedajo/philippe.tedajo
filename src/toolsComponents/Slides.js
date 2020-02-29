@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./Slides.css";
+import "./styles/Slides.css";
 import Octicon, { MarkGithub, Star, RepoForked } from "@primer/octicons-react";
 import Lotties from "../toolsComponents/Lotties";
 import LoaderRing from "../assets/anim/loader-ring.json";

@@ -4,7 +4,7 @@
   padding: 0;
 }
 
-.skills > li{
+.skills > li {
   display: inline-flex;
   border: 2px solid;
   margin: 1rem;
@@ -12,11 +12,10 @@
   padding: 0 5px;
 }
 
-
 .profil {
   border: 2px solid;
   border-radius: 10px;
-  height: 250px; 
+  height: 250px;
   width: 250px;
   position: relative;
 }
@@ -31,7 +30,7 @@
   left: 25px;
   display: block;
   position: absolute;
-  background-image: url(../assets/about_pic.jpg);
+  background-image: url(../../assets/about_pic.jpg);
   background-origin: content-box;
   background-size: contain;
   opacity: 0.99;
@@ -42,4 +41,3 @@
 .profil:hover::after {
   transform: translateX(-15px) translateY(15px);
 }
-
