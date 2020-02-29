@@ -2,6 +2,20 @@
   font-family: "Slabo 27px", serif;
   font-size: 23px;
   font-weight: bold;
+  margin: 0;
+}
+.nav-link {
+  justify-content: space-around;
+}
+
+.head-link {
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+.head-link:hover {
+  transform: scale(1.2);
+  transition: transform 0.3s;
 }
 
 .blog-link {
@@ -29,4 +43,14 @@
   width: 23px;
   height: 23px;
   transition: all 0.3s;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .head-link {
+    display: none;
+  }
+  .nav-link {
+    justify-content: flex-end !important;
+  }
 }

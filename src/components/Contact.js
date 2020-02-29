@@ -5,7 +5,11 @@ import { Container, Row, Col, Form, Button } from "react-bootstrap";
 
 function Contact() {
   return (
-    <Container className="contact" style={{ minHeight: "450px" }}>
+    <Container
+      id="contact pt-2"
+      className="contact"
+      style={{ minHeight: "450px" }}
+    >
       <Hero title="Contact" />
       <Row>
         <Col>

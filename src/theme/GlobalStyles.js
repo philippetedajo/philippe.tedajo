@@ -6,6 +6,10 @@ export const GlobalStyles = createGlobalStyle`
   *::before {
     box-sizing: border-box;
   }
+  
+  html {
+    scroll-behavior: smooth;
+  }
 
   body {
     align-items: center;
@@ -32,6 +36,11 @@ export const GlobalStyles = createGlobalStyle`
   .head-container{
     background-color: ${({ theme }) => theme.bgColor} !important;
   }
+
+  .head-link:hover {
+    color: ${({ theme }) => theme.linkColor} !important
+  }
+  
 
   .wrapper_header{
   background-color: ${({ theme }) => theme.bgColorInverse};
@@ -92,8 +101,5 @@ export const GlobalStyles = createGlobalStyle`
   .repo {
     border:  ${({ theme }) => theme.repoBorder};
     background-color:  ${({ theme }) => theme.repoBg};
-  }
-  .icon-swt{
-    cursor: pointer
   }
   `;
