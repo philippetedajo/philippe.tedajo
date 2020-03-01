@@ -1,8 +1,7 @@
 import React from "react";
 import "./Projects.css";
-import Hero from "../toolsComponents/Hero";
+import { Hero, Slides } from "../../subComponents";
 import { Container, Row, Col } from "react-bootstrap";
-import Slides from "../toolsComponents/Slides";
 
 function Projects() {
   return (

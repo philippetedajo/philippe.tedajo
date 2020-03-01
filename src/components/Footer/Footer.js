@@ -1,10 +1,10 @@
 import React from "react";
 import "./Footer.css";
 import { Row, Col } from "react-bootstrap";
-import { ReactComponent as Github } from "../assets/icons/github-brands.svg";
-import { ReactComponent as Stackoverflow } from "../assets/icons/stack-overflow-brands.svg";
-import { ReactComponent as Linkedin } from "../assets/icons/linkedin-brands.svg";
-import { ReactComponent as Youtube } from "../assets/icons/youtube-brands.svg";
+import { ReactComponent as Github } from "../../assets/icons/github-brands.svg";
+import { ReactComponent as Stackoverflow } from "../../assets/icons/stack-overflow-brands.svg";
+import { ReactComponent as Linkedin } from "../../assets/icons/linkedin-brands.svg";
+import { ReactComponent as Youtube } from "../../assets/icons/youtube-brands.svg";
 
 function Footer() {
   return (

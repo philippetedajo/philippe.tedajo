@@ -1,7 +1,7 @@
 import React from "react";
-import "./styles/LoadingScreen.css";
-import Lotties from "../toolsComponents/Lotties";
-import Loader from "../assets/anim/loader.json";
+import "./LoadingScreen.css";
+import { Lotties } from "../../subComponents";
+import Loader from "../../assets/anim/loader.json";
 
 function LoadingScreen() {
   return (

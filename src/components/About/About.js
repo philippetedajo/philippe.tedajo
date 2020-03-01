@@ -1,6 +1,6 @@
 import React from "react";
 import "./About.css";
-import Hero from "../toolsComponents/Hero";
+import { Hero } from "../../subComponents";
 import { Container, Row, Col } from "react-bootstrap";
 
 function About() {

@@ -1,8 +1,8 @@
 import React from "react";
 import "./Home.css";
 import { Container, Row, Col } from "react-bootstrap";
-import Lotties from "../toolsComponents/Lotties";
-import Splash from "../assets/anim/splash.json";
+import { Lotties } from "../../subComponents";
+import Splash from "../../assets/anim/splash.json";
 
 function Home() {
   return (

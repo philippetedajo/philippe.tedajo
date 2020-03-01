@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import "./styles/Slides.css";
+import "./Slides.css";
 import Octicon, { MarkGithub, Star, RepoForked } from "@primer/octicons-react";
-import Lotties from "../toolsComponents/Lotties";
-import LoaderRing from "../assets/anim/loader-ring.json";
+import { Lotties } from "../../subComponents";
+import LoaderRing from "../../assets/anim/loader-ring.json";
 
 function Slides() {
   const [items, setItems] = useState([]);

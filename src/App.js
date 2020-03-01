@@ -4,12 +4,7 @@ import { lightTheme, darkTheme } from "./theme/Theme";
 import { GlobalStyles } from "./theme/GlobalStyles";
 import { Container, Row } from "react-bootstrap";
 
-import Contact from "./components/Contact";
-import Footer from "./components/Footer";
-import About from "./components/About";
-import Projects from "./components/Projects";
-import Head from "./components/Head";
-import Home from "./components/Home";
+import { About, Contact, Footer, Head, Home, Projects } from "./components";
 
 import { ReactComponent as Sun } from "./assets/icons/sun-regular.svg";
 import { ReactComponent as Moon } from "./assets/icons/moon-regular.svg";
@@ -48,6 +43,3 @@ function App() {
 }
 
 export default App;
-
-/*import { Test1, Test2 } from "./components/test";
- */

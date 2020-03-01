@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./styles/Lotties.css";
+import "./Lotties.css";
 import Lottie from "react-lottie";
 
 function Lotties(props) {
