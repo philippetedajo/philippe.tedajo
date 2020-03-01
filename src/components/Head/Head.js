@@ -3,7 +3,7 @@ import "./Head.css";
 import { Row, Col } from "react-bootstrap";
 import { Link } from "react-scroll";
 
-function Head(props) {
+const Head = props => {
   return (
     <Row className="head-container" style={{ height: "65px" }}>
       <Col className="head d-flex justify-content-between align-items-center">
@@ -25,5 +25,5 @@ function Head(props) {
       </Col>
     </Row>
   );
-}
+};
 export default Head;

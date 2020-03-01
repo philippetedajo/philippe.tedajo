@@ -4,7 +4,7 @@ import Octicon, { MarkGithub, Star, RepoForked } from "@primer/octicons-react";
 import { Lotties } from "../../subComponents";
 import LoaderRing from "../../assets/anim/loader-ring.json";
 
-function Slides() {
+const Slides = () => {
   const [items, setItems] = useState([]);
   const [isloading, setIsloading] = useState(false);
 
@@ -68,5 +68,5 @@ function Slides() {
       </div>
     );
   }
-}
+};
 export default Slides;

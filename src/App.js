@@ -3,32 +3,38 @@ import { ThemeProvider } from "styled-components";
 import { lightTheme, darkTheme } from "./theme/Theme";
 import { GlobalStyles } from "./theme/GlobalStyles";
 import { Container, Row } from "react-bootstrap";
-
 import { About, Contact, Footer, Head, Home, Projects } from "./components";
-
 import { ReactComponent as Sun } from "./assets/icons/sun-regular.svg";
 import { ReactComponent as Moon } from "./assets/icons/moon-regular.svg";
 
-function App() {
-  const [theme, setTheme] = useState("lightTheme");
-  const [themeName, setThemeName] = useState(<Moon />);
+const App = () => {
+  const [setup, setSetup] = useState({
+    theme: "lightTheme",
+    themeIcon: <Moon />
+  });
 
   const toggleTheme = () => {
-    if (theme === "lightTheme") {
-      setTheme("darkTheme");
-      setThemeName(<Sun className="icon-swt" />);
+    if (setup.theme === "lightTheme") {
+      setSetup({
+        theme: "darkTheme",
+        themeIcon: <Sun className="icon-swt" />
+      });
     } else {
-      setTheme("lightTheme");
-      setThemeName(<Moon className="icon-swt" />);
+      setSetup({
+        theme: "lightTheme",
+        themeIcon: <Moon className="icon-swt" />
+      });
     }
   };
 
   return (
-    <ThemeProvider theme={theme === "lightTheme" ? lightTheme : darkTheme}>
+    <ThemeProvider
+      theme={setup.theme === "lightTheme" ? lightTheme : darkTheme}
+    >
       <Container fluid={true} className="App">
         <GlobalStyles />
         <Row className="wrapper_header d-flex flex-column ">
-          <Head toggleTheme={toggleTheme} themeName={themeName} />
+          <Head toggleTheme={toggleTheme} themeIcon={setup.themeIcon} />
           <Home />
         </Row>
         <Projects />
@@ -40,6 +46,6 @@ function App() {
       </Container>
     </ThemeProvider>
   );
-}
+};
 
 export default App;

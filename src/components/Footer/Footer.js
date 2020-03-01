@@ -6,7 +6,7 @@ import { ReactComponent as Stackoverflow } from "../../assets/icons/stack-overfl
 import { ReactComponent as Linkedin } from "../../assets/icons/linkedin-brands.svg";
 import { ReactComponent as Youtube } from "../../assets/icons/youtube-brands.svg";
 
-function Footer() {
+const Footer = () => {
   return (
     <Row className="footer d-flex flex-column pt-3">
       <Col className="d-flex align-items-center justify-content-center">
@@ -50,6 +50,6 @@ function Footer() {
       </Col>
     </Row>
   );
-}
+};
 
 export default Footer;

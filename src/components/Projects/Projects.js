@@ -3,7 +3,7 @@ import "./Projects.css";
 import { Hero, Slides } from "../../subComponents";
 import { Container, Row, Col } from "react-bootstrap";
 
-function Projects() {
+const Projects = () => {
   return (
     <Container
       id="projects"
@@ -24,6 +24,6 @@ function Projects() {
       </Row>
     </Container>
   );
-}
+};
 
 export default Projects;

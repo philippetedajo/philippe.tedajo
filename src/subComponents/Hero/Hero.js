@@ -2,7 +2,7 @@ import React from "react";
 import "./Hero.css";
 import { Row, Col } from "react-bootstrap";
 
-function Hero(props) {
+const Hero = props => {
   return (
     <Row className="heroes mt-5 mb-5">
       <Col className="hero ">
@@ -10,6 +10,6 @@ function Hero(props) {
       </Col>
     </Row>
   );
-}
+};
 
 export default Hero;

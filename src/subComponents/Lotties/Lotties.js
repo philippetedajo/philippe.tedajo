@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./Lotties.css";
 import Lottie from "react-lottie";
 
-function Lotties(props) {
+const Lotties = props => {
   const defaultOptions = {
     loop: true,
     autoplay: true,
@@ -36,6 +36,6 @@ function Lotties(props) {
       </div>
     );
   }
-}
+};
 
 export default Lotties;

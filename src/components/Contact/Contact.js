@@ -3,7 +3,7 @@ import "./Contact.css";
 import { Hero } from "../../subComponents";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
 
-function Contact() {
+const Contact = () => {
   return (
     <Container
       id="contact pt-2"
@@ -72,6 +72,6 @@ function Contact() {
       </Row>
     </Container>
   );
-}
+};
 
 export default Contact;

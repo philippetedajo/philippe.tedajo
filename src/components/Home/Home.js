@@ -4,7 +4,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import { Lotties } from "../../subComponents";
 import Splash from "../../assets/anim/splash.json";
 
-function Home() {
+const Home = () => {
   return (
     <Container
       fluid={true}
@@ -33,5 +33,5 @@ function Home() {
       </Row>
     </Container>
   );
-}
+};
 export default Home;

@@ -3,7 +3,7 @@ import "./About.css";
 import { Hero } from "../../subComponents";
 import { Container, Row, Col } from "react-bootstrap";
 
-function About() {
+const About = () => {
   return (
     <Container id="about" className="about pt-2" style={{ minHeight: "600px" }}>
       <Hero title="About me" />
@@ -32,6 +32,6 @@ function About() {
       </Row>
     </Container>
   );
-}
+};
 
 export default About;
