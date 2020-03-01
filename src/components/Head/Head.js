@@ -1,5 +1,5 @@
 import React from "react";
-import "./styles/Head.css";
+import "./Head.css";
 import { Row, Col } from "react-bootstrap";
 import { Link } from "react-scroll";
 

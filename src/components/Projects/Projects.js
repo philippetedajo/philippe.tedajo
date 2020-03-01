@@ -1,5 +1,5 @@
 import React from "react";
-import "./styles/Projects.css";
+import "./Projects.css";
 import Hero from "../toolsComponents/Hero";
 import { Container, Row, Col } from "react-bootstrap";
 import Slides from "../toolsComponents/Slides";

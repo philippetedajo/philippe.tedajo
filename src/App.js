@@ -48,3 +48,6 @@ function App() {
 }
 
 export default App;
+
+/*import { Test1, Test2 } from "./components/test";
+ */
