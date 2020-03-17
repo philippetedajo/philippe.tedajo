@@ -95,5 +95,6 @@ export const GlobalStyles = createGlobalStyle`
   .repo {
     border:  ${({ theme }) => theme.repoBorder};
     background-color:  ${({ theme }) => theme.repoBg};
+    color: ${({ theme }) => theme.text}
   }
   `;
