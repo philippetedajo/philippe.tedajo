@@ -35,22 +35,21 @@ export const GlobalStyles = createGlobalStyle`
 
   .head-container{
     background-color: ${({ theme }) => theme.bgColor} !important;
+    color: ${({ theme }) => theme.textColorInverse} !important
+  }
+  .head-link{
+   
   }
 
   .head-link:hover {
     color: ${({ theme }) => theme.linkColor} !important
-  }
-  
-
-  .wrapper_header{
-  background-color: ${({ theme }) => theme.bgColorInverse};
   }
 
   .wrapper_contact {
   background-image: url("https://www3.assets.heroku.com/assets/home/heroku-is-for-bg-44f6c029946d5cb6d1c7f62360495a078a6e6b42acf3b1428d7cc08573c8b13b.png");
   background-repeat: no-repeat;
   background-size: 1550px;
-  background-position:  center 90px ;
+  background-position:  center 210px ;
   }
   
   .hi, .name, .title-description  {
@@ -70,6 +69,7 @@ export const GlobalStyles = createGlobalStyle`
 ;
   .skills > li{
     border-color: ${({ theme }) => theme.bgColorOp} ;
+    background-color: ${({ theme }) => theme.bgColorOp};
   }
 
   input:focus,
@@ -86,16 +86,10 @@ export const GlobalStyles = createGlobalStyle`
     background-color: ${({ theme }) => theme.btnBgColorOp} !important;
   }
 
-  .footer {
-    background:  ${({ theme }) => theme.bgColorInverse};
-  }
-
   .copyright {
     font-size: 13px;
-    background:  ${({ theme }) => theme.bgtext};
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color:  ${({ theme }) => theme.footerText};
+
   }
 
   .repo {

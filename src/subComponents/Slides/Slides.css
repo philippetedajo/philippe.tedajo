@@ -11,6 +11,11 @@
   justify-content: space-between;
   border-radius: 15px;
   margin: 1rem;
+  box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.16);
+  cursor: pointer;
+}
+
+.repo:hover {
 }
 
 .repo > div > p {
@@ -51,6 +56,10 @@
 .repo-icon {
   height: 20px;
   width: 20px;
+}
+
+.git-link {
+  border: "2px solid " !important;
 }
 
 @media screen and (max-width: 576px) {

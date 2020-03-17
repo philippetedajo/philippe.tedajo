@@ -35,35 +35,38 @@ const Slides = () => {
     return (
       <div className="repos-container mt-5">
         {items.map(repos => (
-          <div key={repos.node_id} className="repo shadow">
-            <div className="repo-title">
-              <p className="repo-name mt-3">{repos.name}</p>
-              <p className="repo-description mt-2">{repos.description}</p>
-            </div>
-            <div className="repo-details">
-              <div className="repo-details-items">
-                <div className="details-items mr-3">
-                  <span className="mr-1">
-                    <Octicon icon={Star} />
+          <a
+            style={{ color: "#333", textDecoration: "none" }}
+            href={repos.html_url}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div href={repos.html_url} key={repos.node_id} className="repo">
+              <div className="repo-title">
+                <p className="repo-name mt-3">{repos.name}</p>
+                <p className="repo-description mt-2">{repos.description}</p>
+              </div>
+              <div className="repo-details">
+                <div className="repo-details-items">
+                  <div className="details-items mr-3">
+                    <span className="mr-1">
+                      <Octicon icon={Star} />
+                    </span>
+                    <p className="repo-stars">{repos.stargazers_count}</p>
+                  </div>
+                  <div className="details-items mr-3">
+                    <span className="mr-1">
+                      <Octicon icon={RepoForked} />
+                    </span>
+                    <p className="repo-forks">{repos.forks_count}</p>
+                  </div>
+                  <span>
+                    <Octicon icon={MarkGithub} />
                   </span>
-                  <p className="repo-stars">{repos.stargazers_count}</p>
                 </div>
-                <div className="details-items mr-3">
-                  <span className="mr-1">
-                    <Octicon icon={RepoForked} />
-                  </span>
-                  <p className="repo-forks">{repos.forks_count}</p>
-                </div>
-                <a
-                  href={repos.html_url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Octicon icon={MarkGithub} />
-                </a>
               </div>
             </div>
-          </div>
+          </a>
         ))}
       </div>
     );

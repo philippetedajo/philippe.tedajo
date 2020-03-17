@@ -5,9 +5,9 @@ import { Link } from "react-scroll";
 
 const Head = props => {
   return (
-    <Row className="head-container" style={{ height: "65px" }}>
+    <Row className="head-container">
       <Col className="head d-flex justify-content-between align-items-center">
-        <p className="profil-link col-6  text-bold">Phil</p>
+        <p className="profil-link col-6  text-bold">Philippe Tedajo</p>
         <div className="nav-link d-flex col-6 ">
           <Link to="projects" className="head-link">
             Projects
@@ -19,7 +19,7 @@ const Head = props => {
             Contact
           </Link>
           <span className="dark-light" onClick={props.toggleTheme}>
-            {props.themeName}
+            {props.icon}
           </span>
         </div>
       </Col>

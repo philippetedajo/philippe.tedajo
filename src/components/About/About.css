@@ -10,10 +10,10 @@
   margin: 1rem;
   border-radius: 3px;
   padding: 0 5px;
+  box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.16);
 }
 
 .profil {
-  border: 2px solid;
   border-radius: 10px;
   height: 250px;
   width: 250px;
@@ -22,7 +22,7 @@
 
 .profil::after {
   content: "";
-  border: 2px solid;
+
   border-radius: 10px;
   height: 250px;
   width: 250px;

@@ -1,4 +1,8 @@
-.loading-container{
-    background-color: black;
-    height: 100vh;
+.loading-container {
+  background-color: #f8f8f8;
+  height: 100vh;
+}
+
+.loading-container > h1 {
+  color: #333;
 }

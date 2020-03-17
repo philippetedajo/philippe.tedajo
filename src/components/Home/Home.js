@@ -22,8 +22,8 @@ const Home = () => {
           />
         </Col>
         <Col className="col-12 w-100 col-lg-8">
-          <p className="hi text-bold">Hi, my name is</p>
-          <h1 className="name">Philippe Tedajo.</h1>
+          <p className="hi text-bold">Hi, i am</p>
+          <h1 className="name">Full Stack JavaScript Developer.</h1>
           <p className="subtitle">I give life to Web projects.</p>
           <p className=" pl-0 title-description mt-md-4">
             I build desktop and mobile web apps that provide intuitive and

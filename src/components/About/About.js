@@ -4,6 +4,22 @@ import { Hero } from "../../subComponents";
 import { Container, Row, Col } from "react-bootstrap";
 
 const About = () => {
+  const skills = [
+    "JavaScript (ES6+)",
+    "HTML",
+    "(S)CSS",
+    "React",
+    "React Native",
+    "Node.js",
+    "Express",
+    "Mongodb",
+    "redux",
+    "Bootstrap",
+    "Styled component"
+  ];
+
+  const listSkills = skills.map(element => <li> {element} </li>);
+
   return (
     <Container id="about" className="about pt-2" style={{ minHeight: "600px" }}>
       <Hero title="About me" />
@@ -16,17 +32,7 @@ const About = () => {
           scratch, from FreeCodeCamp to Pluralsight with a lot of sleepless
           nights. I built a solid foundation in Javascript. Here are few
           technologies I've been working with recently:
-          <ul className="skills mt-3">
-            <li>JavaScript (ES6+)</li>
-            <li>HTML</li>
-            <li>(S)CSS</li>
-            <li>React</li>
-            <li>React Native</li>
-            <li>Node.js</li>
-            <li>Express</li>
-            <li>Bootstrap</li>
-            <li>Styled component</li>
-          </ul>
+          <ul className="skills mt-3">{listSkills}</ul>
         </Col>
         <div className="profil mb-5 mt-4 ml-md-5 shadow"></div>
       </Row>
