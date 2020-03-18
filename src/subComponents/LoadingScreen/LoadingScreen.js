@@ -1,10 +1,16 @@
 import React from "react";
 import "./LoadingScreen.css";
+import { useSpring, animated } from "react-spring";
 
 const LoadingScreen = () => {
+  const fadeIn = useSpring({ opacity: 1, from: { opacity: 0 } });
+
   return (
     <div className="loading-container d-flex align-items-center justify-content-center">
-      <h1>Philippe tedajo</h1>
+      <animated.div style={fadeIn} className="theName">
+        <div className="logo">P</div>
+        <div className="logo-next">hilippe tedajo</div>
+      </animated.div>
     </div>
   );
 };

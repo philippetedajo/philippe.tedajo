@@ -6,3 +6,39 @@
 .loading-container > h1 {
   color: #333;
 }
+
+.theName {
+  display: flex;
+  font-size: 35px;
+  font-weight: bold;
+}
+.logo {
+  width: 55px;
+  height: 55px;
+}
+
+@media screen and (min-width: 576px) {
+  .theName {
+    font-size: 55px;
+    font-weight: bold;
+  }
+  .logo {
+    width: 90px;
+    height: 90px;
+  }
+}
+
+.logo {
+  border: 2px solid;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e9e7e8;
+  border-radius: 5px;
+}
+
+.logo-next {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}

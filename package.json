@@ -15,6 +15,7 @@
     "react-lottie": "^1.2.3",
     "react-scripts": "3.3.1",
     "react-scroll": "^1.7.16",
+    "react-spring": "^8.0.27",
     "styled-components": "^5.0.1"
   },
   "scripts": {
