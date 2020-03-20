@@ -7,8 +7,8 @@ const Head = props => {
   return (
     <Row className="head-container">
       <Col className="head d-flex justify-content-between align-items-center">
-        <p className="profil-link col-6  text-bold">Philippe Tedajo</p>
-        <div className="nav-link d-flex col-6 ">
+        <p className="profil-link col-sm-6 col-8  text-bold">Philippe Tedajo</p>
+        <div className="nav-link d-flex col-sm-6 col-4">
           <Link to="projects" className="head-link">
             Projects
           </Link>
