@@ -26,13 +26,35 @@ const Lotties = props => {
   if (windowWidth > 768) {
     return (
       <div className="d-flex justify-content-center align-items-center">
-        <Lottie options={defaultOptions} height={props.lh} width={props.lw} />
+        <Lottie
+          style={{
+            position: props.largeScreenPositon,
+            left: props.left,
+            top: props.top,
+            right: props.right,
+            bottom: props.bottom
+          }}
+          options={defaultOptions}
+          height={props.lh}
+          width={props.lw}
+        />
       </div>
     );
   } else {
     return (
       <div className="d-flex justify-content-center align-items-center">
-        <Lottie options={defaultOptions} height={props.mh} width={props.mw} />
+        <Lottie
+          style={{
+            position: props.mediumScreenPositon,
+            left: props.left,
+            top: props.top,
+            right: props.right,
+            bottom: props.bottom
+          }}
+          options={defaultOptions}
+          height={props.mh}
+          width={props.mw}
+        />
       </div>
     );
   }

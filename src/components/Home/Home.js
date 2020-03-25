@@ -3,6 +3,7 @@ import "./Home.css";
 import { Container, Row, Col } from "react-bootstrap";
 import { Lotties } from "../../subComponents";
 import Splash from "../../assets/anim/splash.json";
+
 import { useSpring, animated } from "react-spring";
 
 const Home = () => {
@@ -34,9 +35,9 @@ const Home = () => {
               Hi, i am
             </p>
             <h1 style={slideDown} delay="500" className="name">
-              JavaScript Developer.
+              Front-end Developer.
             </h1>
-            <p className="subtitle">I give life to Web projects.</p>
+            <p className="subtitle">Passionate about React & React native.</p>
             <p className=" pl-0 title-description col-lg-8 mt-md-4">
               I build desktop and mobile web apps that provide intuitive and
               pixel-perfect user interfaces.
