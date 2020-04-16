@@ -10,7 +10,7 @@ const Home = () => {
   const slideDown = useSpring({
     config: { duration: 1000 },
     to: { opacity: 1, marginTop: 0 },
-    from: { opacity: 0, marginTop: -50 }
+    from: { opacity: 0, marginTop: -50 },
   });
 
   return (
@@ -35,7 +35,7 @@ const Home = () => {
               Hi, i am
             </p>
             <h1 style={slideDown} delay="500" className="name">
-              Front-end Developer.
+              Full-stack Developer.
             </h1>
             <p className="subtitle">Passionate about React & React native.</p>
             <p className=" pl-0 title-description col-lg-8 mt-md-4">
