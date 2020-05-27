@@ -37,7 +37,7 @@ const Home = () => {
             <h1 style={slideDown} delay="500" className="name">
               Full-stack Developer.
             </h1>
-            <p className="subtitle">Passionate about React & React native.</p>
+            <p className="subtitle">Passionate about Javascript.</p>
             <p className=" pl-0 title-description col-lg-8 mt-md-4">
               I build desktop and mobile web apps that provide intuitive and
               pixel-perfect user interfaces.
