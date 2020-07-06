@@ -46,7 +46,7 @@ const Home = () => {
               <q>
                 <i>Chase your passion, not your pension.</i>
               </q>
-              <b> Denis Waitley.</b>
+              <b> Denis-Waitley.</b>
             </p>
           </animated.div>
         </Col>
