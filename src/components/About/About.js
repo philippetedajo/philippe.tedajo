@@ -15,10 +15,13 @@ const About = () => {
     "Mongodb",
     "redux",
     "Bootstrap",
-    "Styled component"
+    "Styled component",
+    "GraphQL",
+    "Firebase",
+    "MongoDB",
   ];
 
-  const listSkills = skills.map(element => <li> {element} </li>);
+  const listSkills = skills.map((element) => <li> {element} </li>);
 
   return (
     <Container id="about" className="about pt-2" style={{ minHeight: "600px" }}>

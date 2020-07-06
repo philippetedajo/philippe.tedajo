@@ -35,7 +35,7 @@ const Home = () => {
               Hi, i am
             </p>
             <h1 style={slideDown} delay="500" className="name">
-              Full-stack Developer.
+              Front-end Developer.
             </h1>
             <p className="subtitle">Passionate about Javascript.</p>
             <p className=" pl-0 title-description col-lg-8 mt-md-4">
