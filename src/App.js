@@ -1,64 +1,38 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
+import { Portofolio } from "./pages";
 import { ThemeProvider } from "styled-components";
-import { lightTheme, darkTheme } from "./theme/Theme";
-import { GlobalStyles } from "./theme/GlobalStyles";
-import { Container, Row } from "react-bootstrap";
-import { About, Contact, Footer, Head, Home, Projects } from "./components";
-import { LoadingScreen } from "./subComponents";
-import { ReactComponent as Sun } from "./assets/icons/sun-regular.svg";
-import { ReactComponent as Moon } from "./assets/icons/moon-regular.svg";
+import { darkTheme, lightTheme } from "./themes/Theme";
+import { GlobalStyles } from "./themes/Global";
+import { Helmet } from "react-helmet";
 
-const App = () => {
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 1500);
-  }, []);
-
-  const [setup, setSetup] = useState({
-    theme: "lightTheme",
-    themeIcon: <Moon />
-  });
-
-  const toggleTheme = () => {
-    if (setup.theme === "lightTheme") {
-      setSetup({
-        theme: "darkTheme",
-        themeIcon: <Sun className="icon-swt" />
-      });
-    } else {
-      setSetup({
-        theme: "lightTheme",
-        themeIcon: <Moon className="icon-swt" />
-      });
-    }
+class App extends React.Component {
+  state = {
+    theme: "dark",
   };
 
-  if (isLoading) {
-    return <LoadingScreen />;
-  } else {
+  handleOnThemeChange = () => {
+    this.state.theme === "light"
+      ? this.setState({ theme: "dark" })
+      : this.setState({ theme: "light" });
+  };
+
+  render() {
     return (
       <ThemeProvider
-        theme={setup.theme === "lightTheme" ? lightTheme : darkTheme}
+        theme={this.state.theme === "light" ? darkTheme : lightTheme}
       >
-        <Container fluid={true} className="App">
-          <GlobalStyles />
-          <Row className="wrapper_header d-flex flex-column align-items-center ">
-            <Head toggleTheme={toggleTheme} icon={setup.themeIcon} />
-            <Home />
-          </Row>
-          <Projects />
-          <About />
-          <Row className="wrapper_contact d-flex flex-column ">
-            <Contact />
-            <Footer />
-          </Row>
-        </Container>
+        <Helmet>
+          <meta charSet="utf-8" />
+          <title>Philippe Tedajo</title>
+        </Helmet>
+        <GlobalStyles />
+        <Portofolio
+          allProps={this.state.theme}
+          onThemeChange={this.handleOnThemeChange}
+        ></Portofolio>
       </ThemeProvider>
     );
   }
-};
+}
 
 export default App;

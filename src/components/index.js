@@ -1,6 +1,7 @@
-export { default as About } from "./About/About";
-export { default as Contact } from "./Contact/Contact";
-export { default as Footer } from "./Footer/Footer";
-export { default as Head } from "./Head/Head";
-export { default as Home } from "./Home/Home";
-export { default as Projects } from "./Projects/Projects";
+export { default as ProgressBar } from "./ProgressBar";
+export { default as Repo } from "./Repo";
+export { default as Title } from "./Title";
+export { default as Carousel } from "./Carousel";
+export { default as Lotties } from "./Lotties";
+export { default as Cursor } from "./Cursor";
+export { default as Social } from "./Social";
