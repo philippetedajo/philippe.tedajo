@@ -20,9 +20,9 @@ const Test = () => {
         sapiente?
       </p>
       <motion.ul animate="visible" variants={list}>
-        <motion.li variants={item}>hello</motion.li>
-        <motion.li variants={item}>hello you</motion.li>
-        <motion.li variants={item}> hello you are there</motion.li>
+        <motion.li variants={item}>foo</motion.li>
+        <motion.li variants={item}>foo</motion.li>
+        <motion.li variants={item}>foo</motion.li>
       </motion.ul>
     </div>
   );

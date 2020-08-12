@@ -14,8 +14,8 @@ const StayTuned = () => {
             className="col-md-5 col-8 mb-5"
             style={{ textAlign: "center", fontWeight: 600 }}
           >
-            Bien que n'etant pas en recherche d'emploi pour le moment, je suis
-            ouvert pour toute nouvelles opportunités.
+            Although not looking for a job at the moment, I am open to any new
+            opportunities.
           </p>
           <form className="col-lg-6">
             <div class="form-row">
