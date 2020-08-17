@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import { ReactComponent as LeftArrow } from "../assets/carousel/left-arrow.svg";
 import { ReactComponent as RightArrow } from "../assets/carousel/right-arrow.svg";
-import { TweenLite, Power3 } from "gsap";
 
 class Carousel extends React.Component {
   handleOnClickPrev = () => {
@@ -54,10 +53,6 @@ class Carousel extends React.Component {
     };
     this.artObject = null;
     this.artAnimation = null;
-  }
-
-  hey() {
-    this.artAnimation = TweenLite.to(this.artObject, 1, { x: 100 });
   }
 
   render() {

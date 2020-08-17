@@ -2,12 +2,10 @@ import React from "react";
 import styled from "styled-components";
 import ProfilePicture from "../pictures/profile.png";
 import { FiToggleRight, FiToggleLeft } from "react-icons/fi";
+import { BsDownload } from "react-icons/bs";
+import { Button } from "react-bootstrap";
 
 class Header extends React.Component {
-  handleOnclikResume = () => {
-    console.log("show resume...");
-  };
-
   render() {
     const themeSwitch =
       this.props.onALLthemeProps === "light" ? (
@@ -27,33 +25,24 @@ class Header extends React.Component {
     return (
       <HeaderContainer className="mb-4">
         <Head>
-          <Name className="font-name">Philippe Tedajo</Name>
-          <Switcher>{themeSwitch}</Switcher>
+          <Box>
+            <a
+              href="https://github.com/philippetedajo"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <Profile alt="profile" src={ProfilePicture} />
+            </a>
+            <Name className="font-name">Philippe Tedajo</Name>
+          </Box>
         </Head>
-
-        <ProfileContainer>
-          <a
-            href="https://github.com/philippetedajo"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            <Profile alt="profile" src={ProfilePicture} />
-          </a>
-          <SubText>Building Universes One Pixel at a Time</SubText>
-        </ProfileContainer>
-        <ShowResume
-          animate={{ y: 0, opacity: 1 }}
-          initial={{ y: -30, opacity: 0 }}
-          transition={{ duration: 1, ease: "easeOut", delay: 0.9 }}
-        >
-          <button
-            onClick={this.handleOnclikResume}
-            style={{ background: "#00D1B2", color: "#fff" }}
-            type="button"
-            className="btn mt-4 mt-sm-0"
-          >
-            Resume
-          </button>
+        <SwitcherContainer>
+          <Switcher>{themeSwitch} </Switcher>
+        </SwitcherContainer>
+        <ShowResume>
+          <Btn>
+            Resume <BsDownload className="ml-2" />
+          </Btn>
         </ShowResume>
       </HeaderContainer>
     );
@@ -75,28 +64,29 @@ const Head = styled.div`
   justify-content: space-between;
   align-items: center;
 `;
+
+const Box = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+`;
+
 const Name = styled.div`
   text-decoration: none;
-  margin-bottom: 2rem;
   font-size: 35px;
+  margin-left: 1rem;
   font-weight: bold;
   background: -webkit-linear-gradient(315deg, #2a2a72 0%, #009ffd 45%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 `;
 const Switcher = styled.div`
-  margin-top: 6.5rem;
+  margin: 1.5rem 0;
   @media (max-width: 540px) {
     margin-top: 5rem;
   }
 `;
 
-/* Profil */
-const ProfileContainer = styled.div`
-  display: flex;
-  align-items: flex-end;
-  margin: 1.5rem 0;
-`;
 const Profile = styled.img`
   padding: 4px;
   height: 80px;
@@ -111,13 +101,18 @@ const Profile = styled.img`
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.85);
   }
 `;
-const SubText = styled.h6`
-  margin: 0 1rem;
-  color: #73737d;
+
+const SwitcherContainer = styled.div`
+  display: flex;
+  justify-content: flex-end;
 `;
 
-/* Resume */
 const ShowResume = styled.div`
   display: flex;
   justify-content: flex-end;
+`;
+
+const Btn = styled(Button)`
+  display: flex;
+  align-items: center;
 `;

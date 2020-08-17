@@ -24,7 +24,7 @@ const StayTuned = () => {
                   for="inputEmail4"
                   style={{ color: "#73737d", fontWeight: 600 }}
                 >
-                  Mail
+                  EMail
                 </label>
                 <input
                   type="email"

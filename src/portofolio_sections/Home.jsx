@@ -6,7 +6,9 @@ const Home = () => {
   return (
     <div className="mt-5 pt-3">
       <Col className="mb-5 p-0">
-        <Title className="font-title">Front-end Developer</Title>
+        <Title className="font-title">
+          Building Universes One Pixel at a Time
+        </Title>
       </Col>
       <P>
         I build desktop and mobile web apps that provide intuitive and
