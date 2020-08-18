@@ -33,7 +33,10 @@ class Header extends React.Component {
             >
               <Profile alt="profile" src={ProfilePicture} />
             </a>
-            <Name className="font-name">Philippe Tedajo</Name>
+            <div>
+              <Name className="font-name">Philippe Tedajo</Name>
+              <Subtitle>Front-end Developer</Subtitle>
+            </div>
           </Box>
         </Head>
         <SwitcherContainer>
@@ -79,6 +82,11 @@ const Name = styled.div`
   background: -webkit-linear-gradient(315deg, #2a2a72 0%, #009ffd 45%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+`;
+
+const Subtitle = styled.div`
+  margin-left: 1rem;
+  color: rgb(115, 115, 125);
 `;
 const Switcher = styled.div`
   margin: 1.5rem 0;
