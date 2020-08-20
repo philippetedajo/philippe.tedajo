@@ -26,12 +26,6 @@ If you would like to download the code and try it for yourself:
 
 [Tedajo Philippe](https://github.com/philippetedajo)
 
-## :coffee: Donate
-
-If you like this project and wish to say to say thanks - I'm always open to a coffee!
-
-<a href="https://www.buymeacoffee.com/URQbkog" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/black_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" ></a>
-
 ## 🌴 License
 
 [MIT](https://github.com/philippetedajo/The-Developer-Portofolio/blob/master/LICENSE)
