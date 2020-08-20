@@ -4,7 +4,6 @@ import { ThemeProvider } from "styled-components";
 import { darkTheme, lightTheme } from "./themes/Theme";
 import { GlobalStyles } from "./themes/Global";
 import { Helmet } from "react-helmet";
-import PdfViewer from "./components/PdfViewer.jsx";
 
 class App extends React.Component {
   state = {
@@ -31,7 +30,6 @@ class App extends React.Component {
           allProps={this.state.theme}
           onThemeChange={this.handleOnThemeChange}
         ></Portofolio>
-        <PdfViewer></PdfViewer>
       </ThemeProvider>
     );
   }
