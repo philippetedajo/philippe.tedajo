@@ -35,7 +35,6 @@ export default Repo;
 
 const Anchor = styled.a`
   width: 15rem;
-  background: black;
   height: 135px;
   width: 240px;
   margin: 1rem;
@@ -47,6 +46,9 @@ const Anchor = styled.a`
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
   border-radius: 5px !important;
   padding: 1rem;
+  background-image: url(${Sample});
+  background-size: contain;
+
   &:hover {
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
     color: #0994f0;
