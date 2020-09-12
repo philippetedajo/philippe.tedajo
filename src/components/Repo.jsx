@@ -48,10 +48,13 @@ const Anchor = styled.a`
   padding: 1rem;
   background-image: url(${Sample});
   background-size: contain;
+  -webkit-transition: transform 1s cubic-bezier(0.25, 1, 0.25, 1);
 
   &:hover {
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
     color: #0994f0;
+    transform: scale(1.1);
+    -webkit-transition: transform 1s cubic-bezier(0.25, 1, 0.25, 1);
   }
 `;
 
@@ -63,8 +66,6 @@ const Meta = styled.div`
 /* 
 
 
-    -webkit-transition: color 1s cubic-bezier(.25,1,.25,1),background-color 1s cubic-bezier(.25,1,.25,1);
-    transition: color 1s cubic-bezier(.25,1,.25,1),background-color 1s cubic-bezier(.25,1,.25,1);
 
 
 */
