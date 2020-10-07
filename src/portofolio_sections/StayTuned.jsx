@@ -18,44 +18,33 @@ const StayTuned = () => {
             opportunities.
           </p>
           <form className="col-lg-6">
-            <div class="form-row">
-              <div class="form-group col-md-6">
-                <label
-                  for="inputEmail4"
-                  style={{ color: "#73737d", fontWeight: 600 }}
-                >
+            <div className="form-row">
+              <div className="form-group col-md-6">
+                <label style={{ color: "#73737d", fontWeight: 600 }}>
                   EMail
                 </label>
                 <input
                   type="email"
-                  class="form-control"
+                  className="form-control"
                   id="inputEmail4"
                   placeholder="Adresse Email"
                 />
               </div>
-              <div class="form-group col-md-6">
-                <label
-                  style={{ color: "#73737d", fontWeight: 600 }}
-                  for="inputText"
-                >
-                  Nom
-                </label>
+              <div className="form-group col-md-6">
+                <label style={{ color: "#73737d", fontWeight: 600 }}>Nom</label>
                 <input
                   type="text"
-                  class="form-control"
+                  className="form-control"
                   placeholder="Nom complet"
                 ></input>
               </div>
             </div>
-            <div class="form-group">
-              <label
-                style={{ color: "#73737d", fontWeight: 600 }}
-                for="exampleFormControlTextarea1"
-              >
+            <div className="form-group">
+              <label style={{ color: "#73737d", fontWeight: 600 }}>
                 Laisser un message
               </label>
               <textarea
-                class="form-control"
+                className="form-control"
                 id="exampleFormControlTextarea1"
                 rows="3"
               ></textarea>
