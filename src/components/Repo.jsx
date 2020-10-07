@@ -6,10 +6,10 @@ import { StarIcon, RepoForkedIcon } from "@primer/octicons-react";
 
 class Repo extends React.Component {
   render() {
-    const { name, forks_count, stargazers_count } = this.props.repoData;
+    const { name, forks_count, stargazers_count, html_url } = this.props.repoData;
     return (
       <Anchor
-        href="https://github.com/philippetedajo"
+        href={html_url}
         rel="noopener noreferrer"
         target="_blank"
       >
