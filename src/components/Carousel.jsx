@@ -1,86 +1,76 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { ReactComponent as LeftArrow } from "../assets/carousel/left-arrow.svg";
 import { ReactComponent as RightArrow } from "../assets/carousel/right-arrow.svg";
 
-class Carousel extends React.Component {
-  handleOnClickPrev = () => {
-    let index = this.state.activeIndex; //0
-    let artWorkLength = this.state.artWorkLength; //4
-    index < 1 ? (index = artWorkLength - 1) : index--;
+let artWork = [
+  {
+    name: "Alias Facere",
+    title: "consectetur sit, USA",
+    testimonials:
+      "sit amet consectetur adipisicingptio obcaecati quam ad sit amet adipisicing elit.0",
+    image: `${require("../assets/carousel/aiony-haust-3TLl_97HNJo-unsplash.jpg")}`,
+    link: "",
+  },
+  {
+    name: "ptio obcae",
+    title: "obcaecati",
+    testimonials: "ptio obcaecati quam ad numquam.",
+    image: `${require("../assets/carousel/milan-popovic-kOnmHdLJTNI-unsplash.jpg")}`,
+    link: "",
+  },
+  {
+    name: "stias suscipit aut ",
+    title: "suscipit",
+    testimonials: "molestias suscipit aut et accusamus alias facer.",
+    image: `${require("../assets/carousel/oladimeji-odunsi-tUUmR82pq68-unsplash.jpg")}`,
+    link: "",
+  },
+];
 
-    this.setState({ activeIndex: index });
+const Carousel = () => {
+  const [params, setParams] = useState({
+    activeIndex: 0,
+    artWorkLength: artWork.length,
+  });
+
+  const previous = () => {
+    let index = params.activeIndex;
+    let totalArtwork = params.artWorkLength;
+    index < 1 ? (index = totalArtwork - 1) : index--;
+    setParams({ ...params, activeIndex: index });
   };
 
-  handleOnClickNext = () => {
-    let index = this.state.activeIndex;
-    let artWorkLength = this.state.artWorkLength;
-    index === artWorkLength - 1 ? (index = 0) : index++;
-
-    this.setState({ activeIndex: index });
+  const next = () => {
+    let index = params.activeIndex;
+    let totalArtwork = params.artWorkLength;
+    index === totalArtwork - 1 ? (index = 0) : index++;
+    setParams({ ...params, activeIndex: index });
   };
 
-  artWork = [
-    {
-      name: "Alias Facere",
-      title: "consectetur sit, USA",
-      testimonials:
-        "sit amet consectetur adipisicingptio obcaecati quam ad sit amet adipisicing elit.0",
-      image: `${require("../assets/carousel/aiony-haust-3TLl_97HNJo-unsplash.jpg")}`,
-      link: "",
-    },
-    {
-      name: "ptio obcae",
-      title: "obcaecati",
-      testimonials: "ptio obcaecati quam ad numquam.",
-      image: `${require("../assets/carousel/milan-popovic-kOnmHdLJTNI-unsplash.jpg")}`,
-      link: "",
-    },
-    {
-      name: "stias suscipit aut ",
-      title: "suscipit",
-      testimonials: "molestias suscipit aut et accusamus alias facer.",
-      image: `${require("../assets/carousel/oladimeji-odunsi-tUUmR82pq68-unsplash.jpg")}`,
-      link: "",
-    },
-  ];
+  const artwork = artWork[params.activeIndex];
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      activeIndex: 0,
-      artWorkLength: this.artWork.length,
-    };
-    this.artObject = null;
-    this.artAnimation = null;
-  }
-
-  render() {
-    const artwork = this.artWork[this.state.activeIndex];
-    return (
-      <X>
-        <Slider>
-          <ArrowLeft onClick={this.handleOnClickPrev} />
-          <Inner>
-            <TileContainer>
-              <Tile src={artwork.image} alt={artwork.title}></Tile>
-            </TileContainer>
-            <Content>
-              <Item>
-                <Testimonials>{artwork.testimonials}</Testimonials>
-                <Name ref={(div) => (this.artObject = div)}>
-                  {artwork.name}
-                </Name>
-                <Title>{artwork.title} </Title>
-              </Item>
-            </Content>
-          </Inner>
-          <ArrowRight onClick={this.handleOnClickNext} />
-        </Slider>
-      </X>
-    );
-  }
-}
+  return (
+    <X>
+      <Slider>
+        <ArrowLeft onClick={previous} />
+        <Inner>
+          <TileContainer>
+            <Tile src={artwork.image} alt={artwork.title}></Tile>
+          </TileContainer>
+          <Content>
+            <Item>
+              <Testimonials>{artwork.testimonials}</Testimonials>
+              <Name>{artwork.name}</Name>
+              <Title>{artwork.title} </Title>
+            </Item>
+          </Content>
+        </Inner>
+        <ArrowRight onClick={next} />
+      </Slider>
+    </X>
+  );
+};
 
 export default Carousel;
 
