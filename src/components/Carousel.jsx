@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
+import { TweenMax } from "gsap";
 import styled from "styled-components";
 import { ReactComponent as LeftArrow } from "../assets/carousel/left-arrow.svg";
 import { ReactComponent as RightArrow } from "../assets/carousel/right-arrow.svg";
@@ -29,10 +30,22 @@ let artWork = [
 ];
 
 const Carousel = () => {
+  let testimonialsRef = useRef(null);
+
+  const [animation, setAnimation] = useState(null);
   const [params, setParams] = useState({
     activeIndex: 0,
     artWorkLength: artWork.length,
   });
+
+  /*   useEffect(() => {
+    setAnimation(
+      TweenMax.to(testimonialsRef, 10, {
+        rotation: 360,
+        repeat: -1,
+      }).pause()
+    );
+  }, []); */
 
   const previous = () => {
     let index = params.activeIndex;
@@ -60,7 +73,14 @@ const Carousel = () => {
           </TileContainer>
           <Content>
             <Item>
-              <Testimonials>{artwork.testimonials}</Testimonials>
+              <Testimonials
+                ref={(element) => {
+                  testimonialsRef = element;
+                }}
+              >
+                {artwork.testimonials}
+              </Testimonials>
+
               <Name>{artwork.name}</Name>
               <Title>{artwork.title} </Title>
             </Item>
