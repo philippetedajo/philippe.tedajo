@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import { TweenMax } from "gsap";
+import { TweenLite, Power3 } from "gsap";
 import styled from "styled-components";
 import { ReactComponent as LeftArrow } from "../assets/carousel/left-arrow.svg";
 import { ReactComponent as RightArrow } from "../assets/carousel/right-arrow.svg";
@@ -31,33 +31,31 @@ let artWork = [
 
 const Carousel = () => {
   let testimonialsRef = useRef(null);
+  let nameRef = useRef(null);
+  let titleRef = useRef(null);
+  let pictureRef = useRef(null);
 
-  const [animation, setAnimation] = useState(null);
   const [params, setParams] = useState({
     activeIndex: 0,
     artWorkLength: artWork.length,
   });
 
-  /*   useEffect(() => {
-    setAnimation(
-      TweenMax.to(testimonialsRef, 10, {
-        rotation: 360,
-        repeat: -1,
-      }).pause()
-    );
-  }, []); */
+  const [animationSettings, setAnimationSettings] = useState({ x: 0 });
+  const [hasChanged, setHasChanged] = useState(false);
+
+  let index = params.activeIndex;
 
   const previous = () => {
-    let index = params.activeIndex;
     let totalArtwork = params.artWorkLength;
     index < 1 ? (index = totalArtwork - 1) : index--;
+    setHasChanged(true);
     setParams({ ...params, activeIndex: index });
   };
 
   const next = () => {
-    let index = params.activeIndex;
     let totalArtwork = params.artWorkLength;
     index === totalArtwork - 1 ? (index = 0) : index++;
+    setHasChanged(true);
     setParams({ ...params, activeIndex: index });
   };
 
@@ -69,7 +67,13 @@ const Carousel = () => {
         <ArrowLeft onClick={previous} />
         <Inner>
           <TileContainer>
-            <Tile src={artwork.image} alt={artwork.title}></Tile>
+            <Tile
+              ref={(element) => {
+                pictureRef = element;
+              }}
+              src={artwork.image}
+              alt={artwork.title}
+            ></Tile>
           </TileContainer>
           <Content>
             <Item>
@@ -81,8 +85,20 @@ const Carousel = () => {
                 {artwork.testimonials}
               </Testimonials>
 
-              <Name>{artwork.name}</Name>
-              <Title>{artwork.title} </Title>
+              <Name
+                ref={(element) => {
+                  nameRef = element;
+                }}
+              >
+                {artwork.name}
+              </Name>
+              <Title
+                ref={(element) => {
+                  titleRef = element;
+                }}
+              >
+                {artwork.title}{" "}
+              </Title>
             </Item>
           </Content>
         </Inner>
@@ -200,10 +216,8 @@ const Item = styled.div`
   position: absolute;
   margin: 0 0 0 4rem;
   transition: all 0.3s;
-  opacity: 0;
   width: 340px;
   text-align: justify;
-  opacity: 1;
 
   @media (max-width: 992px) {
     margin: 1.5rem 0;
