@@ -1,0 +1,250 @@
+html,
+body {
+  font-family: "ddin", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+  "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  margin: 0;
+  padding: 0;
+  background: #000;
+  color: #fff;
+}
+h2 {
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-family: "ddinbold", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+  "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+p {
+  line-height: 2rem;
+  letter-spacing: 1.5px;
+}
+h6 {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: "ddinbold", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+  "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  letter-spacing: 2px;
+}
+input {
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom: 1px solid #717171;
+  background-color: transparent;
+  color: #cecece;
+  outline: none;
+  width: 200px;
+}
+a {
+  color: #fff;
+}
+
+//layout  ================================================================================================
+.full-layout {
+  @media (min-width: 768px) {
+    display: flex;
+  }
+}
+
+.full-content {
+  @media (min-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+  }
+}
+
+.header_container {
+  @media (max-width: 768px) {
+    display: none !important;
+  }
+  @media (min-width: 768px) {
+    width: 10%;
+  }
+  .header {
+    height: 100%;
+    position: fixed;
+    .inner-header {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      .logo {
+        flex: 1.2;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        a {
+          text-decoration: none;
+          font-family: "ddinbold", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+          "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+          font-size: 70px;
+        }
+      }
+      .navigation {
+        display: flex;
+        flex-direction: column;
+        flex: 3.5;
+        align-items: center;
+        a {
+          transform: rotate(-90deg);
+          margin-top: 70px;
+          letter-spacing: 1.75px;
+          font-size: 15px;
+          font-family: "ddinbold", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+          "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+          text-transform: uppercase;
+          text-decoration: none;
+        }
+      }
+      .social {
+        flex: 1.5;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        visibility: hidden;
+        a {
+          opacity: 0;
+          margin: 5px 0;
+          cursor: pointer;
+          transition: all 0.3s;
+        }
+        a:hover {
+          transition: all 0.3s;
+          transform: scale(1.5);
+        }
+      }
+    }
+  }
+}
+
+.header_responsive_container {
+  height: 6rem;
+  position: absolute;
+  width: 100%;
+  z-index: 99;
+  @media (min-width: 768px) {
+    display: none !important;
+  }
+  .wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 50%;
+    grid-template-rows: 1fr;
+    .logo {
+      a {
+        @media (max-width: 768px) {
+          font-size: 60px;
+          margin-left: 1.5rem;
+          font-family: "ddinbold", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+          "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        }
+      }
+    }
+    .navigation {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: #000000;
+      pointer-events: none;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      backdrop-filter: blur(10px);
+      z-index: 9;
+      opacity: 0; //******
+      a {
+        color: #fff !important;
+        font-weight: bold;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin: 2rem 0;
+      }
+
+    }
+  }
+}
+
+.active{
+  border: 1px solid red !important
+}
+
+//Components ===============================================================================================
+
+.arrow-down {
+  position: absolute;
+  top: 88%;
+  left: calc(90% - 15px);
+  animation: scroll 2.8s infinite ease-in-out;
+  @keyframes scroll {
+    0% {
+      transform: translateY(0);
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(45px) scale(0.9);
+      opacity: 0;
+    }
+  }
+  @media (max-width: 992px) {
+    left: calc(50% - 15px);
+  }
+}
+
+.cursor{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  z-index: 999;
+}
+
+.cursor-follower{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  background-color: darkred;
+  opacity: .6;
+}
+
+
+//page Transitions ================================================================================================
+
+.page-enter{
+  opacity: 0;
+}
+.page-enter-active{
+  opacity: 1;
+  transition: opacity 400ms;
+  transition-delay:  600ms;
+}
+.page-exit{
+  opacity: 1;
+}
+.page-exit-active{
+  opacity: 0;
+  transition: opacity 400ms;
+}
+
+
+
