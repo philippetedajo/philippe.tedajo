@@ -1,33 +1,49 @@
-# The_Developer_Portofolio
+[![Netlify Status](https://api.netlify.com/api/v1/badges/0643e551-0fef-4f57-9d3c-29d576f3e06c/deploy-status)](https://app.netlify.com/sites/gatsby-personal-starter-blog/deploys)
 
-[![License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/philippetedajo/The-Developer-Portofolio/blob/master/LICENSE)
+<img alt="screenshot" src="./screenshot.gif">
 
-<p>
-  <a href="https://app.netlify.com/sites/philippetedajo/deploys" target="_blank">
-    <img src="https://api.netlify.com/api/v1/badges/1963b488-7b78-48c9-9e2d-6fb5e47ab3af/deploy-status" alt="Netlify Status" />
-  </a>
-</p>
+This is the search-enabled version of Gatsby Personal Starter Blog!
 
-A is a responsive [React](http://facebook.github.io/react/index.html) portofolio for developers
+## 🚀 Quick start
 
-## 🚀 Installation
+1.  **Create a Gatsby site.**
 
-[node.js](http://nodejs.org/download/) is required to get `npm`.
+    Use the Gatsby CLI to create a new site, specifying the blog starter.
 
-If you would like to download the code and try it for yourself:
+    ```sh
+    # create a new Gatsby site using the blog starter
+    gatsby new my-blog-starter https://github.com/thomaswang/gatsby-personal-starter-blog
+    ```
 
-1. Clone the repo: `https://github.com/philippetedajo/The-Developer-Portofolio.git`
-2. Change directory `cd the_developer_portofolio`
-3. Install packages: `npm install`
-4. Start project: `npm start`
-5. Open your browser at: `http://localhost:3000`
+1.  **Start developing.**
 
-## 🐾 Author
+    Navigate into your new site’s directory and start it up.
 
-[Tedajo Philippe](https://github.com/philippetedajo)
+    ```sh
+    cd my-blog-starter/
+    gatsby develop
+    ```
 
-## 🌴 License
+1.  **Open the source code and start editing!**
 
-[MIT](https://github.com/philippetedajo/The-Developer-Portofolio/blob/master/LICENSE)
+    Your site is now running at `http://localhost:8000`!
 
-You are welcome to use this however you wish within the MIT license, but please retain [my credentials](https://philippetedajo.com) and links back to [this repo](https://github.com/philippetedajo/The-Developer-Portofolio).
+    _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
+
+    Open the `my-blog-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
+
+## 🎓 Learning Gatsby
+
+Looking for more guidance? Full documentation for Gatsby lives [on the website](https://www.gatsbyjs.org/). Here are some places to start:
+
+- **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.org/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
+
+- **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.org/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
+
+## 📔 Learning Netlify CMS with Gatsby
+
+Start from [this point](https://www.gatsbyjs.org/docs/sourcing-from-netlify-cms/#authenticating-with-github) in the Gatsby documentation to finish the set up for your personal Netlify CMS with authentication.
+
+## 💫 Deploy
+
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/thomaswangio/gatsby-personal-starter-blog)
