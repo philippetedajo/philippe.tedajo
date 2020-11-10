@@ -1,23 +1,21 @@
-import React from "react"
-import { Link, graphql } from "gatsby"
-
-import Bio from "../components/bio"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import Button from "../components/button"
-import SearchPosts from "../components/searchPosts"
+import React from "react";
+import { Link, graphql } from "gatsby";
+import SEO from "../components/seo";
+import Button from "../components/button";
+import SearchPosts from "../components/searchPosts";
+import "../styles/blog.css";
 
 class Blog extends React.Component {
   render() {
-    const { data, navigate, location } = this.props
-    const siteTitle = data.site.siteMetadata.title
-    const posts = data.allMdx.edges
-    const localSearchBlog = data.localSearchBlog
+    const { data, navigate, location } = this.props;
+    const siteTitle = data.site.siteMetadata.title;
+    const posts = data.allMdx.edges;
+    const localSearchBlog = data.localSearchBlog;
 
     return (
-      <Layout location={this.props.location} title={siteTitle}>
+      <div className="container mt-5 pt-5" title={siteTitle}>
         <SEO title="All posts" />
-        <Bio />
+        <h1 className="title-blog">Welcome to my blog</h1>
         <SearchPosts
           posts={posts}
           localSearchBlog={localSearchBlog}
@@ -27,12 +25,12 @@ class Blog extends React.Component {
         <Link to="/">
           <Button marginTop="85px">Go Home</Button>
         </Link>
-      </Layout>
-    )
+      </div>
+    );
   }
 }
 
-export default Blog
+export default Blog;
 
 export const pageQuery = graphql`
   query {
@@ -61,4 +59,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;
