@@ -81,14 +81,12 @@ const IndexPage = () => {
         </div>
       </div>
       <div className="arrow-down">
-        <AnchorLink to="/#about" title="About">
-          <img
-            style={{ height: "28px" }}
-            src={arrow_down}
-            alt="arrow-down"
-            ref={scroller}
-          />
-        </AnchorLink>
+        <img
+          style={{ height: "28px" }}
+          src={arrow_down}
+          alt="arrow-down"
+          ref={scroller}
+        />
       </div>
     </Container>
   )
