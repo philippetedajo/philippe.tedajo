@@ -2,7 +2,7 @@ import React, { useRef, useEffect } from "react"
 import { gsap } from "gsap"
 import { FaTwitter, FaGithub, FaLinkedin } from "react-icons/fa"
 import { AnchorLink } from "gatsby-plugin-anchor-links"
-
+//working on header
 const Header = () => {
   const logoRef = useRef(null)
   const aboutRef = useRef(null)
