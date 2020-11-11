@@ -88,7 +88,7 @@ a {
         flex-direction: column;
         flex: 3.5;
         align-items: center;
-        a {
+        .item {
           transform: rotate(-90deg);
           margin-top: 70px;
           letter-spacing: 1.75px;
