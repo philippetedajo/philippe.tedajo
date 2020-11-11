@@ -1,19 +1,13 @@
-.w-picture-about {
-  width: 50%;
+.w-banner-about {
+  width: 75%;
   overflow: hidden;
 }
-.picture-about {
+.banner-about {
   width: 100%;
 }
 .w-title-about {
-  height: 80px;
   overflow: hidden;
 }
 .w-subtitle-about {
-  height: 160px;
-  overflow: hidden;
-}
-.w-project-links-about {
-  height: 20px;
   overflow: hidden;
 }

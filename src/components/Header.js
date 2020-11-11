@@ -6,6 +6,7 @@ import { FaTwitter, FaGithub, FaLinkedin } from "react-icons/fa"
 const Header = () => {
   const logoRef = useRef(null)
   const aboutRef = useRef(null)
+  const workRef = useRef(null)
   const homeRef = useRef(null)
   const contactRef = useRef(null)
 
@@ -20,13 +21,16 @@ const Header = () => {
       delay: 0.5,
       scale: 1.5,
     })
-    gsap.from([homeRef.current, aboutRef.current, contactRef.current], {
-      duration: 0.7,
-      autoAlpha: 0,
-      y: 25,
-      ease: "none",
-      stagger: 0.5,
-    })
+    gsap.from(
+      [homeRef.current, workRef.current, aboutRef.current, contactRef.current],
+      {
+        duration: 0.7,
+        autoAlpha: 0,
+        y: 25,
+        ease: "none",
+        stagger: 0.5,
+      }
+    )
     gsap.to([twitterRef.current, githubRef.current, linkedinRef.current], {
       duration: 0.5,
       opacity: 1,
@@ -49,6 +53,9 @@ const Header = () => {
           <div className="navigation">
             <Link activeClassName="active" to="#home" ref={homeRef}>
               Home
+            </Link>
+            <Link activeClassName="active" to="#work" ref={workRef}>
+              Work
             </Link>
             <Link activeClassName="active" to="#about" ref={aboutRef}>
               About
