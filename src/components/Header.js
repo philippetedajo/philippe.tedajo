@@ -1,17 +1,17 @@
-import React, { useRef, useEffect } from "react";
-import { Link } from "gatsby";
-import { gsap, Power3 } from "gsap";
-import { FaTwitter, FaGithub, FaLinkedin } from "react-icons/fa";
+import React, { useRef, useEffect } from "react"
+import { Link } from "gatsby"
+import { gsap, Power3 } from "gsap"
+import { FaTwitter, FaGithub, FaLinkedin } from "react-icons/fa"
 
 const Header = () => {
-  const logoRef = useRef(null);
-  const aboutRef = useRef(null);
-  const homeRef = useRef(null);
-  const contactRef = useRef(null);
+  const logoRef = useRef(null)
+  const aboutRef = useRef(null)
+  const homeRef = useRef(null)
+  const contactRef = useRef(null)
 
-  const twitterRef = useRef(null);
-  const githubRef = useRef(null);
-  const linkedinRef = useRef(null);
+  const twitterRef = useRef(null)
+  const githubRef = useRef(null)
+  const linkedinRef = useRef(null)
 
   useEffect(() => {
     gsap.from(logoRef.current, {
@@ -19,22 +19,22 @@ const Header = () => {
       autoAlpha: 0,
       delay: 0.5,
       scale: 1.5,
-    });
+    })
     gsap.from([homeRef.current, aboutRef.current, contactRef.current], {
       duration: 0.7,
       autoAlpha: 0,
       y: 25,
       ease: "none",
       stagger: 0.5,
-    });
+    })
     gsap.to([twitterRef.current, githubRef.current, linkedinRef.current], {
       duration: 0.5,
       opacity: 1,
       ease: "none",
       visibility: "visible",
       delay: 2,
-    });
-  }, []);
+    })
+  }, [])
 
   /* ============ */
   return (
@@ -86,7 +86,7 @@ const Header = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header

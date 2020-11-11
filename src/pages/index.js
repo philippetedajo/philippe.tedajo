@@ -1,14 +1,14 @@
-import React from "react";
-import "../styles/styles.scss";
-import "../static/fonts/fonts.scss";
-import { Home, About, Contact } from "../sections";
+import React from "react"
+import "../styles/styles.scss"
+import "../static/fonts/fonts.scss"
+import { Home, About, Contact } from "../sections"
 
-const Index = () => (
+const Index = props => (
   <>
     <Home />
     <About />
     <Contact />
   </>
-);
+)
 
-export default Index;
+export default Index
