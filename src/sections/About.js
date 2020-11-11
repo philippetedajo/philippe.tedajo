@@ -1,16 +1,14 @@
-import { gsap, Power3 } from "gsap"
-import React, { useEffect, useRef } from "react"
-import { Container } from "../components"
+import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
-import { useStaticQuery, graphql, Link } from "gatsby"
+import { gsap, Power3 } from "gsap"
+import React, { useRef, useEffect } from "react"
+import { Container } from "../components"
 import "../styles/about.css"
 
 const About = () => {
   const data = useStaticQuery(graphql`
     query {
-      about: file(
-        relativePath: { eq: "andrew-neel-1-29wyvvLJA-unsplash.jpg" }
-      ) {
+      about: file(relativePath: { eq: "qpro-3Ynsf8_XCKc-unsplash.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 3000) {
             ...GatsbyImageSharpFluid
@@ -23,59 +21,50 @@ const About = () => {
   /* About REF === */
   const title = useRef(null)
   const subtitle = useRef(null)
-  const links = useRef(null)
-  const pictureWrapper = useRef(null)
-  const picture = useRef(null)
+  const bannerWrapper = useRef(null)
+  const banner = useRef(null)
 
   useEffect(() => {
-    gsap.from([title.current, subtitle.current, links.current], {
+    gsap.from([title.current, subtitle.current], {
       duration: 2,
       ease: Power3.easeOut,
       y: 164,
       autoAlpha: 0,
       stagger: 0.4,
     })
-    gsap.from(picture.current, {
+    gsap.from(banner.current, {
       duration: 2,
       ease: Power3.easeInOut,
       scale: 2,
       autoAlpha: 0,
     })
-  }, [title, subtitle, links, picture])
+  }, [title, subtitle, banner])
 
   return (
     <Container viewHeight="100vh">
-      <div className="about d-flex h-100" id="about">
-        <div className="inner-container d-flex flex-lg-row flex-column-reverse align-items-center justify-content-center justify-content-lg-between w-100">
-          <div className="para col-lg-4 mt-5">
-            <div className="w-title-about">
-              <h2 className="text-center text-lg-left title-about" ref={title}>
-                THE POWER OF IMAGINATION
+      <div className="d-flex h-100" id="about">
+        <div className="banner-image inner-container d-flex flex-column align-items-center justify-content-center">
+          <div className="w-banner-about mb-5" ref={bannerWrapper}>
+            <div className="banner-about" ref={banner}>
+              <Img fluid={data.about.childImageSharp.fluid} />
+            </div>
+          </div>
+
+          <div className="box d-flex flex-column flex-lg-row justify-content-center align-items-center align-items-lg-start mt-5">
+            <div className="col-lg-6 text-center text-lg-left w-title-about">
+              <h2 className="title-about" ref={title}>
+                GREAT INNOVATION
               </h2>
             </div>
-            <div className="my-3 w-subtitle-about">
+            <div className="col-lg-6 w-subtitle-about">
               <p
-                className="text-center text-lg-left subtitle-about"
                 ref={subtitle}
+                className="m-0 text-center text-lg-left subtitle-about"
               >
                 Sed ut perspiciatis unde omnis iste natus error sit voluptatem
                 accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
                 quae ab illo inventore veritatis et quasi architecto beatae
-                vitae
               </p>
-            </div>
-            <div className="w-project-links-about">
-              <h6
-                className="text-center text-lg-left project-links-about"
-                ref={links}
-              >
-                <Link to="/projects">View projects</Link>
-              </h6>
-            </div>
-          </div>
-          <div className="w-picture-about" ref={pictureWrapper}>
-            <div className="picture-about" ref={picture}>
-              <Img fluid={data.about.childImageSharp.fluid} />
             </div>
           </div>
         </div>

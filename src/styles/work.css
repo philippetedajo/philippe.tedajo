@@ -1,0 +1,19 @@
+.w-picture-work {
+  width: 50%;
+  overflow: hidden;
+}
+.picture-work {
+  width: 100%;
+}
+.w-title-work {
+  height: 80px;
+  overflow: hidden;
+}
+.w-subtitle-work {
+  height: 160px;
+  overflow: hidden;
+}
+.w-project-links-work {
+  height: 20px;
+  overflow: hidden;
+}
