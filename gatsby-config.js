@@ -26,7 +26,8 @@ module.exports = {
       options: {
         offset: -100,
       },
-    }`gatsby-plugin-sharp`,
+    },
+    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

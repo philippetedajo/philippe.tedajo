@@ -49,19 +49,19 @@ const Header = () => {
     <div className="header_container d-flex justify-content-center m-0 p-0">
       <div className="header">
         <div className="inner-header">
-          <a className="logo" ref={logoRef}>
+          <div className="logo" ref={logoRef}>
             <AnchorLink to="/#home" title="P." className="logo" />
-          </a>
+          </div>
           <div className="navigation">
-            <a className="item" ref={workRef}>
+            <div className="item" ref={workRef}>
               <AnchorLink to="/#work" title="Work" />
-            </a>
-            <a className="item" ref={aboutRef}>
+            </div>
+            <div className="item" ref={aboutRef}>
               <AnchorLink to="/#about" title="About" />
-            </a>
-            <a className="item" ref={contactRef}>
+            </div>
+            <div className="item" ref={contactRef}>
               <AnchorLink to="/contact" title="Contact" />
-            </a>
+            </div>
           </div>
           <div className="social">
             <a

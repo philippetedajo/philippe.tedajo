@@ -4,6 +4,7 @@ import { Container } from "../components"
 import "../styles/styles.scss"
 import "../styles/home.css"
 import arrow_down from "../images/down-chevron.png"
+import { AnchorLink } from "gatsby-plugin-anchor-links"
 
 const IndexPage = () => {
   /* Home REF ==== */
@@ -80,12 +81,14 @@ const IndexPage = () => {
         </div>
       </div>
       <div className="arrow-down">
-        <img
-          style={{ height: "28px" }}
-          src={arrow_down}
-          alt="arrow-down"
-          ref={scroller}
-        />
+        <AnchorLink to="/#work" title="Work">
+          <img
+            style={{ height: "28px" }}
+            src={arrow_down}
+            alt="arrow-down"
+            ref={scroller}
+          />
+        </AnchorLink>
       </div>
     </Container>
   )
