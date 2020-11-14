@@ -3,12 +3,14 @@ import "../styles/styles.scss"
 import "../static/fonts/fonts.scss"
 import { Home, Work, About } from "../sections"
 
-const Index = () => (
-  <>
-    <Home />
-    <Work />
-    <About />
-  </>
-)
+const Index = () => {
+  return (
+    <>
+      <Home />
+      <Work />
+      <About />
+    </>
+  )
+}
 
 export default Index
