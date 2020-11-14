@@ -53,14 +53,14 @@ module.exports = {
         url: "https://api.github.com/graphql", // default Github GraphQL v4 API endpoint
 
         // token: required by the GitHub API
-        token: process.env.GITHUB_PERSONAL_ACCESS_TOKEN,
+        token: "f9fed5acd405df6bc006f368f72f95929a7f7543",
 
         // GraphQLquery: defaults to a search query
         graphQLQuery: githubApiQuery,
 
         // variables: defaults to variables needed for a search query
         variables: {
-          github_login: process.env.GITHUB_LOGIN,
+          github_login: "philippetedajo",
         },
       },
     },
