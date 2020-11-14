@@ -43,7 +43,6 @@ const Work = () => {
       }
     }
   `)
-
   console.log(data)
 
   /* Work REF === */
