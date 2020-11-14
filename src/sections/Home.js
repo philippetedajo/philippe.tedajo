@@ -8,6 +8,7 @@ import { AnchorLink } from "gatsby-plugin-anchor-links"
 
 const IndexPage = () => {
   /* Home REF ==== */
+  const home = useRef(null)
   const title = useRef(null)
   const description = useRef(null)
   const sl1 = useRef(null)
@@ -18,20 +19,24 @@ const IndexPage = () => {
 
   /* Timeline  === */
   useEffect(() => {
+    gsap.to(home.current, {
+      visibility: "visible",
+    })
+
     gsap.from(
       [
-        title.current,
-        description.current,
         sl1.current,
         sl2.current,
         sl3.current,
+        title.current,
+        description.current,
       ],
       {
         duration: 1.6,
         ease: Power3.easeOut,
         y: 164,
         autoAlpha: 0,
-        stagger: 0.4,
+        stagger: 0.3,
       }
     )
 
@@ -39,13 +44,14 @@ const IndexPage = () => {
       duration: 1,
       y: -220,
     })
-  }, [title, description, sl1, sl2, sl3, separator, scroller])
+  }, [home, sl1, sl2, sl3, title, description, separator, scroller])
 
   return (
     <Container viewHeight="100vh">
       <div
         className="home d-flex justify-content-center align-items-center"
         id="home"
+        ref={home}
       >
         <div className="profil">
           <div className="w-user">

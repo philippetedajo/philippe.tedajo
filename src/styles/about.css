@@ -1,3 +1,6 @@
+.about {
+  visibility: hidden;
+}
 .w-banner-about {
   width: 75%;
   overflow: hidden;

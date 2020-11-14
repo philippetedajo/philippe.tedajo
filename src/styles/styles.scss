@@ -66,6 +66,7 @@ a {
   .header {
     height: 100%;
     position: fixed;
+    visibility: hidden;
     .inner-header {
       display: flex;
       flex-direction: column;
@@ -137,6 +138,7 @@ a {
     display: grid;
     grid-template-columns: 50%;
     grid-template-rows: 1fr;
+    visibility: hidden;
     .logo {
       a {
         @media (max-width: 768px) {
@@ -227,24 +229,36 @@ a {
   opacity: .6;
 }
 
+.splashscreen{
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.spashtext{
+    text-transform: uppercase;
+    font-size: 3em;
+    font-weight: bold;
+    letter-spacing: 4px;
+    overflow: hidden;
+    background: linear-gradient(60deg, #000, #fff, #000);
+    background-repeat: no-repeat;
+    background-size: 80%;
+    animation: animate 3s linear infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0);
+}
 
-//page Transitions ================================================================================================
+@keyframes animate {
+  0% {
+    background-position: -500%;
+  }
+  100% {
+    background-position: 500%;
+  }
+}
 
-.page-enter{
-  opacity: 0;
-}
-.page-enter-active{
-  opacity: 1;
-  transition: opacity 400ms;
-  transition-delay:  600ms;
-}
-.page-exit{
-  opacity: 1;
-}
-.page-exit-active{
-  opacity: 0;
-  transition: opacity 400ms;
-}
 
 
 

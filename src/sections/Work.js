@@ -15,70 +15,117 @@ const Work = () => {
           }
         }
       }
+      allGithubData {
+        nodes {
+          data {
+            viewer {
+              repositories {
+                nodes {
+                  description
+                  forkCount
+                  id
+                  languages {
+                    nodes {
+                      name
+                    }
+                  }
+                  name
+                  openGraphImageUrl
+                  stargazers {
+                    totalCount
+                  }
+                  url
+                }
+              }
+            }
+          }
+        }
+      }
     }
   `)
+  console.log(data)
 
   /* Work REF === */
+  const work = useRef(null)
   const title = useRef(null)
   const subtitle = useRef(null)
   const links = useRef(null)
+  const projects = useRef(null)
   const pictureWrapper = useRef(null)
   const picture = useRef(null)
 
   useEffect(() => {
-    gsap.from([title.current, subtitle.current, links.current], {
-      duration: 2,
-      ease: Power3.easeOut,
-      y: 164,
-      autoAlpha: 0,
-      stagger: 0.4,
+    gsap.to(work.current, {
+      visibility: "visible",
     })
+    gsap.from(
+      [title.current, subtitle.current, links.current, projects.current],
+      {
+        duration: 2,
+        ease: Power3.easeOut,
+        y: 164,
+        autoAlpha: 0,
+        stagger: 0.4,
+      }
+    )
     gsap.from(picture.current, {
       duration: 2,
       ease: Power3.easeInOut,
       scale: 2,
       autoAlpha: 0,
     })
-  }, [title, subtitle, links, picture])
+  }, [work, title, subtitle, links, picture, projects])
 
   return (
-    <Container viewHeight="100vh">
-      <div className="work d-flex h-100" id="work">
-        <div className="inner-container d-flex flex-lg-row flex-column-reverse align-items-center justify-content-center justify-content-lg-between w-100">
-          <div className="para col-lg-4 mt-5">
-            <div className="w-title-work">
-              <h2 className="text-center text-lg-left title-work" ref={title}>
-                THE POWER OF IMAGINATION
-              </h2>
+    <>
+      <Container viewHeight="80vh">
+        <div className="work " id="work" ref={work}>
+          <div className="inner-container h-100 d-flex flex-lg-row flex-column-reverse align-items-center justify-content-center justify-content-lg-between w-100 mb-5">
+            <div className="para col-lg-4 mt-5">
+              <div className="w-title-work">
+                <h2 className="text-center text-lg-left title-work" ref={title}>
+                  THE POWER OF IMAGINATION
+                </h2>
+              </div>
+              <div className="my-3 w-subtitle-work">
+                <p
+                  className="text-center text-lg-left subtitle-work"
+                  ref={subtitle}
+                >
+                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                  accusantium doloremque laudantium, totam rem aperiam, eaque
+                  ipsa quae ab illo inventore veritatis et quasi architecto
+                  beatae vitae
+                </p>
+              </div>
+              <div className="w-project-links-work">
+                <h6
+                  className="text-center text-lg-left project-links-work"
+                  ref={links}
+                >
+                  <Link to="/projects">View more</Link>
+                </h6>
+              </div>
             </div>
-            <div className="my-3 w-subtitle-work">
-              <p
-                className="text-center text-lg-left subtitle-work"
-                ref={subtitle}
-              >
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-                quae ab illo inventore veritatis et quasi architecto beatae
-                vitae
-              </p>
-            </div>
-            <div className="w-project-links-work">
-              <h6
-                className="text-center text-lg-left project-links-work"
-                ref={links}
-              >
-                <Link to="/projects">View projects</Link>
-              </h6>
-            </div>
-          </div>
-          <div className="w-picture-work" ref={pictureWrapper}>
-            <div className="picture-work" ref={picture}>
-              <Img fluid={data.work.childImageSharp.fluid} />
+            <div className="w-picture-work" ref={pictureWrapper}>
+              <div className="picture-work" ref={picture}>
+                <Img fluid={data.work.childImageSharp.fluid} />
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </Container>
+      </Container>
+      {/* ---- */}
+      <Container viewHeight="80vh">
+        <div className="projects-container">
+          <div className="prj">hello</div>
+          <div className="prj">hello</div>
+          <div className="prj">hello</div>
+          <div className="prj">hello</div>
+          <div className="prj">hello</div>
+        </div>
+      </Container>
+    </>
   )
 }
 
