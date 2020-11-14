@@ -1,6 +1,7 @@
 .home {
   padding: 8rem;
   height: 100%;
+  visibility: hidden;
 }
 .separator-bar {
   border-top: 2px solid #717171 !important;

@@ -19,12 +19,16 @@ const About = () => {
   `)
 
   /* About REF === */
+  const about = useRef(null)
   const title = useRef(null)
   const subtitle = useRef(null)
   const bannerWrapper = useRef(null)
   const banner = useRef(null)
 
   useEffect(() => {
+    gsap.to(about.current, {
+      visibility: "visible",
+    })
     gsap.from([title.current, subtitle.current], {
       duration: 2,
       ease: Power3.easeOut,
@@ -38,11 +42,11 @@ const About = () => {
       scale: 2,
       autoAlpha: 0,
     })
-  }, [title, subtitle, banner])
+  }, [about, title, subtitle, banner])
 
   return (
     <Container viewHeight="100vh">
-      <div className="d-flex h-100" id="about">
+      <div className="d-flex h-100" id="about" ref={about}>
         <div className="banner-image inner-container d-flex flex-column align-items-center justify-content-center">
           <div className="w-banner-about mb-5" ref={bannerWrapper}>
             <div className="banner-about" ref={banner}>

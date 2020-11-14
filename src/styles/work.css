@@ -1,3 +1,6 @@
+.work {
+  visibility: hidden;
+}
 .w-picture-work {
   width: 50%;
   overflow: hidden;

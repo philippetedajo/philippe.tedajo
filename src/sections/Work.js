@@ -19,6 +19,7 @@ const Work = () => {
   `)
 
   /* Work REF === */
+  const work = useRef(null)
   const title = useRef(null)
   const subtitle = useRef(null)
   const links = useRef(null)
@@ -26,6 +27,9 @@ const Work = () => {
   const picture = useRef(null)
 
   useEffect(() => {
+    gsap.to(work.current, {
+      visibility: "visible",
+    })
     gsap.from([title.current, subtitle.current, links.current], {
       duration: 2,
       ease: Power3.easeOut,
@@ -39,11 +43,11 @@ const Work = () => {
       scale: 2,
       autoAlpha: 0,
     })
-  }, [title, subtitle, links, picture])
+  }, [work, title, subtitle, links, picture])
 
   return (
     <Container viewHeight="100vh">
-      <div className="work d-flex h-100" id="work">
+      <div className="work d-flex h-100" id="work" ref={work}>
         <div className="inner-container d-flex flex-lg-row flex-column-reverse align-items-center justify-content-center justify-content-lg-between w-100">
           <div className="para col-lg-4 mt-5">
             <div className="w-title-work">

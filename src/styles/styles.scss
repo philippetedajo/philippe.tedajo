@@ -66,6 +66,7 @@ a {
   .header {
     height: 100%;
     position: fixed;
+    visibility: hidden;
     .inner-header {
       display: flex;
       flex-direction: column;
@@ -137,6 +138,7 @@ a {
     display: grid;
     grid-template-columns: 50%;
     grid-template-rows: 1fr;
+    visibility: hidden;
     .logo {
       a {
         @media (max-width: 768px) {

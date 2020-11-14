@@ -2,8 +2,9 @@ import React, { useRef, useEffect } from "react"
 import { gsap } from "gsap"
 import { FaTwitter, FaGithub, FaLinkedin } from "react-icons/fa"
 import { AnchorLink } from "gatsby-plugin-anchor-links"
-//working on header
+
 const Header = () => {
+  const header = useRef(null)
   const logoRef = useRef(null)
   const aboutRef = useRef(null)
   const workRef = useRef(null)
@@ -14,6 +15,9 @@ const Header = () => {
   const linkedinRef = useRef(null)
 
   useEffect(() => {
+    gsap.to(header.current, {
+      visibility: "visible",
+    })
     gsap.from(logoRef.current, {
       duration: 0.8,
       autoAlpha: 0,
@@ -35,6 +39,7 @@ const Header = () => {
       delay: 2,
     })
   }, [
+    header,
     logoRef,
     aboutRef,
     workRef,
@@ -47,7 +52,7 @@ const Header = () => {
   /* ============ */
   return (
     <div className="header_container d-flex justify-content-center m-0 p-0">
-      <div className="header">
+      <div className="header" ref={header}>
         <div className="inner-header">
           <div className="logo" ref={logoRef}>
             <AnchorLink to="/#home" title="P." className="logo" />
