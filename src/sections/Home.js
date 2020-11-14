@@ -25,18 +25,18 @@ const IndexPage = () => {
 
     gsap.from(
       [
-        title.current,
-        description.current,
         sl1.current,
         sl2.current,
         sl3.current,
+        title.current,
+        description.current,
       ],
       {
         duration: 1.6,
         ease: Power3.easeOut,
         y: 164,
         autoAlpha: 0,
-        stagger: 0.4,
+        stagger: 0.3,
       }
     )
 
@@ -44,7 +44,7 @@ const IndexPage = () => {
       duration: 1,
       y: -220,
     })
-  }, [home, title, description, sl1, sl2, sl3, separator, scroller])
+  }, [home, sl1, sl2, sl3, title, description, separator, scroller])
 
   return (
     <Container viewHeight="100vh">
