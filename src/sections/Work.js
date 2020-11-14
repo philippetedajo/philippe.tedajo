@@ -15,8 +15,36 @@ const Work = () => {
           }
         }
       }
+      allGithubData {
+        nodes {
+          data {
+            viewer {
+              repositories {
+                nodes {
+                  description
+                  forkCount
+                  id
+                  languages {
+                    nodes {
+                      name
+                    }
+                  }
+                  name
+                  openGraphImageUrl
+                  stargazers {
+                    totalCount
+                  }
+                  url
+                }
+              }
+            }
+          }
+        }
+      }
     }
   `)
+
+  console.log(data)
 
   /* Work REF === */
   const work = useRef(null)
@@ -51,7 +79,7 @@ const Work = () => {
 
   return (
     <>
-      <Container viewHeight="75vh">
+      <Container viewHeight="80vh">
         <div className="work " id="work" ref={work}>
           <div className="inner-container h-100 d-flex flex-lg-row flex-column-reverse align-items-center justify-content-center justify-content-lg-between w-100 mb-5">
             <div className="para col-lg-4 mt-5">
@@ -88,8 +116,8 @@ const Work = () => {
           </div>
         </div>
       </Container>
-      {/* */}
-      <Container viewHeight="75vh" style={{ border: " 1px solid red" }}>
+      {/* ---- */}
+      <Container viewHeight="80vh">
         <div className="projects-container">
           <div className="prj">hello</div>
           <div className="prj">hello</div>
