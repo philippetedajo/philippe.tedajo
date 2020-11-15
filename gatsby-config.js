@@ -1,6 +1,6 @@
 // init. environment variables
-const dotenv = require("dotenv")
-dotenv.config()
+// const dotenv = require("dotenv")
+// dotenv.config()
 
 const { githubApiQuery } = require("./github-api")
 
