@@ -230,6 +230,7 @@ a {
 }
 
 .splashscreen{
+  visibility: hidden;
   height: 100vh;
   overflow: hidden;
   display: flex;
@@ -237,9 +238,8 @@ a {
   align-items: center;
 }
 .spashtext{
-    text-transform: uppercase;
-    font-size: 3em;
-    font-weight: bold;
+    font-size: 3.2rem;
+    font-weight: bolder;
     letter-spacing: 4px;
     overflow: hidden;
     background: linear-gradient(60deg, #000, #fff, #000);

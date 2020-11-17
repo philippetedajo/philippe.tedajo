@@ -15,20 +15,18 @@ const Work = () => {
           }
         }
       }
-#
-        allGithubData {
-          nodes {
-            id
-          }
-          totalCount
+      #
+      allGithubData {
+        nodes {
+          id
         }
-      
-
-      #      
+        totalCount
+      }
+      #
     }
   `)
 
-console.log(data)
+  console.log(data)
 
   /* Work REF === */
   const work = useRef(null)
