@@ -26,7 +26,7 @@ const Work = () => {
     }
   `)
 
-  console.log(data)
+console.log(data)
 
   /* Work REF === */
   const work = useRef(null)
