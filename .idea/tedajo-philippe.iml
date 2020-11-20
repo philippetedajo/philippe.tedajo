@@ -2,7 +2,13 @@
 <module type="WEB_MODULE" version="4">
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/.cache" />
       <excludeFolder url="file://$MODULE_DIR$/.tmp" />
+      <excludeFolder url="file://$MODULE_DIR$/public/404" />
+      <excludeFolder url="file://$MODULE_DIR$/public/contact" />
+      <excludeFolder url="file://$MODULE_DIR$/public/icons" />
+      <excludeFolder url="file://$MODULE_DIR$/public/page-data" />
+      <excludeFolder url="file://$MODULE_DIR$/public/static" />
       <excludeFolder url="file://$MODULE_DIR$/temp" />
       <excludeFolder url="file://$MODULE_DIR$/tmp" />
     </content>
