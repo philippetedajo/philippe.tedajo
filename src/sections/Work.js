@@ -18,15 +18,27 @@ const Work = () => {
       # github data
       allGithubData {
         nodes {
-          id
+          data {
+            viewer {
+              repositories {
+                nodes {
+                  description
+                  url
+                  forkCount
+                  stargazers {
+                    totalCount
+                  }
+                }
+              }
+              name
+            }
+          }
         }
-        totalCount
       }
       #
     }
   `)
-
-console.log(data)
+  const reponame = data.allGithubData.nodes[0].data.viewer.name
 
   /* Work REF === */
   const work = useRef(null)
@@ -101,11 +113,11 @@ console.log(data)
       {/* ---- */}
       <Container viewHeight="80vh">
         <div className="projects-container">
-          <div className="prj">hello</div>
-          <div className="prj">hello</div>
-          <div className="prj">hello</div>
-          <div className="prj">hello</div>
-          <div className="prj">hello</div>
+          <div className="prj">{reponame}</div>
+          <div className="prj">{reponame}</div>
+          <div className="prj">{reponame}</div>
+          <div className="prj">{reponame}</div>
+          <div className="prj">{reponame}</div>
         </div>
       </Container>
     </>
