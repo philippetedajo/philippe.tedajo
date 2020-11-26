@@ -28,6 +28,6 @@
   grid-gap: 26px;
 }
 .prj {
-  border: 1px solid red;
+  /*border: 1px solid red;*/
   height: 200px !important;
 }
