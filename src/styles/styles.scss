@@ -264,7 +264,7 @@ a {
     background-position: 500%;
   }
 }
-
+//================================
 //repo slider
 .repo-slider {
   position: relative;
@@ -278,7 +278,7 @@ a {
   transform: translate(-50%, -50%);
   border: 1px solid red;
   height: 550px;
-  width: 25rem;
+  width: 20rem;
 }
 
 //next-controls
@@ -340,13 +340,25 @@ a {
   top: 50%;
   left: 61px;
 }
+
+.repo-title {
+  font-size: 100px;
+  position: absolute;
+  border: 1px solid blue;
+  width: 35rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 //
 
-@media only screen and (max-width: 768px) {
-  .box-slide {
-    background: #6610f2;
+@media only screen and (max-width: 850px) {
+  .repo-title {
+    font-size: 80px;
   }
+}
 
+@media only screen and (max-width: 768px) {
   .next-control {
     position: static;
     max-width: 600px;
@@ -366,5 +378,8 @@ a {
 @media only screen and (max-width: 480px) {
   .box-slide {
     width: 18rem;
+  }
+  .repo-title {
+    font-size: 67px;
   }
 }
