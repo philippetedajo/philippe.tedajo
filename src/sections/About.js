@@ -46,7 +46,7 @@ const About = () => {
 
   return (
     <Container viewHeight="100vh">
-      <div className="d-flex h-100" id="about" ref={about}>
+      <div className="d-flex h-100 about" id="about" ref={about}>
         <div className="banner-image inner-container d-flex flex-column align-items-center justify-content-center">
           <div className="w-banner-about mb-5" ref={bannerWrapper}>
             <div className="banner-about" ref={banner}>

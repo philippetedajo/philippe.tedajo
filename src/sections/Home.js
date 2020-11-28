@@ -55,12 +55,15 @@ const IndexPage = () => {
       >
         <div className="profil">
           <div className="w-user">
-            <div className="user-profil" ref={title}>
+            <div className="user-profil text-center text-md-left" ref={title}>
               Philippe Tedajo
             </div>
           </div>
           <div className="w-description">
-            <div className="description-profil" ref={description}>
+            <div
+              className="description-profil text-center text-md-left"
+              ref={description}
+            >
               Web developer
             </div>
           </div>
@@ -68,19 +71,19 @@ const IndexPage = () => {
           {/*<div className="separator-bar" ref={separator} />*/}
 
           <div className="w-slogan">
-            <div className="slogan" ref={sl1}>
+            <div className="slogan text-center text-md-left title" ref={sl1}>
               Bulding universe
             </div>
           </div>
 
           <div className="w-slogan">
-            <div className="slogan" ref={sl2}>
+            <div className="slogan text-center text-md-left title" ref={sl2}>
               one pixel at a
             </div>
           </div>
 
           <div className="w-slogan">
-            <div className="slogan" ref={sl3}>
+            <div className="slogan text-center text-md-left title" ref={sl3}>
               time
             </div>
           </div>

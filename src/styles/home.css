@@ -1,5 +1,4 @@
 .home {
-  padding: 8rem;
   height: 100%;
   visibility: hidden;
 }
@@ -24,6 +23,7 @@
 .w-description {
   height: 22px;
   overflow: hidden;
+  margin-bottom: 2rem;
 }
 .description-profil {
   font-size: 0.8rem;
@@ -44,3 +44,59 @@
     "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
+
+@media only screen and (max-width: 1160px) {
+  .slogan {
+    font-size: 3rem;
+  }
+}
+@media only screen and (max-width: 945px) {
+  .slogan {
+    font-size: 2.5rem;
+    letter-spacing: 20px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .slogan {
+    font-size: 2rem;
+    letter-spacing: 20px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .slogan {
+    font-size: 2rem;
+    letter-spacing: 15px;
+  }
+}
+
+@media only screen and (max-width: 555px) {
+  .slogan {
+    font-size: 1.3rem;
+    letter-spacing: 6px;
+  }
+}
+
+/* */
+
+/*.title {*/
+/*  font-weight: 800;*/
+/*  color: transparent;*/
+/*  font-size: 120px;*/
+/*  background: url("https://mir-s3-cdn-cf.behance.net/project_modules/1400/91dc1964120315.5ac77335ae374.png")*/
+/*    repeat;*/
+/*  background-position: 40% 50%;*/
+/*  -webkit-background-clip: text;*/
+/*  position: relative;*/
+/*  text-align: center;*/
+/*  line-height: 90px;*/
+/*  letter-spacing: -8px;*/
+/*}*/
+
+/*.subtitle {*/
+/*  display: block;*/
+/*  text-align: center;*/
+/*  text-transform: uppercase;*/
+/*  padding-top: 10px;*/
+/*}*/

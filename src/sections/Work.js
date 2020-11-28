@@ -1,5 +1,5 @@
 import { gsap, Power3 } from "gsap"
-import React, { useEffect, useRef } from "react"
+import React, { useEffect, useRef, useState } from "react"
 import { Container } from "../components"
 import Img from "gatsby-image"
 import { useStaticQuery, graphql, Link } from "gatsby"
@@ -38,7 +38,6 @@ const Work = () => {
       #
     }
   `)
-  const reponame = data.allGithubData.nodes[0].data.viewer.name
 
   /* Work REF === */
   const work = useRef(null)
@@ -70,6 +69,8 @@ const Work = () => {
       autoAlpha: 0,
     })
   }, [work, title, subtitle, links, picture, projects])
+
+  console.log(data.allGithubData.nodes[0].data.viewer.repositories)
 
   return (
     <>
@@ -113,11 +114,8 @@ const Work = () => {
       {/* ---- */}
       <Container viewHeight="80vh">
         <div className="projects-container">
-          <div className="prj">{reponame}</div>
-          <div className="prj">{reponame}</div>
-          <div className="prj">{reponame}</div>
-          <div className="prj">{reponame}</div>
-          <div className="prj">{reponame}</div>
+          {}
+          <div className="prj">work</div>
         </div>
       </Container>
     </>
