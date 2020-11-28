@@ -11,8 +11,10 @@ const Splashscreen = () => {
   }, [splash])
 
   return (
-    <div className="splashscreen" ref={splash}>
-      <div className="spashtext">"Give, even if you only have a little."</div>
+    <div className="splashscreen " ref={splash}>
+      <div className="spashtext text-center">
+        "Give, even if you only have a little."
+      </div>
     </div>
   )
 }

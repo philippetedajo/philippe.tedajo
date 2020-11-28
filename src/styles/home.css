@@ -77,3 +77,26 @@
     letter-spacing: 6px;
   }
 }
+
+/* */
+
+/*.title {*/
+/*  font-weight: 800;*/
+/*  color: transparent;*/
+/*  font-size: 120px;*/
+/*  background: url("https://mir-s3-cdn-cf.behance.net/project_modules/1400/91dc1964120315.5ac77335ae374.png")*/
+/*    repeat;*/
+/*  background-position: 40% 50%;*/
+/*  -webkit-background-clip: text;*/
+/*  position: relative;*/
+/*  text-align: center;*/
+/*  line-height: 90px;*/
+/*  letter-spacing: -8px;*/
+/*}*/
+
+/*.subtitle {*/
+/*  display: block;*/
+/*  text-align: center;*/
+/*  text-transform: uppercase;*/
+/*  padding-top: 10px;*/
+/*}*/

@@ -114,6 +114,7 @@ const Work = () => {
       {/* ---- */}
       <Container viewHeight="80vh">
         <div className="projects-container">
+          {}
           <div className="prj">work</div>
         </div>
       </Container>

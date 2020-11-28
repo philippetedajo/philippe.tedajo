@@ -31,3 +31,18 @@
   /*border: 1px solid red;*/
   height: 200px !important;
 }
+
+@media only screen and (max-width: 1160px) {
+}
+@media only screen and (max-width: 945px) {
+  .w-picture-work {
+    width: 90%;
+    overflow: hidden;
+  }
+}
+@media only screen and (max-width: 800px) {
+}
+@media only screen and (max-width: 768px) {
+}
+@media only screen and (max-width: 555px) {
+}
