@@ -3,6 +3,7 @@ import React, { useEffect, useRef, useState } from "react"
 import { Container } from "../components"
 import Img from "gatsby-image"
 import { useStaticQuery, graphql, Link } from "gatsby"
+import RepoSlider from "../components/RepoSlider"
 import "../styles/work.css"
 
 const Work = () => {
@@ -70,11 +71,9 @@ const Work = () => {
     })
   }, [work, title, subtitle, links, picture, projects])
 
-  console.log(data.allGithubData.nodes[0].data.viewer.repositories)
-
   return (
     <>
-      <Container viewHeight="80vh">
+      <Container viewHeight="100vh">
         <div className="work " id="work" ref={work}>
           <div className="inner-container h-100 d-flex flex-lg-row flex-column-reverse align-items-center justify-content-center justify-content-lg-between w-100 mb-5">
             <div className="para col-lg-4 mt-5">
@@ -112,11 +111,10 @@ const Work = () => {
         </div>
       </Container>
       {/* ---- */}
-      <Container viewHeight="80vh">
-        <div className="projects-container">
-          {}
-          <div className="prj">work</div>
-        </div>
+      <Container viewHeight="100vh">
+        <RepoSlider
+          data={data.allGithubData.nodes[0].data.viewer.repositories}
+        />
       </Container>
     </>
   )

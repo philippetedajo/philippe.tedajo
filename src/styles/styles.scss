@@ -3,8 +3,8 @@
 html,
 body {
   font-family: "ddin", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-  "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
-  "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   margin: 0;
   padding: 0;
   background: #000;
@@ -14,8 +14,8 @@ h2 {
   text-transform: uppercase;
   letter-spacing: 1.5px;
   font-family: "ddinbold", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-  "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
-  "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 p {
   line-height: 2rem;
@@ -25,8 +25,8 @@ h6 {
   text-transform: uppercase;
   text-decoration: none;
   font-family: "ddinbold", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-  "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
-  "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   letter-spacing: 2px;
 }
 input {
@@ -80,9 +80,10 @@ a {
         align-items: flex-end;
         a {
           text-decoration: none;
-          font-family: "ddinbold", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-          "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
-          "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+          font-family: "ddinbold", -apple-system, BlinkMacSystemFont, "Segoe UI",
+            Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+            "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+            "Noto Color Emoji";
           font-size: 70px;
         }
       }
@@ -96,9 +97,10 @@ a {
           margin-top: 70px;
           letter-spacing: 1.75px;
           font-size: 15px;
-          font-family: "ddinbold", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-          "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
-          "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+          font-family: "ddinbold", -apple-system, BlinkMacSystemFont, "Segoe UI",
+            Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+            "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+            "Noto Color Emoji";
           text-transform: uppercase;
           text-decoration: none;
         }
@@ -146,9 +148,10 @@ a {
         @media (max-width: 768px) {
           font-size: 60px;
           margin-left: 1.5rem;
-          font-family: "ddinbold", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-          "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
-          "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+          font-family: "ddinbold", -apple-system, BlinkMacSystemFont, "Segoe UI",
+            Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+            "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+            "Noto Color Emoji";
         }
       }
     }
@@ -175,13 +178,12 @@ a {
         text-transform: uppercase;
         margin: 2rem 0;
       }
-
     }
   }
 }
 
-.active{
-  border: 1px solid red !important
+.active {
+  border: 1px solid red !important;
 }
 
 //Components ===============================================================================================
@@ -209,7 +211,7 @@ a {
   }
 }
 
-.cursor{
+.cursor {
   position: fixed;
   top: 0;
   left: 0;
@@ -220,7 +222,7 @@ a {
   z-index: 999;
 }
 
-.cursor-follower{
+.cursor-follower {
   position: fixed;
   top: 0;
   left: 0;
@@ -228,10 +230,10 @@ a {
   width: 100px;
   border-radius: 50%;
   background-color: darkred;
-  opacity: .6;
+  opacity: 0.6;
 }
 
-.splashscreen{
+.splashscreen {
   opacity: 0;
   visibility: hidden;
   height: 100vh;
@@ -240,17 +242,18 @@ a {
   justify-content: center;
   align-items: center;
 }
-.spashtext{
-    font-size: 3.2rem;
-    font-weight: bolder;
-    letter-spacing: 4px;
-    overflow: hidden;
-    background: linear-gradient(60deg, #000, #fff, #000);
-    background-repeat: no-repeat;
-    background-size: 80%;
-    animation: animate 3s linear infinite;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: rgba(255, 255, 255, 0);
+
+.spashtext {
+  font-size: 3.2rem;
+  font-weight: bolder;
+  letter-spacing: 4px;
+  overflow: hidden;
+  background: linear-gradient(60deg, #000, #fff, #000);
+  background-repeat: no-repeat;
+  background-size: 80%;
+  animation: animate 3s linear infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0);
 }
 
 @keyframes animate {
@@ -261,7 +264,122 @@ a {
     background-position: 500%;
   }
 }
+//================================
+//repo slider
+.repo-slider {
+  position: relative;
+  border: 1px solid red;
+}
 
+.box-slide {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid red;
+  height: 550px;
+  width: 20rem;
+}
 
+//next-controls
 
+.next-control {
+  position: relative;
+  max-width: 600px;
+  text-align: center;
+  transform: rotate(-90deg);
+  padding: 0 15px;
+}
 
+.next-control:before {
+  content: "";
+  display: block;
+  width: 55px;
+  height: 1px;
+  position: absolute;
+  background: #fff;
+  top: 50%;
+  left: -55px;
+}
+.next-control:after {
+  content: "";
+  display: block;
+  width: 55px;
+  height: 1px;
+  position: absolute;
+  background: #fff;
+  top: 50%;
+  left: 87px;
+}
+//previous-controls
+.previous-control {
+  position: relative;
+  max-width: 600px;
+  text-align: center;
+  transform: rotate(90deg);
+  padding: 0 15px;
+}
+
+.previous-control:before {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 1px;
+  position: absolute;
+  background: #fff;
+  top: 50%;
+  left: -60px;
+}
+.previous-control:after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 1px;
+  position: absolute;
+  background: #fff;
+  top: 50%;
+  left: 61px;
+}
+
+.repo-title {
+  font-size: 100px;
+  position: absolute;
+  border: 1px solid blue;
+  width: 35rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+//
+
+@media only screen and (max-width: 850px) {
+  .repo-title {
+    font-size: 80px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .next-control {
+    position: static;
+    max-width: 600px;
+    text-align: center;
+    transform: rotate(0);
+    padding: 0 15px;
+  }
+  .previous-control {
+    position: static;
+    max-width: 600px;
+    text-align: center;
+    transform: rotate(0);
+    padding: 0 15px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .box-slide {
+    width: 18rem;
+  }
+  .repo-title {
+    font-size: 67px;
+  }
+}
