@@ -7,6 +7,7 @@ const Splashscreen = () => {
   useEffect(() => {
     gsap.to(splash.current, {
       visibility: "visible",
+      opacity: 1,
     })
   }, [splash])
 

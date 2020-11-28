@@ -18,9 +18,6 @@
 @media only screen and (max-width: 1160px) {
 }
 @media only screen and (max-width: 945px) {
-  .about {
-    background: blue;
-  }
   .w-banner-about {
     width: 100%;
     overflow: hidden;
