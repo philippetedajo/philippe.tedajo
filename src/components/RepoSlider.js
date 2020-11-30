@@ -1,11 +1,21 @@
 import React, { useEffect, useRef, useState } from "react"
-import gsap from "gsap"
+import gsap, { Expo } from "gsap"
 
 const RepoSlider = data => {
   const slides = [
-    { number: "#01", title: "Lorem ipsum 1", imgSrc: "" },
-    { number: "#02", title: "Lorem ipsum 2", imgSrc: "" },
-    { number: "#03", title: "Lorem ipsum 3", imgSrc: "" },
+    { number: "#01", title: "Lorem ipsum 1", imgSrc: "", class: "activeSlide" },
+    {
+      number: "#02",
+      title: "Lorem ipsum 2",
+      imgSrc: "",
+      class: "activeSlide2",
+    },
+    {
+      number: "#03",
+      title: "Lorem ipsum 3",
+      imgSrc: "",
+      class: "activeSlide3",
+    },
   ]
 
   const boxSlide = useRef(null)
@@ -41,14 +51,15 @@ const RepoSlider = data => {
     setCurrentSlide({ ...currentSilde, activeIndex })
   }, [activeIndex])
 
-  console.log(currentSilde.activeIndex, currentSilde.totalLength)
-
   return (
     <div className="d-flex flex-column flex-md-row justify-content-end justify-content-md-between align-items-center h-100 repo-slider">
       {/* slider */}
-      <div className="box-slide">
+      <div className={`box-slide`}>
         <div className="repo-number"> {slides[activeIndex].number} </div>
-        <div className="repo-title text-center">
+        <div
+          className={`repo-title text-center ${slides[activeIndex].class}`}
+          ref={repoTitle}
+        >
           {slides[activeIndex].title}
         </div>
       </div>
