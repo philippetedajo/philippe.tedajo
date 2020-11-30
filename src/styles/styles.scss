@@ -265,6 +265,7 @@ a {
   }
 }
 //================================
+
 //repo slider
 .repo-slider {
   position: relative;
@@ -279,16 +280,43 @@ a {
   border: 1px solid red;
   height: 550px;
   width: 20rem;
+  visibility: hidden;
+  opacity: 0;
 }
 
-//next-controls
+.repo-title {
+  font-size: 100px;
+  position: absolute;
+  border: 1px solid blue;
+  width: 35rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+  visibility: hidden;
+  opacity: 0;
+}
 
+.repo-number {
+  font-size: 30px;
+  position: absolute;
+  border: 1px solid blue;
+  left: 50%;
+  transform: translate(-50%);
+  top: -25px;
+  z-index: 999;
+  visibility: hidden;
+  opacity: 0;
+}
+
+//controls
 .next-control {
   position: relative;
   max-width: 600px;
   text-align: center;
   transform: rotate(-90deg);
   padding: 0 15px;
+  cursor: pointer;
 }
 
 .next-control:before {
@@ -311,6 +339,7 @@ a {
   top: 50%;
   left: 87px;
 }
+
 //previous-controls
 .previous-control {
   position: relative;
@@ -318,6 +347,7 @@ a {
   text-align: center;
   transform: rotate(90deg);
   padding: 0 15px;
+  cursor: pointer;
 }
 
 .previous-control:before {
@@ -330,6 +360,7 @@ a {
   top: 50%;
   left: -60px;
 }
+
 .previous-control:after {
   content: "";
   display: block;
@@ -341,17 +372,7 @@ a {
   left: 61px;
 }
 
-.repo-title {
-  font-size: 100px;
-  position: absolute;
-  border: 1px solid blue;
-  width: 35rem;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-//
-
+// media query
 @media only screen and (max-width: 850px) {
   .repo-title {
     font-size: 80px;
