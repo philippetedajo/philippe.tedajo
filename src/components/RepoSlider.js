@@ -17,8 +17,9 @@ const RepoSlider = data => {
     totalLength: slides.length,
   })
 
+  let { activeIndex, totalLength } = currentSilde
+
   const handlePrevious = () => {
-    let { activeIndex, totalLength } = currentSilde
     if (activeIndex < 1) {
       activeIndex = totalLength - 1
     } else {
@@ -28,7 +29,6 @@ const RepoSlider = data => {
   }
 
   const handleNext = () => {
-    let { activeIndex, totalLength } = currentSilde
     if (activeIndex === totalLength - 1) {
       activeIndex = 0
     } else {
@@ -37,34 +37,22 @@ const RepoSlider = data => {
     setCurrentSlide({ ...currentSilde, activeIndex })
   }
 
-  console.log(currentSilde.activeIndex, currentSilde.totalLength)
-
   useEffect(() => {
-    const showAnimation = gsap.to(boxSlide.current, {
-      opacity: 1,
-      visibility: "visible",
-    })
+    setCurrentSlide({ ...currentSilde, activeIndex })
+  }, [activeIndex])
 
-    const hideAnimation = gsap.from(boxSlide.current, {
-      opacity: 0,
-      visibility: "hidden",
-    })
-  }, [boxSlide])
+  console.log(currentSilde.activeIndex, currentSilde.totalLength)
 
   return (
     <div className="d-flex flex-column flex-md-row justify-content-end justify-content-md-between align-items-center h-100 repo-slider">
-      {slides.map((slide, index) => {
-        return (
-          <div className="box-slide" ref={boxSlide} key={index}>
-            <div className="repo-number" ref={repoNumber}>
-              {slide.number}
-            </div>
-            <div className="repo-title text-center" ref={repoTitle}>
-              {slide.title}
-            </div>
-          </div>
-        )
-      })}
+      {/* slider */}
+      <div className="box-slide">
+        <div className="repo-number"> {slides[activeIndex].number} </div>
+        <div className="repo-title text-center">
+          {slides[activeIndex].title}
+        </div>
+      </div>
+      {/*slider controls*/}
       <div className="next-control">
         <span onClick={handlePrevious}>Previous</span>
       </div>
