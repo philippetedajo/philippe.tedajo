@@ -4,55 +4,50 @@ import useMousePosition from "../utils/useMousePositionHook"
 
 const Cursor = () => {
   const cursor = useRef(null)
-    const { x, y } = useMousePosition()
+  const { x, y } = useMousePosition()
 
-
-  const onMouseMove = () =>{
+  const onMouseMove = () => {
     gsap.to(cursor.current, {
       duration: 1,
       x: x,
       y: y,
     })
   }
-  const onMouseEnter = () =>{
+  const onMouseEnter = () => {
     gsap.to(cursor.current, {
-      duration: .4,
-      autoAlpha: 1
+      duration: 0.4,
+      autoAlpha: 1,
     })
   }
-  const onMouseLeave = () =>{
+  const onMouseLeave = () => {
     gsap.to(cursor.current, {
-      duration: .4,
-      autoAlpha: 0
+      duration: 0.4,
+      autoAlpha: 0,
     })
   }
-  const onMouseDown = () =>{
-    console.log("down")
+  const onMouseDown = () => {
+    // console.log("down")
   }
-  const onMouseUp = () =>{
-    console.log("up")
+  const onMouseUp = () => {
+    // console.log("up")
   }
-
 
   useEffect(() => {
-    document.addEventListener("mousemove", onMouseMove);
-    document.addEventListener("mouseenter", onMouseEnter);
-    document.addEventListener("mouseleave", onMouseLeave);
-    document.addEventListener("mousedown", onMouseDown);
-    document.addEventListener("mouseup", onMouseUp);
-
+    document.addEventListener("mousemove", onMouseMove)
+    document.addEventListener("mouseenter", onMouseEnter)
+    document.addEventListener("mouseleave", onMouseLeave)
+    document.addEventListener("mousedown", onMouseDown)
+    document.addEventListener("mouseup", onMouseUp)
 
     return () => {
       //cleanup
-      document.removeEventListener("mousemove", onMouseMove);
-      document.removeEventListener("mouseenter", onMouseEnter);
-      document.removeEventListener("mouseleave", onMouseLeave);
-      document.removeEventListener("mousedown", onMouseDown);
-      document.removeEventListener("mouseup", onMouseUp);
-    };
-  },[cursor, x, y]);
-
-
+      document.removeEventListener("mousemove", onMouseMove)
+      document.removeEventListener("mouseenter", onMouseEnter)
+      document.removeEventListener("mouseleave", onMouseLeave)
+      document.removeEventListener("mousedown", onMouseDown)
+      document.removeEventListener("mouseup", onMouseUp)
+    }
+  }, [cursor, x, y])
 
   return (
     <>

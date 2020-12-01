@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import { Splashscreen, Header, HeaderResponsive, Cursor } from "../components"
 
 const Layout = ({ children }) => {
-  const [isLoading, setIsLoading] = useState(true)
+  const [isLoading, setIsLoading] = useState(false)
 
   setTimeout(function () {
     setIsLoading(false)
