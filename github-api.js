@@ -1,32 +1,26 @@
 exports.githubApiQuery = `{
   viewer {
     login
+    anyPinnableItems(type: REPOSITORY)
+    bio
     name
-    repositories(first: 10) {
+    pinnedItems(first: 6) {
+      totalCount
       nodes {
-        id
-        name
-        description
-        url
-        updatedAt
-        forkCount
-        openGraphImageUrl
-        stargazers {
-          totalCount
-        }
-        
-        licenseInfo {
+        ... on Repository {
           id
-        }
-        primaryLanguage {
           name
-        }
-        languages(first: 10) {
-          nodes {
-            name
+          forkCount
+          languages(first: 4) {
+            nodes {
+              name
+            }
           }
+          stargazerCount
+          description
         }
       }
     }
   }
-}`
+}
+`

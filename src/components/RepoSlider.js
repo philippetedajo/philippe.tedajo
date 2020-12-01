@@ -1,14 +1,13 @@
 import React, { useEffect, useRef, useState, createRef } from "react"
 import gsap from "gsap"
+import s1 from "../images/slides/marek-piwnicki-7iV2hWUQzxE-unsplash.jpg"
 
 const RepoSlider = data => {
-  const repos = data.data.nodes
-
-  console.log(repos)
+  data = data.data
 
   const [currentSilde, setCurrentSlide] = useState({
     activeIndex: 0,
-    totalLength: repos.length,
+    totalLength: data.length,
   })
   const [animation, setAnimation] = useState("rigth")
 
@@ -38,9 +37,9 @@ const RepoSlider = data => {
 
   //====================================================================================================
 
-  const titles = useRef(repos.map(() => createRef()))
-  const numbers = useRef(repos.map(() => createRef()))
-  const pictures = useRef(repos.map(() => createRef()))
+  const titles = useRef(data.map(() => createRef()))
+  const numbers = useRef(data.map(() => createRef()))
+  const pictures = useRef(data.map(() => createRef()))
 
   const startAnimation = (a, b, c) => {
     switch (animation) {
@@ -105,21 +104,21 @@ const RepoSlider = data => {
     <div className="d-flex flex-column flex-md-row justify-content-end justify-content-md-between align-items-center h-100 repo-slider">
       {/* slider */}
       <div className={`box-slide`}>
-        {/*<img*/}
-        {/*  src={slides[activeIndex].imgSrc}*/}
-        {/*  alt="repo"*/}
-        {/*  ref={pictures.current[activeIndex]}*/}
-        {/*  style={{ width: "100%" }}*/}
-        {/*/>*/}
+        <img
+          src={s1}
+          alt="repo"
+          ref={pictures.current[activeIndex]}
+          style={{ width: "100%" }}
+        />
 
         <div className="repo-number" ref={numbers.current[activeIndex]}>
-          {repos[activeIndex].stargazers.totalCount}
+          {data[activeIndex].forkCount}
         </div>
         <div
           className={`repo-title text-center`}
           ref={titles.current[activeIndex]}
         >
-          {repos[activeIndex].description}
+          {data[activeIndex].name}
         </div>
       </div>
       {/*slider controls*/}

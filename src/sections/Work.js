@@ -20,26 +20,36 @@ const Work = () => {
       # github data
       allGithubData {
         nodes {
-          data {
-            viewer {
-              repositories {
-                nodes {
-                  description
-                  url
-                  forkCount
-                  stargazers {
-                    totalCount
+          rawResult {
+            data {
+              viewer {
+                bio
+                name
+                pinnedItems {
+                  totalCount
+                  nodes {
+                    description
+                    forkCount
+                    id
+                    name
+                    stargazerCount
+                    languages {
+                      nodes {
+                        name
+                      }
+                    }
                   }
                 }
               }
-              name
             }
           }
         }
       }
-      #
     }
   `)
+
+  const repoData =
+    data.allGithubData.nodes[0].rawResult.data.viewer.pinnedItems.nodes
 
   /* Work REF === */
   const work = useRef(null)
@@ -113,9 +123,7 @@ const Work = () => {
       </Container>
       {/* ---- */}
       <Container viewHeight="100vh">
-        <RepoSlider
-          data={data.allGithubData.nodes[0].data.viewer.repositories}
-        />
+        <RepoSlider data={repoData} />
       </Container>
     </>
   )
