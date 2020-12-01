@@ -103,6 +103,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 999;
+  opacity: 1;
 }
 
 .repo-number {
@@ -206,20 +207,5 @@
   }
   .repo-title {
     font-size: 67px;
-  }
-}
-
-//test
-
-.activeSlide {
-  animation: slide 1s linear forwards !important;
-
-  @keyframes slide {
-    0% {
-      transform: translate(-20%, -50%);
-    }
-    100% {
-      transform: translate(-60%, -50%);
-    }
   }
 }
