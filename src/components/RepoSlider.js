@@ -1,11 +1,15 @@
 import React, { useEffect, useRef, useState, createRef } from "react"
-import gsap, { Expo } from "gsap"
+import gsap from "gsap"
+
+import s1 from "../images/slides/marek-piwnicki-7iV2hWUQzxE-unsplash.jpg"
+import s2 from "../images/slides/marek-piwnicki-G-4aYXwbYk8-unsplash.jpg"
+import s3 from "../images/slides/sumit-jaswal-NSJLJqVVnfk-unsplash.jpg"
 
 const RepoSlider = data => {
   const slides = [
-    { number: "#00", title: "Ideal", imgSrc: "" },
-    { number: "#01", title: "Nature ", imgSrc: "" },
-    { number: "#02", title: "Ability", imgSrc: "" },
+    { number: "#01", title: "Ideal", imgSrc: s1 },
+    { number: "#02", title: "Nature ", imgSrc: s2 },
+    { number: "#03", title: "Ability", imgSrc: s3 },
   ]
 
   const [currentSilde, setCurrentSlide] = useState({
@@ -42,8 +46,9 @@ const RepoSlider = data => {
 
   const titles = useRef(slides.map(() => createRef()))
   const numbers = useRef(slides.map(() => createRef()))
+  const pictures = useRef(slides.map(() => createRef()))
 
-  const startAnimation = (a, b) => {
+  const startAnimation = (a, b, c) => {
     switch (animation) {
       case "rigth":
         gsap.from(a, {
@@ -58,11 +63,17 @@ const RepoSlider = data => {
           scale: 0.7,
           x: 100,
         })
+        gsap.from(c, {
+          duration: 1,
+          opacity: 0,
+          scale: 0.7,
+        })
 
         break
       case "left":
         gsap.from(a, {
           duration: 1,
+          opacity: 0,
           scale: 0.7,
           x: -500,
         })
@@ -71,6 +82,11 @@ const RepoSlider = data => {
           opacity: 0,
           scale: 0.7,
           x: -100,
+        })
+        gsap.from(c, {
+          duration: 1,
+          opacity: 0,
+          scale: 0.7,
         })
         break
     }
@@ -82,14 +98,26 @@ const RepoSlider = data => {
     setCurrentSlide({ ...currentSilde, activeIndex })
     const title = titles.current.map(ref => ref.current)
     const number = numbers.current.map(ref => ref.current)
+    const picture = pictures.current.map(ref => ref.current)
 
-    startAnimation(title[activeIndex], number[activeIndex])
+    startAnimation(
+      title[activeIndex],
+      number[activeIndex],
+      picture[activeIndex]
+    )
   }, [activeIndex])
 
   return (
     <div className="d-flex flex-column flex-md-row justify-content-end justify-content-md-between align-items-center h-100 repo-slider">
       {/* slider */}
       <div className={`box-slide`}>
+        <img
+          src={slides[activeIndex].imgSrc}
+          alt="repo"
+          ref={pictures.current[activeIndex]}
+          style={{ width: "100%" }}
+        />
+
         <div className="repo-number" ref={numbers.current[activeIndex]}>
           {slides[activeIndex].number}
         </div>

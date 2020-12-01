@@ -16,6 +16,7 @@ const Work = () => {
           }
         }
       }
+
       # github data
       allGithubData {
         nodes {
@@ -39,6 +40,7 @@ const Work = () => {
       #
     }
   `)
+  console.log(data.work)
 
   /* Work REF === */
   const work = useRef(null)
