@@ -1,20 +1,14 @@
 import React, { useEffect, useRef, useState, createRef } from "react"
 import gsap from "gsap"
 
-import s1 from "../images/slides/marek-piwnicki-7iV2hWUQzxE-unsplash.jpg"
-import s2 from "../images/slides/marek-piwnicki-G-4aYXwbYk8-unsplash.jpg"
-import s3 from "../images/slides/sumit-jaswal-NSJLJqVVnfk-unsplash.jpg"
-
 const RepoSlider = data => {
-  const slides = [
-    { number: "#01", title: "Ideal", imgSrc: s1 },
-    { number: "#02", title: "Nature ", imgSrc: s2 },
-    { number: "#03", title: "Ability", imgSrc: s3 },
-  ]
+  const repos = data.data.nodes
+
+  console.log(repos)
 
   const [currentSilde, setCurrentSlide] = useState({
     activeIndex: 0,
-    totalLength: slides.length,
+    totalLength: repos.length,
   })
   const [animation, setAnimation] = useState("rigth")
 
@@ -44,9 +38,9 @@ const RepoSlider = data => {
 
   //====================================================================================================
 
-  const titles = useRef(slides.map(() => createRef()))
-  const numbers = useRef(slides.map(() => createRef()))
-  const pictures = useRef(slides.map(() => createRef()))
+  const titles = useRef(repos.map(() => createRef()))
+  const numbers = useRef(repos.map(() => createRef()))
+  const pictures = useRef(repos.map(() => createRef()))
 
   const startAnimation = (a, b, c) => {
     switch (animation) {
@@ -111,21 +105,21 @@ const RepoSlider = data => {
     <div className="d-flex flex-column flex-md-row justify-content-end justify-content-md-between align-items-center h-100 repo-slider">
       {/* slider */}
       <div className={`box-slide`}>
-        <img
-          src={slides[activeIndex].imgSrc}
-          alt="repo"
-          ref={pictures.current[activeIndex]}
-          style={{ width: "100%" }}
-        />
+        {/*<img*/}
+        {/*  src={slides[activeIndex].imgSrc}*/}
+        {/*  alt="repo"*/}
+        {/*  ref={pictures.current[activeIndex]}*/}
+        {/*  style={{ width: "100%" }}*/}
+        {/*/>*/}
 
         <div className="repo-number" ref={numbers.current[activeIndex]}>
-          {slides[activeIndex].number}
+          {repos[activeIndex].stargazers.totalCount}
         </div>
         <div
           className={`repo-title text-center`}
           ref={titles.current[activeIndex]}
         >
-          {slides[activeIndex].title}
+          {repos[activeIndex].description}
         </div>
       </div>
       {/*slider controls*/}
