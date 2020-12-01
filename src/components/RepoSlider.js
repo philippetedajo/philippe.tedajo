@@ -110,7 +110,6 @@ const RepoSlider = data => {
           ref={pictures.current[activeIndex]}
           style={{ width: "100%" }}
         />
-
         <div className="repo-number" ref={numbers.current[activeIndex]}>
           {data[activeIndex].forkCount}
         </div>
@@ -120,7 +119,15 @@ const RepoSlider = data => {
         >
           {data[activeIndex].name}
         </div>
+        <div className="box-slide-details">
+          <h3 className="mb-3">{data[activeIndex].description}</h3>
+          <h3 className="mb-3">
+            stargazerCount: {data[activeIndex].stargazerCount}
+          </h3>
+          <h3 className="mb-3">forkCount: {data[activeIndex].forkCount}</h3>
+        </div>
       </div>
+
       {/*slider controls*/}
       <div className="next-control">
         <span onClick={handlePrevious}>Previous</span>
