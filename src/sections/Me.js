@@ -4,12 +4,14 @@ import { Container } from "../components"
 import Img from "gatsby-image"
 import { useStaticQuery, graphql, Link } from "gatsby"
 import RepoSlider from "../components/RepoSlider"
-import "../styles/work.css"
+import "../styles/me.css"
 
-const Work = () => {
+const Me = () => {
   const data = useStaticQuery(graphql`
     query {
-      work: file(relativePath: { eq: "andrew-neel-1-29wyvvLJA-unsplash.jpg" }) {
+      about: file(
+        relativePath: { eq: "andrew-neel-1-29wyvvLJA-unsplash.jpg" }
+      ) {
         childImageSharp {
           fluid(maxWidth: 3000) {
             ...GatsbyImageSharpFluid
@@ -51,8 +53,8 @@ const Work = () => {
   const repoData =
     data.allGithubData.nodes[0].rawResult.data.viewer.pinnedItems.nodes
 
-  /* Work REF === */
-  const work = useRef(null)
+  /* About REF === */
+  const about = useRef(null)
   const title = useRef(null)
   const subtitle = useRef(null)
   const links = useRef(null)
@@ -61,7 +63,7 @@ const Work = () => {
   const picture = useRef(null)
 
   useEffect(() => {
-    gsap.to(work.current, {
+    gsap.to(about.current, {
       visibility: "visible",
     })
     gsap.from(
@@ -80,22 +82,25 @@ const Work = () => {
       scale: 2,
       autoAlpha: 0,
     })
-  }, [work, title, subtitle, links, picture, projects])
+  }, [about, title, subtitle, links, picture, projects])
 
   return (
     <>
-      <Container viewHeight="100vh">
-        <div className="work " id="work" ref={work}>
+      <Container viewHeight="70vh">
+        <div className="about " id="about" ref={about}>
           <div className="inner-container h-100 d-flex flex-lg-row flex-column-reverse align-items-center justify-content-center justify-content-lg-between w-100 mb-5">
             <div className="para col-lg-4 mt-5">
-              <div className="w-title-work">
-                <h2 className="text-center text-lg-left title-work" ref={title}>
+              <div className="w-title-about">
+                <h2
+                  className="text-center text-lg-left title-about"
+                  ref={title}
+                >
                   THE POWER OF IMAGINATION
                 </h2>
               </div>
-              <div className="my-3 w-subtitle-work">
+              <div className="my-3 w-subtitle-about">
                 <p
-                  className="text-center text-lg-left subtitle-work"
+                  className="text-center text-lg-left subtitle-about"
                   ref={subtitle}
                 >
                   Sed ut perspiciatis unde omnis iste natus error sit voluptatem
@@ -104,29 +109,29 @@ const Work = () => {
                   beatae vitae
                 </p>
               </div>
-              <div className="w-project-links-work">
+              <div className="w-project-links-about">
                 <h6
-                  className="text-center text-lg-left project-links-work"
+                  className="text-center text-lg-left project-links-about"
                   ref={links}
                 >
                   <Link to="/projects">View more</Link>
                 </h6>
               </div>
             </div>
-            <div className="w-picture-work" ref={pictureWrapper}>
-              <div className="picture-work" ref={picture}>
-                <Img fluid={data.work.childImageSharp.fluid} />
+            <div className="w-picture-about" ref={pictureWrapper}>
+              <div className="picture-about" ref={picture}>
+                <Img fluid={data.about.childImageSharp.fluid} />
               </div>
             </div>
           </div>
         </div>
       </Container>
       {/* ---- */}
-      <Container viewHeight="100vh">
+      <Container viewHeight="70vh">
         <RepoSlider data={repoData} />
       </Container>
     </>
   )
 }
 
-export default Work
+export default Me

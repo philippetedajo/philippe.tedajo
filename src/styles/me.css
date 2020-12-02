@@ -1,22 +1,22 @@
-.work {
+.about {
   visibility: hidden;
 }
-.w-picture-work {
+.w-picture-about {
   width: 50%;
   overflow: hidden;
 }
-.picture-work {
+.picture-about {
   width: 100%;
 }
-.w-title-work {
+.w-title-about {
   height: 80px;
   overflow: hidden;
 }
-.w-subtitle-work {
+.w-subtitle-about {
   height: 160px;
   overflow: hidden;
 }
-.w-project-links-work {
+.w-project-links-about {
   height: 20px;
   overflow: hidden;
 }
@@ -31,7 +31,7 @@
 @media only screen and (max-width: 1160px) {
 }
 @media only screen and (max-width: 945px) {
-  .w-picture-work {
+  .w-picture-about {
     width: 90%;
     overflow: hidden;
   }

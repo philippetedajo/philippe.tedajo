@@ -1,6 +1,9 @@
 import React, { useEffect, useRef, useState, createRef } from "react"
 import gsap from "gsap"
 import s1 from "../images/slides/marek-piwnicki-7iV2hWUQzxE-unsplash.jpg"
+import { HiStar } from "react-icons/hi"
+import { VscRepoForked } from "react-icons/vsc"
+import { Container } from "./index"
 
 const RepoSlider = data => {
   data = data.data
@@ -40,46 +43,56 @@ const RepoSlider = data => {
   const titles = useRef(data.map(() => createRef()))
   const numbers = useRef(data.map(() => createRef()))
   const pictures = useRef(data.map(() => createRef()))
+  const details = useRef(data.map(() => createRef()))
 
-  const startAnimation = (a, b, c) => {
+  const startAnimation = (title, number, picture, detail) => {
     switch (animation) {
       case "rigth":
-        gsap.from(a, {
+        gsap.from(title, {
           duration: 1,
           opacity: 0,
           scale: 0.7,
           x: 500,
         })
-        gsap.from(b, {
+        gsap.from(number, {
           duration: 1,
           opacity: 0,
           scale: 0.7,
           x: 100,
         })
-        gsap.from(c, {
+        gsap.from(picture, {
           duration: 1,
           opacity: 0,
           scale: 0.7,
         })
+        gsap.from(detail, {
+          duration: 0.9,
+          scale: 0.7,
+          opacity: 0,
+        })
 
         break
       case "left":
-        gsap.from(a, {
+        gsap.from(title, {
           duration: 1,
           opacity: 0,
           scale: 0.7,
           x: -500,
         })
-        gsap.from(b, {
+        gsap.from(number, {
           duration: 1,
           opacity: 0,
           scale: 0.7,
           x: -100,
         })
-        gsap.from(c, {
+        gsap.from(picture, {
           duration: 1,
           opacity: 0,
           scale: 0.7,
+        })
+        gsap.from(detail, {
+          duration: 0.9,
+          opacity: 0,
         })
         break
     }
@@ -92,16 +105,21 @@ const RepoSlider = data => {
     const title = titles.current.map(ref => ref.current)
     const number = numbers.current.map(ref => ref.current)
     const picture = pictures.current.map(ref => ref.current)
+    const detail = details.current.map(ref => ref.current)
 
     startAnimation(
       title[activeIndex],
       number[activeIndex],
-      picture[activeIndex]
+      picture[activeIndex],
+      detail[activeIndex]
     )
   }, [activeIndex])
 
   return (
-    <div className="d-flex flex-column flex-md-row justify-content-end justify-content-md-between align-items-center h-100 repo-slider">
+    <div
+      className="d-flex flex-column flex-md-row justify-content-end justify-content-md-between align-items-center h-100 repo-slider"
+      id="work"
+    >
       {/* slider */}
       <div className={`box-slide`}>
         <img
@@ -110,21 +128,20 @@ const RepoSlider = data => {
           ref={pictures.current[activeIndex]}
           style={{ width: "100%" }}
         />
-        <div className="repo-number" ref={numbers.current[activeIndex]}>
-          {data[activeIndex].forkCount}
-        </div>
         <div
           className={`repo-title text-center`}
           ref={titles.current[activeIndex]}
         >
           {data[activeIndex].name}
         </div>
-        <div className="box-slide-details">
+        <div className="box-slide-details" ref={details.current[activeIndex]}>
           <h3 className="mb-3">{data[activeIndex].description}</h3>
           <h3 className="mb-3">
-            stargazerCount: {data[activeIndex].stargazerCount}
+            <HiStar /> : {data[activeIndex].stargazerCount}
           </h3>
-          <h3 className="mb-3">forkCount: {data[activeIndex].forkCount}</h3>
+          <h3 className="mb-3">
+            <VscRepoForked /> : {data[activeIndex].forkCount}
+          </h3>
         </div>
       </div>
 
