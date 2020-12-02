@@ -9,6 +9,7 @@ const Header = () => {
   const aboutRef = useRef(null)
   const workRef = useRef(null)
   const contactRef = useRef(null)
+  const moreRef = useRef(null)
 
   const twitterRef = useRef(null)
   const githubRef = useRef(null)
@@ -24,13 +25,16 @@ const Header = () => {
       delay: 0.5,
       scale: 1.5,
     })
-    gsap.from([workRef.current, aboutRef.current, contactRef.current], {
-      duration: 0.7,
-      autoAlpha: 0,
-      y: 25,
-      ease: "none",
-      stagger: 0.5,
-    })
+    gsap.from(
+      [aboutRef.current, workRef.current, contactRef.current, moreRef.current],
+      {
+        duration: 0.7,
+        autoAlpha: 0,
+        y: 25,
+        ease: "none",
+        stagger: 0.5,
+      }
+    )
     gsap.to([twitterRef.current, githubRef.current, linkedinRef.current], {
       duration: 0.5,
       opacity: 1,
@@ -44,6 +48,7 @@ const Header = () => {
     aboutRef,
     workRef,
     contactRef,
+    moreRef,
     twitterRef,
     githubRef,
     linkedinRef,
@@ -58,14 +63,17 @@ const Header = () => {
             <AnchorLink to="/#home" title="P." className="logo" />
           </div>
           <div className="navigation">
-            <div className="item" ref={workRef}>
-              <AnchorLink to="/#work" title="Work" />
-            </div>
             <div className="item" ref={aboutRef}>
               <AnchorLink to="/#about" title="About" />
             </div>
+            <div className="item" ref={workRef}>
+              <AnchorLink to="/#work" title="Work" />
+            </div>
             <div className="item" ref={contactRef}>
-              <AnchorLink to="/contact" title="Contact" />
+              <AnchorLink to="/#contact" title="Contact" />
+            </div>
+            <div className="item" ref={moreRef}>
+              <AnchorLink to="/more" title="More" />
             </div>
           </div>
           <div className="social">

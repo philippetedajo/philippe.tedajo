@@ -3,6 +3,7 @@ import gsap from "gsap"
 import s1 from "../images/slides/marek-piwnicki-7iV2hWUQzxE-unsplash.jpg"
 import { HiStar } from "react-icons/hi"
 import { VscRepoForked } from "react-icons/vsc"
+import { Container } from "./index"
 
 const RepoSlider = data => {
   data = data.data
@@ -115,7 +116,10 @@ const RepoSlider = data => {
   }, [activeIndex])
 
   return (
-    <div className="d-flex flex-column flex-md-row justify-content-end justify-content-md-between align-items-center h-100 repo-slider">
+    <div
+      className="d-flex flex-column flex-md-row justify-content-end justify-content-md-between align-items-center h-100 repo-slider"
+      id="work"
+    >
       {/* slider */}
       <div className={`box-slide`}>
         <img
