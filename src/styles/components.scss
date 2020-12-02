@@ -81,7 +81,6 @@
 //slider ===============================================================================================
 .repo-slider {
   position: relative;
-  border: 1px solid red;
 }
 
 .box-slide {
@@ -89,24 +88,21 @@
   top: 50%;
   left: 50%;
   transform: translate(-100%, -50%);
-  border: 1px solid #f1b0b7;
-  height: 550px;
+  height: 450px;
   width: 20rem;
 }
 
 .box-slide-details {
-  border: 1px solid #e83e8c;
   position: absolute;
   display: block;
-  top: 50px;
+  top: 0px;
   left: 140%;
-  width: 30rem;
+  width: 20rem;
 }
 
 .repo-title {
   font-size: 110px;
   position: absolute;
-  border: 1px solid blue;
   width: 55rem;
   top: 50%;
   left: 50%;
@@ -198,6 +194,18 @@
     font-size: 80px;
   }
 }
+
+@media only screen and (max-width: 990px) {
+  .box-slide-details {
+    background: #e83e8c !important;
+    position: absolute;
+    display: block;
+    top: 50px;
+    left: 112%;
+    width: 20rem;
+  }
+}
+
 @media only screen and (max-width: 850px) {
   .repo-title {
     font-size: 60px;

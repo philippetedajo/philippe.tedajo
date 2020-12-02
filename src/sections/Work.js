@@ -84,7 +84,7 @@ const Work = () => {
 
   return (
     <>
-      <Container viewHeight="100vh">
+      <Container viewHeight="70vh">
         <div className="work " id="work" ref={work}>
           <div className="inner-container h-100 d-flex flex-lg-row flex-column-reverse align-items-center justify-content-center justify-content-lg-between w-100 mb-5">
             <div className="para col-lg-4 mt-5">
@@ -122,7 +122,7 @@ const Work = () => {
         </div>
       </Container>
       {/* ---- */}
-      <Container viewHeight="100vh">
+      <Container viewHeight="70vh">
         <RepoSlider data={repoData} />
       </Container>
     </>
