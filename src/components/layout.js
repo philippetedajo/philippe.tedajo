@@ -8,8 +8,8 @@ import {
 } from "../components"
 
 const Layout = ({ children }) => {
-  const [isLoading, setIsLoading] = useState(false)
-  const [comingSoon] = useState(true)
+  const [isLoading, setIsLoading] = useState(true)
+  const [iscomingSoon] = useState(false)
 
   setTimeout(function () {
     setIsLoading(false)
@@ -17,7 +17,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      {comingSoon ? (
+      {iscomingSoon ? (
         <Soon />
       ) : (
         <>

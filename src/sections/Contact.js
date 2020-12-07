@@ -8,7 +8,9 @@ import "../styles/contact.css"
 const Contact = () => {
   const data = useStaticQuery(graphql`
     query {
-      contact: file(relativePath: { eq: "qpro-3Ynsf8_XCKc-unsplash.jpg" }) {
+      contact: file(
+        relativePath: { eq: "African_Art_at_the_British_Museum.jpg" }
+      ) {
         childImageSharp {
           fluid(maxWidth: 3000) {
             ...GatsbyImageSharpFluid
@@ -22,6 +24,8 @@ const Contact = () => {
   const contact = useRef(null)
   const title = useRef(null)
   const subtitle = useRef(null)
+  const bannerTitleWrapper = useRef(null)
+  const bannerTitle = useRef(null)
   const bannerWrapper = useRef(null)
   const banner = useRef(null)
 
@@ -29,7 +33,7 @@ const Contact = () => {
     gsap.to(contact.current, {
       visibility: "visible",
     })
-    gsap.from([title.current, subtitle.current], {
+    gsap.from([bannerTitle.current, title.current, subtitle.current], {
       duration: 2,
       ease: Power3.easeOut,
       y: 164,
@@ -42,12 +46,22 @@ const Contact = () => {
       scale: 2,
       autoAlpha: 0,
     })
-  }, [contact, title, subtitle, banner])
+  }, [contact, bannerTitle, title, subtitle, banner])
 
   return (
-    <Container viewHeight="85vh">
-      <div className="d-flex h-100 contact" id="contact" ref={contact}>
-        <div className="banner-image inner-container d-flex flex-column align-items-center justify-content-center">
+    <Container viewHeight="110vh">
+      <div className="d-flex flex-column h-100 contact" ref={contact}>
+        {/* */}
+        <div className="w-banner-title my-5" ref={bannerTitleWrapper}>
+          <h6
+            className="banner-title text-center text-lg-left"
+            ref={bannerTitle}
+            id="contact"
+          >
+            AN INSPIRATION
+          </h6>
+        </div>
+        <div className="banner-image inner-container d-flex flex-column align-items-center justify-content-center mt-5">
           <div className="w-banner-contact mb-5" ref={bannerWrapper}>
             <div className="banner-contact" ref={banner}>
               <Img fluid={data.contact.childImageSharp.fluid} />
@@ -57,7 +71,7 @@ const Contact = () => {
           <div className="box d-flex flex-column flex-lg-row justify-content-center align-items-center align-items-lg-start mt-5">
             <div className="col-lg-6 text-center text-lg-left w-title-contact">
               <h2 className="title-contact" ref={title}>
-                GREAT INNOVATION
+                CONTACT ME
               </h2>
             </div>
             <div className="col-lg-6 w-subtitle-contact">

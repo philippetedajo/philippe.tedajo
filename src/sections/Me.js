@@ -10,7 +10,7 @@ const Me = () => {
   const data = useStaticQuery(graphql`
     query {
       about: file(
-        relativePath: { eq: "andrew-neel-1-29wyvvLJA-unsplash.jpg" }
+        relativePath: { eq: "xavier-von-erlach-ySv9xncaq3A-unsplash.jpg" }
       ) {
         childImageSharp {
           fluid(maxWidth: 3000) {
@@ -61,13 +61,15 @@ const Me = () => {
   const projects = useRef(null)
   const pictureWrapper = useRef(null)
   const picture = useRef(null)
+  const meTitleWrapper = useRef(null)
+  const meTitle = useRef(null)
 
   useEffect(() => {
     gsap.to(about.current, {
       visibility: "visible",
     })
     gsap.from(
-      [title.current, subtitle.current, links.current, projects.current],
+      [title.current, subtitle.current, meTitle.current, projects.current],
       {
         duration: 2,
         ease: Power3.easeOut,
@@ -82,40 +84,52 @@ const Me = () => {
       scale: 2,
       autoAlpha: 0,
     })
-  }, [about, title, subtitle, links, picture, projects])
+  }, [about, title, subtitle, meTitle, picture, projects])
+
+  //.
+
+  const [width, setWidth] = useState(window.innerWidth)
+
+  useEffect(() => {
+    const updateWindowDimensions = () => {
+      const newWidth = window.innerWidth
+      setWidth(newWidth)
+    }
+    window.addEventListener("resize", updateWindowDimensions)
+    return () => window.removeEventListener("resize", updateWindowDimensions)
+  }, [])
+
+  console.log("give height", width)
+
+  //.
 
   return (
     <>
-      <Container viewHeight="70vh">
+      <Container viewHeight={width > 945 ? "80vh" : "100vh"}>
         <div className="about " id="about" ref={about}>
-          <div className="inner-container h-100 d-flex flex-lg-row flex-column-reverse align-items-center justify-content-center justify-content-lg-between w-100 mb-5">
-            <div className="para col-lg-4 mt-5">
-              <div className="w-title-about">
+          <div className="inner-container h-100 d-flex flex-lg-row flex-column-reverse align-items-center justify-content-center justify-content-lg-between w-100 ">
+            <div className="para d-flex flex-column col-lg-5 ">
+              <div className="w-title-about mt-5 ">
                 <h2
-                  className="text-center text-lg-left title-about"
+                  className="text-center text-lg-left title-about "
                   ref={title}
                 >
-                  THE POWER OF IMAGINATION
+                  A LITTLE ABOUT ME
                 </h2>
               </div>
-              <div className="my-3 w-subtitle-about">
+              <div className=" w-subtitle-about">
                 <p
-                  className="text-center text-lg-left subtitle-about"
+                  className="text-center text-lg-left  subtitle-about"
                   ref={subtitle}
                 >
-                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                  accusantium doloremque laudantium, totam rem aperiam, eaque
-                  ipsa quae ab illo inventore veritatis et quasi architecto
-                  beatae vitae
+                  Hello and welcome, as a supporter of "simplicity", I focus on
+                  user needs to build intuitive digital interfaces, offering a
+                  memorable user experience. I work at Bhent.inc as a front end
+                  developer for several types of projects and my area of
+                  expertise goes from javascript to python programming
+                  language.longly inspired by Indian philosophy and culture, all
+                  my life and work is design by it.
                 </p>
-              </div>
-              <div className="w-project-links-about">
-                <h6
-                  className="text-center text-lg-left project-links-about"
-                  ref={links}
-                >
-                  <Link to="/projects">View more</Link>
-                </h6>
               </div>
             </div>
             <div className="w-picture-about" ref={pictureWrapper}>
@@ -127,7 +141,15 @@ const Me = () => {
         </div>
       </Container>
       {/* ---- */}
-      <Container viewHeight="70vh">
+      <Container viewHeight="100vh">
+        <div className="w-me-banner-title" ref={meTitleWrapper}>
+          <h6
+            className="me-banner-title text-center text-lg-left"
+            ref={meTitle}
+          >
+            AN IMAGINATION
+          </h6>
+        </div>
         <RepoSlider data={repoData} />
       </Container>
     </>

@@ -71,19 +71,28 @@ const IndexPage = () => {
           {/*<div className="separator-bar" ref={separator} />*/}
 
           <div className="w-slogan">
-            <div className="slogan text-center text-md-left title" ref={sl1}>
+            <div
+              className="slogan text-center text-md-left title hlo"
+              ref={sl1}
+            >
               Bulding universe
             </div>
           </div>
 
           <div className="w-slogan">
-            <div className="slogan text-center text-md-left title" ref={sl2}>
+            <div
+              className="slogan text-center text-md-left title hlo"
+              ref={sl2}
+            >
               one pixel at a
             </div>
           </div>
 
           <div className="w-slogan">
-            <div className="slogan text-center text-md-left title" ref={sl3}>
+            <div
+              className="slogan text-center text-md-left title hlo"
+              ref={sl3}
+            >
               time
             </div>
           </div>

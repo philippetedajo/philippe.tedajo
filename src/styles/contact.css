@@ -1,6 +1,17 @@
 .contact {
   visibility: hidden;
 }
+
+.banner-title {
+  font-size: 60px;
+  font-weight: bold;
+}
+
+.w-banner-title {
+  height: 80px;
+  overflow: hidden;
+}
+
 .w-banner-contact {
   width: 75%;
   overflow: hidden;
@@ -17,6 +28,7 @@
 
 @media only screen and (max-width: 1160px) {
 }
+
 @media only screen and (max-width: 945px) {
   .w-banner-contact {
     width: 100%;
@@ -29,4 +41,13 @@
 @media only screen and (max-width: 768px) {
 }
 @media only screen and (max-width: 555px) {
+  .w-banner-title {
+    height: 140px;
+    overflow: hidden;
+  }
+}
+@media only screen and (max-width: 555px) {
+  .banner-title {
+    font-size: 50px;
+  }
 }

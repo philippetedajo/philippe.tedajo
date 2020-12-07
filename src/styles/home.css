@@ -80,23 +80,12 @@
 
 /* */
 
-/*.title {*/
-/*  font-weight: 800;*/
-/*  color: transparent;*/
-/*  font-size: 120px;*/
-/*  background: url("https://mir-s3-cdn-cf.behance.net/project_modules/1400/91dc1964120315.5ac77335ae374.png")*/
-/*    repeat;*/
-/*  background-position: 40% 50%;*/
-/*  -webkit-background-clip: text;*/
-/*  position: relative;*/
-/*  text-align: center;*/
-/*  line-height: 90px;*/
-/*  letter-spacing: -8px;*/
-/*}*/
+/*.hlo {*/
+/*  font-size: 72px;*/
 
-/*.subtitle {*/
-/*  display: block;*/
-/*  text-align: center;*/
-/*  text-transform: uppercase;*/
-/*  padding-top: 10px;*/
+/*  background-color: #2a2a72;*/
+/*  background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);*/
+
+/*  -webkit-background-clip: text;*/
+/*  -webkit-text-fill-color: transparent;*/
 /*}*/
