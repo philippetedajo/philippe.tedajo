@@ -61,13 +61,15 @@ const Me = () => {
   const projects = useRef(null)
   const pictureWrapper = useRef(null)
   const picture = useRef(null)
+  const meTitleWrapper = useRef(null)
+  const meTitle = useRef(null)
 
   useEffect(() => {
     gsap.to(about.current, {
       visibility: "visible",
     })
     gsap.from(
-      [title.current, subtitle.current, links.current, projects.current],
+      [title.current, subtitle.current, meTitle.current, projects.current],
       {
         duration: 2,
         ease: Power3.easeOut,
@@ -82,20 +84,37 @@ const Me = () => {
       scale: 2,
       autoAlpha: 0,
     })
-  }, [about, title, subtitle, links, picture, projects])
+  }, [about, title, subtitle, meTitle, picture, projects])
+
+  //.
+
+  const [width, setWidth] = useState(window.innerWidth)
+
+  useEffect(() => {
+    const updateWindowDimensions = () => {
+      const newWidth = window.innerWidth
+      setWidth(newWidth)
+    }
+    window.addEventListener("resize", updateWindowDimensions)
+    return () => window.removeEventListener("resize", updateWindowDimensions)
+  }, [])
+
+  console.log("give height", width)
+
+  //.
 
   return (
     <>
-      <Container viewHeight="80vh">
+      <Container viewHeight={width > 945 ? "80vh" : "100vh"}>
         <div className="about " id="about" ref={about}>
-          <div className="inner-container h-100 d-flex flex-lg-row flex-column-reverse align-items-center justify-content-center justify-content-lg-between w-100 mb-5">
-            <div className="para d-flex flex-column justify-content-center  col-lg-5  pt-5">
+          <div className="inner-container h-100 d-flex flex-lg-row flex-column-reverse align-items-center justify-content-center justify-content-lg-between w-100 ">
+            <div className="para d-flex flex-column col-lg-5 ">
               <div className="w-title-about mt-5 ">
                 <h2
                   className="text-center text-lg-left title-about "
                   ref={title}
                 >
-                  A little about me
+                  A LITTLE ABOUT ME
                 </h2>
               </div>
               <div className=" w-subtitle-about">
@@ -122,15 +141,15 @@ const Me = () => {
         </div>
       </Container>
       {/* ---- */}
-      <div className="w-project-links-about d-flex justify-content-end">
-        <h6
-          className="text-center text-lg-left project-links-about"
-          ref={links}
-        >
-          <Link to="/projects">POWER OF IMAGINATION</Link>
-        </h6>
-      </div>
       <Container viewHeight="100vh">
+        <div className="w-me-banner-title" ref={meTitleWrapper}>
+          <h6
+            className="me-banner-title text-center text-lg-left"
+            ref={meTitle}
+          >
+            AN IMAGINATION
+          </h6>
+        </div>
         <RepoSlider data={repoData} />
       </Container>
     </>

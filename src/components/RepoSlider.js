@@ -117,7 +117,7 @@ const RepoSlider = data => {
 
   return (
     <div
-      className="d-flex flex-column flex-md-row justify-content-end justify-content-md-between align-items-center h-100 repo-slider"
+      className="d-flex flex-column flex-md-row justify-content-end justify-content-md-between align-items-center  repo-slider"
       id="work"
     >
       {/* slider */}

@@ -8,6 +8,8 @@
 }
 
 .w-banner-title {
+  height: 80px;
+  overflow: hidden;
 }
 
 .w-banner-contact {
@@ -39,4 +41,8 @@
 @media only screen and (max-width: 768px) {
 }
 @media only screen and (max-width: 555px) {
+  .w-banner-title {
+    height: 140px;
+    overflow: hidden;
+  }
 }

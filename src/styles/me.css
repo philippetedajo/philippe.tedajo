@@ -16,19 +16,15 @@
   height: 385px;
   overflow: hidden;
 }
-.project-links-about {
+.me-banner-title {
   font-size: 60px;
+  z-index: 9999 !important;
 }
-.w-project-links-about {
-  height: 70px;
+.w-me-banner-title {
+  height: 80px;
   overflow: hidden;
-}
-
-.projects-container {
-  display: grid;
-  list-style: none;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  grid-gap: 26px;
+  border: 1px solid red;
+  z-index: 9999 !important;
 }
 
 @media only screen and (max-width: 1160px) {
@@ -53,6 +49,6 @@
 
 @media only screen and (min-width: 992px) {
   .para {
-    margin-top: 100px;
+    margin-top: 0px;
   }
 }
