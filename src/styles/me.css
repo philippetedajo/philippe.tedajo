@@ -13,11 +13,14 @@
   overflow: hidden;
 }
 .w-subtitle-about {
-  height: 160px;
+  height: 385px;
   overflow: hidden;
 }
+.project-links-about {
+  font-size: 60px;
+}
 .w-project-links-about {
-  height: 20px;
+  height: 70px;
   overflow: hidden;
 }
 
@@ -30,6 +33,11 @@
 
 @media only screen and (max-width: 1160px) {
 }
+@media only screen and (max-width: 1080px) {
+  /*.w-project-links-about {*/
+  /*  display: none !important;*/
+  /*}*/
+}
 @media only screen and (max-width: 945px) {
   .w-picture-about {
     width: 90%;
@@ -41,4 +49,10 @@
 @media only screen and (max-width: 768px) {
 }
 @media only screen and (max-width: 555px) {
+}
+
+@media only screen and (min-width: 992px) {
+  .para {
+    margin-top: 100px;
+  }
 }

@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState, createRef } from "react"
 import gsap from "gsap"
-import s1 from "../images/slides/marek-piwnicki-7iV2hWUQzxE-unsplash.jpg"
+import s1 from "../images/slides/matteo-vistocco-mJUpopBUGsg-unsplash.jpg"
 import { HiStar } from "react-icons/hi"
 import { VscRepoForked } from "react-icons/vsc"
 import { Container } from "./index"

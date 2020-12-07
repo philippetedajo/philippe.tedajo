@@ -80,12 +80,12 @@
 
 /* */
 
-.hlo {
-  font-size: 72px;
+/*.hlo {*/
+/*  font-size: 72px;*/
 
-  background-color: #861657;
-  background-image: -webkit-linear-gradient(326deg, #861657 0%, #ffa69e 74%);
+/*  background-color: #2a2a72;*/
+/*  background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);*/
 
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
+/*  -webkit-background-clip: text;*/
+/*  -webkit-text-fill-color: transparent;*/
+/*}*/

@@ -72,9 +72,9 @@ const Header = () => {
             <div className="item" ref={contactRef}>
               <AnchorLink to="/#contact" title="Contact" />
             </div>
-            <div className="item" ref={moreRef}>
-              <AnchorLink to="/more" title="More" />
-            </div>
+            {/*<div className="item" ref={moreRef}>*/}
+            {/*  <AnchorLink to="/more" title="More" />*/}
+            {/*</div>*/}
           </div>
           <div className="social">
             <a

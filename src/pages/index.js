@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import "../styles/styles.scss"
 import "../styles/components.scss"
 import "../static/fonts/fonts.scss"

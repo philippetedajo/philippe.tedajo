@@ -64,7 +64,7 @@
   background: linear-gradient(60deg, #000, #fff, #000);
   background-repeat: no-repeat;
   background-size: 80%;
-  animation: animate 3s linear infinite;
+  animation: animate 3.3s linear infinite;
   -webkit-background-clip: text;
   -webkit-text-fill-color: rgba(255, 255, 255, 0);
 }
@@ -118,7 +118,6 @@
 .repo-number {
   font-size: 30px;
   position: absolute;
-  border: 1px solid blue;
   left: 50%;
   transform: translate(-50%);
   top: -25px;
@@ -197,12 +196,16 @@
 
 @media only screen and (max-width: 990px) {
   .box-slide-details {
-    background: #e83e8c !important;
     position: absolute;
     display: block;
     top: 50px;
     left: 112%;
     width: 20rem;
+  }
+  .spashtext {
+    font-size: 2.5rem;
+    font-weight: bolder;
+    letter-spacing: 2px;
   }
 }
 
@@ -233,7 +236,6 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    border: 1px solid #f1b0b7;
     height: 550px;
     width: 20rem;
   }
@@ -246,6 +248,12 @@
     font-size: 50px;
     width: 40rem;
   }
+
+  .spashtext {
+    font-size: 1.7rem;
+    font-weight: bolder;
+    letter-spacing: 2px;
+  }
 }
 
 @media only screen and (max-width: 480px) {
@@ -256,5 +264,11 @@
   .repo-title {
     font-size: 40px;
     width: 22rem;
+  }
+
+  .spashtext {
+    font-size: 1.4rem;
+    font-weight: bolder;
+    letter-spacing: 1px;
   }
 }

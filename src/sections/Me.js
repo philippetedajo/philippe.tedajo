@@ -10,7 +10,7 @@ const Me = () => {
   const data = useStaticQuery(graphql`
     query {
       about: file(
-        relativePath: { eq: "andrew-neel-1-29wyvvLJA-unsplash.jpg" }
+        relativePath: { eq: "xavier-von-erlach-ySv9xncaq3A-unsplash.jpg" }
       ) {
         childImageSharp {
           fluid(maxWidth: 3000) {
@@ -86,36 +86,31 @@ const Me = () => {
 
   return (
     <>
-      <Container viewHeight="70vh">
+      <Container viewHeight="80vh">
         <div className="about " id="about" ref={about}>
           <div className="inner-container h-100 d-flex flex-lg-row flex-column-reverse align-items-center justify-content-center justify-content-lg-between w-100 mb-5">
-            <div className="para col-lg-4 mt-5">
-              <div className="w-title-about">
+            <div className="para d-flex flex-column justify-content-center  col-lg-5  pt-5">
+              <div className="w-title-about mt-5 ">
                 <h2
-                  className="text-center text-lg-left title-about"
+                  className="text-center text-lg-left title-about "
                   ref={title}
                 >
-                  THE POWER OF IMAGINATION
+                  A little about me
                 </h2>
               </div>
-              <div className="my-3 w-subtitle-about">
+              <div className=" w-subtitle-about">
                 <p
-                  className="text-center text-lg-left subtitle-about"
+                  className="text-center text-lg-left  subtitle-about"
                   ref={subtitle}
                 >
-                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                  accusantium doloremque laudantium, totam rem aperiam, eaque
-                  ipsa quae ab illo inventore veritatis et quasi architecto
-                  beatae vitae
+                  Hello and welcome, as a supporter of "simplicity", I focus on
+                  user needs to build intuitive digital interfaces, offering a
+                  memorable user experience. I work at Bhent.inc as a front end
+                  developer for several types of projects and my area of
+                  expertise goes from javascript to python programming
+                  language.longly inspired by Indian philosophy and culture, all
+                  my life and work is design by it.
                 </p>
-              </div>
-              <div className="w-project-links-about">
-                <h6
-                  className="text-center text-lg-left project-links-about"
-                  ref={links}
-                >
-                  <Link to="/projects">View more</Link>
-                </h6>
               </div>
             </div>
             <div className="w-picture-about" ref={pictureWrapper}>
@@ -126,8 +121,10 @@ const Me = () => {
           </div>
         </div>
       </Container>
+
       {/* ---- */}
-      <Container viewHeight="70vh">
+
+      <Container viewHeight="100vh">
         <RepoSlider data={repoData} />
       </Container>
     </>

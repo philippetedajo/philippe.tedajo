@@ -7,7 +7,6 @@ const Container = ({ children, viewHeight, bgColor }) => {
       style={{
         height: viewHeight,
         backgroundColor: bgColor,
-        border: "1px solid red",
       }}
     >
       {children}
