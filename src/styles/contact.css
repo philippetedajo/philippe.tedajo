@@ -46,3 +46,8 @@
     overflow: hidden;
   }
 }
+@media only screen and (max-width: 555px) {
+  .banner-title {
+    font-size: 50px;
+  }
+}

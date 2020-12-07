@@ -49,7 +49,7 @@ const Contact = () => {
   }, [contact, bannerTitle, title, subtitle, banner])
 
   return (
-    <Container viewHeight="110vh">
+    <Container viewHeight="120vh">
       <div className="d-flex flex-column h-100 contact" ref={contact}>
         {/* */}
         <div className="w-banner-title my-5" ref={bannerTitleWrapper}>
@@ -57,10 +57,10 @@ const Contact = () => {
             className="banner-title text-center text-lg-left"
             ref={bannerTitle}
           >
-            A BIT OF MAGIC
+            AN INSPIRATION
           </h6>
         </div>
-        <div className="banner-image inner-container d-flex flex-column align-items-center justify-content-center">
+        <div className="banner-image inner-container d-flex flex-column align-items-center justify-content-center mt-5">
           <div
             className="w-banner-contact mb-5"
             ref={bannerWrapper}
