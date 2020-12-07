@@ -49,23 +49,20 @@ const Contact = () => {
   }, [contact, bannerTitle, title, subtitle, banner])
 
   return (
-    <Container viewHeight="120vh">
+    <Container viewHeight="110vh">
       <div className="d-flex flex-column h-100 contact" ref={contact}>
         {/* */}
         <div className="w-banner-title my-5" ref={bannerTitleWrapper}>
           <h6
             className="banner-title text-center text-lg-left"
             ref={bannerTitle}
+            id="contact"
           >
             AN INSPIRATION
           </h6>
         </div>
         <div className="banner-image inner-container d-flex flex-column align-items-center justify-content-center mt-5">
-          <div
-            className="w-banner-contact mb-5"
-            ref={bannerWrapper}
-            id="contact"
-          >
+          <div className="w-banner-contact mb-5" ref={bannerWrapper}>
             <div className="banner-contact" ref={banner}>
               <Img fluid={data.contact.childImageSharp.fluid} />
             </div>
