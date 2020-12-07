@@ -121,9 +121,15 @@ const Me = () => {
           </div>
         </div>
       </Container>
-
       {/* ---- */}
-
+      <div className="w-project-links-about d-flex justify-content-end">
+        <h6
+          className="text-center text-lg-left project-links-about"
+          ref={links}
+        >
+          <Link to="/projects">POWER OF IMAGINATION</Link>
+        </h6>
+      </div>
       <Container viewHeight="100vh">
         <RepoSlider data={repoData} />
       </Container>
