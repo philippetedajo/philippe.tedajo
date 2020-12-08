@@ -6,9 +6,12 @@ const { githubApiQuery } = require("./github-api")
 
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `P.`,
+    description: `A portofolio for developer build using Github GraphQL V4 API`,
+    author: `Philippe Tedajo`,
+    url: "https://www.philippetedajo.com/",
+    image: "images/p.png",
+    twitterUsername: "@Zambou21",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
