@@ -1,17 +1,26 @@
 // init. environment variables
 const dotenv = require("dotenv")
+const { graphql } = require("gatsby")
 dotenv.config()
 
 const { githubApiQuery } = require("./github-api")
 
 module.exports = {
   siteMetadata: {
-    title: `P.`,
-    description: `A portofolio for developer build using Github GraphQL V4 API`,
+    title: `Philippe Tedajo`,
+    description: `Philippe Tedajo is a software engineer specializing in building websites and applications offering a memorable user experience.`,
     author: `Philippe Tedajo`,
     url: "https://www.philippetedajo.com/",
     image: "images/p.png",
     twitterUsername: "@Zambou21",
+    keywords: [
+      "Portofolio",
+      "Gatsby",
+      "Javascript",
+      "React",
+      "Github",
+      "GRAPHQL",
+    ],
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
