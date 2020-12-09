@@ -49,7 +49,7 @@ const Contact = () => {
   }, [contact, bannerTitle, title, subtitle, banner])
 
   return (
-    <Container viewHeight="130vh">
+    <Container viewHeight="135vh">
       <div className="d-flex flex-column h-100 contact" ref={contact}>
         {/* */}
         <div className="w-banner-title my-5" ref={bannerTitleWrapper}>
@@ -76,7 +76,7 @@ const Contact = () => {
               <form className="d-flex align-items-md-center align-items-lg-start flex-column">
                 <input
                   type="email"
-                  className="pf my-3 col-md-7 col-lg-9 p-0 mt-4"
+                  className="pf my-3 col-md-6 col-lg-9 p-0 mt-4"
                   placeholder="Enter your email"
                 />
 
@@ -85,7 +85,10 @@ const Contact = () => {
                   className="pf my-3 col-md-8 col-lg-9 p-0 mb-4"
                   placeholder="Leave a message"
                 />
-                <button className="col-lg-3 my-4 send " type="submit">
+                <button
+                  className="col-md-8 col-lg-3 mt-2 mb-4 send "
+                  type="submit"
+                >
                   Send
                 </button>
               </form>
