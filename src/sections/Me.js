@@ -105,7 +105,7 @@ const Me = () => {
 
   return (
     <>
-      <Container viewHeight={width > 945 ? "80vh" : "100vh"}>
+      <Container viewHeight={width > 945 ? "80vh" : "114vh"}>
         <div className="about " id="about" ref={about}>
           <div className="inner-container h-100 d-flex flex-lg-row flex-column-reverse align-items-center justify-content-center justify-content-lg-between w-100 ">
             <div className="para d-flex flex-column col-lg-5 ">
