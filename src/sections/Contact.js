@@ -49,7 +49,7 @@ const Contact = () => {
   }, [contact, bannerTitle, title, subtitle, banner])
 
   return (
-    <Container viewHeight="110vh">
+    <Container viewHeight="120vh">
       <div className="d-flex flex-column h-100 contact" ref={contact}>
         {/* */}
         <div className="w-banner-title my-5" ref={bannerTitleWrapper}>
@@ -70,18 +70,39 @@ const Contact = () => {
 
           <div className="box d-flex flex-column flex-lg-row justify-content-center align-items-center align-items-lg-start mt-5">
             <div className="col-lg-6 text-center text-lg-left w-title-contact">
-              <h2 className="title-contact" ref={title}>
-                CONTACT ME
-              </h2>
+              <div className="col-lg-12 text-center text-lg-left w-title-contact">
+                <h2 className="title-contact" ref={title}>
+                  CONTACT ME
+                </h2>
+              </div>
+
+              <div className="col-lg-12 text-center text-lg-left w-title-contact">
+                <form className="d-flex flex-column ">
+                  <input
+                    type="email"
+                    className="pf my-2 col-9 p-0"
+                    placeholder="Enter your email"
+                  />
+
+                  <input
+                    type="email"
+                    className="pf my-3 col-9 p-0"
+                    placeholder="Leave a message"
+                  />
+                  <button className="col-3 send " type="submit">
+                    Send
+                  </button>
+                </form>
+              </div>
             </div>
+
             <div className="col-lg-6 w-subtitle-contact">
               <p
                 ref={subtitle}
                 className="m-0 text-center text-lg-left subtitle-contact"
               >
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-                quae ab illo inventore veritatis et quasi architecto beatae
+                Let's work together to create game-changing experiences that
+                will take your brand to another level.
               </p>
             </div>
           </div>

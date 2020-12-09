@@ -11,7 +11,7 @@ const Contact = () => {
     })
   }, [contact])
 
-  return <div className="contact">Contact</div>
+  return <div className="contact">sr</div>
 }
 
 export default Contact
