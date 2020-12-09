@@ -73,6 +73,22 @@ const Contact = () => {
               <h2 className="title-contact" ref={title}>
                 CONTACT ME
               </h2>
+              <form className="d-flex flex-column ">
+                <input
+                  type="email"
+                  className="pf my-2 col-9 p-0"
+                  placeholder="Enter your email"
+                />
+
+                <input
+                  type="email"
+                  className="pf my-3 col-9 p-0"
+                  placeholder="Leave a message"
+                />
+                <button className="col-3 send " type="submit">
+                  Send
+                </button>
+              </form>
             </div>
             <div className="col-lg-6 w-subtitle-contact">
               <p
