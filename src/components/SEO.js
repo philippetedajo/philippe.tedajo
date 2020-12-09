@@ -12,7 +12,6 @@ const SEO = ({
   twitterUsername,
   keywords,
 }) => {
-  console.log(title)
   return (
     <StaticQuery
       query={detailsQuery}

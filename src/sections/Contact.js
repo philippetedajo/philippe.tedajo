@@ -73,19 +73,19 @@ const Contact = () => {
               <h2 className="title-contact" ref={title}>
                 CONTACT ME
               </h2>
-              <form className="d-flex flex-column ">
+              <form className="d-flex align-items-md-center align-items-lg-start flex-column">
                 <input
                   type="email"
-                  className="pf my-2 col-9 p-0"
+                  className="pf my-3 col-md-7 col-lg-9 p-0 mt-4"
                   placeholder="Enter your email"
                 />
 
                 <input
                   type="email"
-                  className="pf my-3 col-9 p-0"
+                  className="pf my-3 col-md-8 col-lg-9 p-0 mb-4"
                   placeholder="Leave a message"
                 />
-                <button className="col-3 send " type="submit">
+                <button className="col-lg-3 my-4 send " type="submit">
                   Send
                 </button>
               </form>
