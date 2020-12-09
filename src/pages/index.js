@@ -8,7 +8,6 @@ import { SEO } from "../components"
 const Index = () => {
   return (
     <>
-      <SEO />
       <Home />
       <Me />
       <Contact />

@@ -5,6 +5,7 @@ import {
   HeaderResponsive,
   Cursor,
   Soon,
+  SEO,
 } from "../components"
 
 const Layout = ({ children }) => {
@@ -17,6 +18,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
+      <SEO />
       {iscomingSoon ? (
         <Soon />
       ) : (
