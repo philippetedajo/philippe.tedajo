@@ -95,9 +95,8 @@ const Contact = () => {
                 ref={subtitle}
                 className="m-0 text-center text-lg-left subtitle-contact"
               >
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-                quae ab illo inventore veritatis et quasi architecto beatae
+                Let's work together to create game-changing experiences that
+                will take your brand to another level.
               </p>
             </div>
           </div>
