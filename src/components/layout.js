@@ -9,7 +9,7 @@ import {
 } from "../components"
 
 const Layout = ({ children }) => {
-  const [isLoading, setIsLoading] = useState(false)
+  const [isLoading, setIsLoading] = useState(true)
   const [iscomingSoon] = useState(false)
 
   setTimeout(function () {

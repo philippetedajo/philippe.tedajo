@@ -146,10 +146,14 @@ const RepoSlider = data => {
 
       {/*slider controls*/}
       <div className="next-control">
-        <span onClick={handlePrevious}>Previous</span>
+        <span onClick={handlePrevious} className="hover-link">
+          previous
+        </span>
       </div>
       <div className="previous-control">
-        <span onClick={handleNext}>Next</span>
+        <span onClick={handleNext} className="hover-link">
+          Next
+        </span>
       </div>
     </div>
   )
