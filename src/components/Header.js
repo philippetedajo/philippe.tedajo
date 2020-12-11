@@ -4,10 +4,10 @@ import { FaTwitter, FaGithub, FaLinkedin } from "react-icons/fa"
 import { AnchorLink } from "gatsby-plugin-anchor-links"
 
 const Header = () => {
-  const [isActive, setActive] = useState("false")
+  const [activeIndexLink, setActiveIndexLink] = useState(0)
 
-  const handleToggle = () => {
-    setActive(!isActive)
+  const handleOnLink = el => {
+    setActiveIndexLink(el)
   }
 
   const header = useRef(null)
@@ -29,20 +29,20 @@ const Header = () => {
   ]
 
   const linksRef = useRef([])
+  const socialsRef = useRef([])
+
   linksRef.current = []
+  socialsRef.current = []
+
   const addLinkToRefs = el => {
     if (el && !linksRef.current.includes(el)) {
       linksRef.current.push(el)
     }
   }
-
-  const socialsRef = useRef([])
-  socialsRef.current = []
   const addSocialToRefs = el => {
     if (el && !socialsRef.current.includes(el)) {
       socialsRef.current.push(el)
     }
-    console.log(socialsRef)
   }
 
   useEffect(() => {
@@ -81,8 +81,21 @@ const Header = () => {
           </div>
           <div className="navigation">
             {links.map(({ title, pathname }, index) => (
-              <div key={index} className="item" ref={addLinkToRefs}>
-                <AnchorLink to={pathname} title={title} className={isActive} />
+              <div
+                key={index}
+                className="item"
+                ref={addLinkToRefs}
+                onClick={() => handleOnLink(index)}
+              >
+                <AnchorLink
+                  to={pathname}
+                  title={title}
+                  className={
+                    activeIndexLink === index
+                      ? "item-link activeLink"
+                      : "item-link"
+                  }
+                />
               </div>
             ))}
           </div>
@@ -98,23 +111,6 @@ const Header = () => {
                 {icon}
               </a>
             ))}
-
-            {/* <a
-              href="https://github.com/philippetedajo"
-              rel="noopener noreferrer"
-              target="_blank"
-              ref={githubRef}
-            >
-              <FaGithub />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/philippe-tedajo-aa1a298b"
-              rel="noopener noreferrer"
-              target="_blank"
-              ref={linkedinRef}
-            >
-              <FaLinkedin />
-            </a> */}
           </div>
         </div>
       </div>
