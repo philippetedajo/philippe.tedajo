@@ -9,8 +9,8 @@ const Cursor = () => {
   const onMouseMove = () => {
     gsap.to(cursor.current, {
       duration: 1,
-      x: x,
-      y: y,
+      x: x + 30,
+      y: y - 30,
     })
   }
   const onMouseEnter = () => {

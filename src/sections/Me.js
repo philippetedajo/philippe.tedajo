@@ -5,6 +5,8 @@ import Img from "gatsby-image"
 import { useStaticQuery, graphql, Link } from "gatsby"
 import RepoSlider from "../components/RepoSlider"
 import "../styles/me.css"
+import useWindowResizeHook from "../utils/useWindowResizeHook"
+import useWindowPosition from "../utils/useWindowResizeHook"
 
 const Me = () => {
   const data = useStaticQuery(graphql`
@@ -86,22 +88,7 @@ const Me = () => {
     })
   }, [about, title, subtitle, meTitle, picture, projects])
 
-  //.
-
-  const [width, setWidth] = useState(window.innerWidth)
-
-  useEffect(() => {
-    const updateWindowDimensions = () => {
-      const newWidth = window.innerWidth
-      setWidth(newWidth)
-    }
-    window.addEventListener("resize", updateWindowDimensions)
-    return () => window.removeEventListener("resize", updateWindowDimensions)
-  }, [])
-
-  console.log("give height", width)
-
-  //.
+  const width = useWindowPosition()
 
   return (
     <>

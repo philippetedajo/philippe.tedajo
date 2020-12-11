@@ -1,19 +1,49 @@
-import React, { useRef, useEffect } from "react"
+import React, { useState, useRef, useEffect } from "react"
 import { gsap } from "gsap"
 import { FaTwitter, FaGithub, FaLinkedin } from "react-icons/fa"
 import { AnchorLink } from "gatsby-plugin-anchor-links"
 
 const Header = () => {
+  const [isActive, setActive] = useState("false")
+
+  const handleToggle = () => {
+    setActive(!isActive)
+  }
+
   const header = useRef(null)
   const logoRef = useRef(null)
-  const aboutRef = useRef(null)
-  const workRef = useRef(null)
-  const contactRef = useRef(null)
-  const moreRef = useRef(null)
 
-  const twitterRef = useRef(null)
-  const githubRef = useRef(null)
-  const linkedinRef = useRef(null)
+  const links = [
+    { title: "About", pathname: "/#about" },
+    { title: "Work", pathname: "/#work" },
+    { title: "Contact", pathname: "/#contact" },
+  ]
+
+  const socials = [
+    { href: "https://twitter.com/Zambou21", icon: <FaTwitter /> },
+    { href: "https://github.com/philippetedajo", icon: <FaGithub /> },
+    {
+      href: "https://www.linkedin.com/in/philippe-tedajo-aa1a298b",
+      icon: <FaLinkedin />,
+    },
+  ]
+
+  const linksRef = useRef([])
+  linksRef.current = []
+  const addLinkToRefs = el => {
+    if (el && !linksRef.current.includes(el)) {
+      linksRef.current.push(el)
+    }
+  }
+
+  const socialsRef = useRef([])
+  socialsRef.current = []
+  const addSocialToRefs = el => {
+    if (el && !socialsRef.current.includes(el)) {
+      socialsRef.current.push(el)
+    }
+    console.log(socialsRef)
+  }
 
   useEffect(() => {
     gsap.to(header.current, {
@@ -25,34 +55,21 @@ const Header = () => {
       delay: 0.5,
       scale: 1.5,
     })
-    gsap.from(
-      [aboutRef.current, workRef.current, contactRef.current, moreRef.current],
-      {
-        duration: 0.7,
-        autoAlpha: 0,
-        y: 25,
-        ease: "none",
-        stagger: 0.5,
-      }
-    )
-    gsap.to([twitterRef.current, githubRef.current, linkedinRef.current], {
+    gsap.from(linksRef.current, {
+      duration: 0.7,
+      autoAlpha: 0,
+      y: 25,
+      ease: "none",
+      stagger: 0.5,
+    })
+    gsap.to(socialsRef.current, {
       duration: 0.5,
       opacity: 1,
       ease: "none",
       visibility: "visible",
       delay: 2,
     })
-  }, [
-    header,
-    logoRef,
-    aboutRef,
-    workRef,
-    contactRef,
-    moreRef,
-    twitterRef,
-    githubRef,
-    linkedinRef,
-  ])
+  }, [header, logoRef])
 
   /* ============ */
   return (
@@ -63,29 +80,26 @@ const Header = () => {
             <AnchorLink to="/#home" title="P." className="logo" />
           </div>
           <div className="navigation">
-            <div className="item" ref={aboutRef}>
-              <AnchorLink to="/#about" title="About" />
-            </div>
-            <div className="item" ref={workRef}>
-              <AnchorLink to="/#work" title="Work" />
-            </div>
-            <div className="item" ref={contactRef}>
-              <AnchorLink to="/#contact" title="Contact" />
-            </div>
-            {/*<div className="item" ref={moreRef}>*/}
-            {/*  <AnchorLink to="/more" title="More" />*/}
-            {/*</div>*/}
+            {links.map(({ title, pathname }, index) => (
+              <div key={index} className="item" ref={addLinkToRefs}>
+                <AnchorLink to={pathname} title={title} className={isActive} />
+              </div>
+            ))}
           </div>
           <div className="social">
-            <a
-              href="https://twitter.com/Zambou21"
-              rel="noopener noreferrer"
-              target="_blank"
-              ref={twitterRef}
-            >
-              <FaTwitter />
-            </a>
-            <a
+            {socials.map(({ href, icon }, index) => (
+              <a
+                key={index}
+                href={href}
+                rel="noopener noreferrer"
+                target="_blank"
+                ref={addSocialToRefs}
+              >
+                {icon}
+              </a>
+            ))}
+
+            {/* <a
               href="https://github.com/philippetedajo"
               rel="noopener noreferrer"
               target="_blank"
@@ -100,7 +114,7 @@ const Header = () => {
               ref={linkedinRef}
             >
               <FaLinkedin />
-            </a>
+            </a> */}
           </div>
         </div>
       </div>
