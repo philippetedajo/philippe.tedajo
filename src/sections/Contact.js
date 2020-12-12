@@ -52,7 +52,7 @@ const Contact = () => {
     <Container viewHeight="135vh">
       <div className="d-flex flex-column h-100 contact" ref={contact}>
         {/* */}
-        <div className="w-banner-title my-5" ref={bannerTitleWrapper}>
+        <div className="w-banner-title mb-5" ref={bannerTitleWrapper}>
           <h6
             className="banner-title text-center text-lg-left"
             ref={bannerTitle}
@@ -61,14 +61,14 @@ const Contact = () => {
             AN INSPIRATION
           </h6>
         </div>
-        <div className="banner-image inner-container d-flex flex-column align-items-center justify-content-center mt-5">
+        <div className="banner-image inner-container d-flex flex-column align-items-center justify-content-center mt-1">
           <div className="w-banner-contact mb-5" ref={bannerWrapper}>
             <div className="banner-contact" ref={banner}>
               <Img fluid={data.contact.childImageSharp.fluid} />
             </div>
           </div>
 
-          <div className="box d-flex flex-column flex-lg-row justify-content-center align-items-center align-items-lg-start mt-5">
+          <div className="box d-flex flex-column flex-lg-row justify-content-center align-items-center align-items-lg-start mt-1">
             <div className="col-lg-6 text-center text-lg-left w-title-contact">
               <h2 className="title-contact" ref={title}>
                 CONTACT ME

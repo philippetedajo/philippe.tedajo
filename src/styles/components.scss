@@ -277,35 +277,37 @@
 //links ===============================================================================================
 
 .item-link {
-  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none !important;
+  letter-spacing: 0.15em;
+  display: inline-block;
+  padding: 5px 10px;
   position: relative;
-  color: white !important;
+}
+.item-link:hover {
+  text-decoration: none !important;
+  color: #fff;
 }
 .item-link::after {
+  bottom: 16px;
   content: "";
-  background: white;
-  mix-blend-mode: exclusion;
-  width: calc(100% + 20px);
-  height: 0;
+  display: block;
+  height: 2px;
+  left: 0;
   position: absolute;
-  bottom: -4px;
-  left: -10px;
-  transition: all 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  background: #fff;
+  transition: width 0.3s ease 0s;
+  width: 0;
 }
 .item-link:hover::after {
-  height: calc(100% + 8px);
+  width: 100%;
+  left: 0;
 }
 
 .activeLink::after {
-  content: "";
-  background: white;
-  mix-blend-mode: exclusion;
-  width: calc(100% + 20px);
-  height: calc(100% + 8px);
-  position: absolute;
-  bottom: -4px;
-  left: -10px;
-  transition: all 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  width: 100%;
+  left: 0;
 }
 
 .hover-link {
