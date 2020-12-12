@@ -49,7 +49,7 @@ const Contact = () => {
   }, [contact, bannerTitle, title, subtitle, banner])
 
   return (
-    <Container viewHeight="135vh">
+    <Container viewHeight="115vh">
       <div className="d-flex flex-column h-100 contact" ref={contact}>
         {/* */}
         <div className="w-banner-title mb-5" ref={bannerTitleWrapper}>

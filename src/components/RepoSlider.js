@@ -134,13 +134,13 @@ const RepoSlider = data => {
           {data[activeIndex].name}
         </div>
         <div className="box-slide-details" ref={details.current[activeIndex]}>
-          <h3 className="mb-3">{data[activeIndex].description}</h3>
-          <h3 className="mb-3">
+          <h5 className="mb-3">{data[activeIndex].description}</h5>
+          <h5 className="mb-3">
             <HiStar /> : {data[activeIndex].stargazerCount}
-          </h3>
-          <h3 className="mb-3">
+          </h5>
+          <h5 className="mb-3">
             <VscRepoForked /> : {data[activeIndex].forkCount}
-          </h3>
+          </h5>
         </div>
       </div>
 
