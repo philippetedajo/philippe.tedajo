@@ -68,7 +68,7 @@ const Contact = () => {
             </div>
           </div>
 
-          <div className="box d-flex flex-column flex-lg-row justify-content-center align-items-center align-items-lg-start mt-1">
+          <div className="box d-flex flex-column flex-lg-row justify-content-center align-items-center align-items-lg-start mt-3">
             <div className="col-lg-6 text-center text-lg-left w-title-contact">
               <h2 className="title-contact" ref={title}>
                 CONTACT ME
