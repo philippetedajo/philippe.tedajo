@@ -31,7 +31,7 @@ const Contact = () => {
 
   useEffect(() => {
     gsap.to(contact.current, {
-      visibility: "visible",
+      visibility: "visible" ,
     })
     gsap.from([bannerTitle.current, title.current, subtitle.current], {
       duration: 2,
