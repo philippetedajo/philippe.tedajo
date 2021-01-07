@@ -4,7 +4,7 @@ import arrow_down from "../images/down-chevron.png"
 
 const Home = () => {
   return (
-    <div className="d-flex justify-content-center align-items-center p-lg-5">
+    <div className="d-flex justify-content-center align-items-center p-5 p-md-0 p-lg-5">
       <div className="profil p-md-5">
         <div className="user-profil text-center text-md-left">
           Philippe Tedajo

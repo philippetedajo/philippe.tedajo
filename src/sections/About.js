@@ -19,10 +19,10 @@ const About = () => {
   `)
 
   return (
-    <div className="p-md-5">
+    <div className=" p-4 p-md-5">
       <div className="h-100 d-flex flex-lg-row flex-column-reverse align-items-center justify-content-center justify-content-lg-between w-100">
         <div className="d-flex flex-column col-lg-5 ">
-          <h2 className="text-center text-lg-left mt-3 mt-lg-0">
+          <h2 className="text-center text-lg-left mt-5 mt-md-3 mt-lg-0">
             A LITTLE ABOUT ME
           </h2>
           <p className="text-center text-lg-left">
