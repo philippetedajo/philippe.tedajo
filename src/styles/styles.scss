@@ -43,11 +43,17 @@ p {
 //cursor ===============================================================================================
 .cursor {
   position: fixed;
-  top: 0;
-  left: 0;
+  top: -20px;
+  left: -20px;
   height: 20px;
   width: 20px;
   border-radius: 50%;
   background-color: #a3988d;
   z-index: 999;
+}
+
+@media only screen and (max-width: 500px) {
+  .cursor {
+    display: none;
+  }
 }

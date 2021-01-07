@@ -1,7 +1,7 @@
 .projet {
   font-size: 100px;
   text-decoration: none !important;
-  color: #fff;
+  color: black;
 }
 
 @media only screen and (max-width: 555px) {
