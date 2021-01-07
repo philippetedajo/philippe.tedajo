@@ -12,10 +12,15 @@ const Splash = (item1, item2) => {
 
   tl.to(item2, {
     duration: 2,
-    ease: Expo.easeIn,
-    opacity: 0,
-    y: 120,
+    ease: Expo.easeInOut,
+    top: "90%",
+    borderRadius: "50%",
+    height: 20,
+    width: 20,
     delay: 0.5,
+  })
+  tl.to(item2, {
+    opacity: 0,
   })
 }
 

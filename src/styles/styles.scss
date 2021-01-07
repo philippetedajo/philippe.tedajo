@@ -30,14 +30,23 @@ p {
 }
 
 .loader {
-  position: fixed;
-  top: 40%;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  border: 4px solid $primary;
+  animation: loader 2s infinite ease;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
-  font-family: "ddinbold", sans-serif;
-  color: $primary !important;
-  font-size: 80px;
+}
+
+.loader-inner {
+  vertical-align: top;
+  display: inline-block;
+  width: 100%;
+  background-color: $primary;
+  animation: loader-inner 2s infinite ease-in;
 }
 
 //cursor ===============================================================================================
@@ -55,5 +64,50 @@ p {
 @media only screen and (max-width: 500px) {
   .cursor {
     display: none;
+  }
+}
+
+//keyframes
+@keyframes loader {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(180deg);
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+
+  75% {
+    transform: rotate(360deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes loader-inner {
+  0% {
+    height: 0;
+  }
+
+  25% {
+    height: 0;
+  }
+
+  50% {
+    height: 100%;
+  }
+
+  75% {
+    height: 100%;
+  }
+
+  100% {
+    height: 0;
   }
 }

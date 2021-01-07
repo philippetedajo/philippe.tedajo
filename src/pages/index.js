@@ -16,9 +16,9 @@ const Index = () => {
   return (
     <div>
       <div className="wrapper" ref={wrapper}>
-        <div className="loader" ref={loader}>
-          P.
-        </div>
+        <span className="loader" ref={loader}>
+          <span className="loader-inner" />
+        </span>
       </div>
       <SEO />
       <Cursor />
