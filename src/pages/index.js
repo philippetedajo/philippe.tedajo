@@ -15,13 +15,13 @@ const Index = () => {
 
   return (
     <div>
+      <SEO />
+      <Cursor />
       <div className="wrapper" ref={wrapper}>
         <span className="loader" ref={loader}>
           <span className="loader-inner" />
         </span>
       </div>
-      <SEO />
-      <Cursor />
       <Home />
       <About />
       <Project />
