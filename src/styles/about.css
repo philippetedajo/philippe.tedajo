@@ -1,0 +1,26 @@
+.picture-about {
+  width: 50%;
+}
+.me-banner-title {
+  font-size: 60px;
+}
+
+@media only screen and (max-width: 945px) {
+  .me-banner-title {
+    width: 90%;
+    overflow: hidden;
+  }
+  .picture-about {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 555px) {
+  .me-banner-title {
+    font-size: 50px;
+    height: 180px;
+  }
+  .picture-about {
+    width: 90%;
+  }
+}
