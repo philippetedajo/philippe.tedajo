@@ -19,9 +19,6 @@ const Splash = (item1, item2) => {
     width: 20,
     delay: 0.5,
   })
-  tl.to(item2, {
-    opacity: 0,
-  })
 }
 
 export default Splash

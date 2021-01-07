@@ -3,9 +3,9 @@ import "../styles/project.css"
 
 const Project = () => {
   const projects = [
-    { name: "Nextwind", link: "https://nextwind-snowy.vercel.app/" },
+    { name: "Nextwind.", link: "https://nextwind-snowy.vercel.app/" },
     { name: "Reminder.", link: "https://reminderapp.netlify.app/" },
-    { name: "BookCart", link: "https://bookcart.netlify.app/" },
+    { name: "BookCart.", link: "https://bookcart.netlify.app/" },
   ]
 
   return (
