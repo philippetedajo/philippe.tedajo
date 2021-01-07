@@ -1,15 +1,20 @@
 import React from "react"
 import "../styles/styles.scss"
-import "../styles/components.scss"
 import "../static/fonts/fonts.scss"
-import { Home, Me, Contact } from "../sections"
+import { Cursor, SEO } from "../components"
+import { Home, About, Project } from "../sections"
 
 const Index = () => {
   return (
     <>
+      <SEO />
+      <Cursor />
       <Home />
-      <Me />
-      <Contact />
+      <About />
+      <Project />
+      <footer className="text-center my-3">
+        © 2020 P. All rights reserved
+      </footer>
     </>
   )
 }

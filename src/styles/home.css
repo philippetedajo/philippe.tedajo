@@ -1,91 +1,27 @@
-.home {
-  height: 100%;
-  visibility: hidden;
-}
-.separator-bar {
-  border-top: 2px solid #717171 !important;
-  width: 380px;
-  align-self: flex-end;
-  margin: 1.5rem 0;
-}
-.w-user {
-  overflow: hidden;
-  height: 30px;
-}
 .user-profil {
   letter-spacing: 9px;
   text-transform: uppercase;
-  font-family: "ddinbold", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "ddinbold", sans-serif;
 }
 
-.w-description {
-  height: 22px;
-  overflow: hidden;
-  margin-bottom: 2rem;
-}
 .description-profil {
+  margin-bottom: 2rem;
   font-size: 0.8rem;
   letter-spacing: 4px;
-  font-family: "ddin", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "ddin", sans-serif;
 }
-.w-slogan {
-  height: 85px;
-  overflow: hidden;
-}
+
 .slogan {
   font-size: 4rem;
   letter-spacing: 25px;
   text-transform: uppercase;
-  font-family: "ddinbold", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "ddinbold", sans-serif;
 }
 
-@media only screen and (max-width: 1160px) {
-  .slogan {
-    font-size: 3rem;
-  }
-}
-@media only screen and (max-width: 945px) {
-  .slogan {
-    font-size: 2.5rem;
-    letter-spacing: 20px;
-  }
-}
-
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 450px) {
   .slogan {
     font-size: 2rem;
-    letter-spacing: 20px;
+    padding-left: 20px;
+    text-align: center !important;
   }
 }
-
-@media only screen and (max-width: 768px) {
-  .slogan {
-    font-size: 2rem;
-    letter-spacing: 15px;
-  }
-}
-
-@media only screen and (max-width: 555px) {
-  .slogan {
-    font-size: 1.3rem;
-    letter-spacing: 6px;
-  }
-}
-
-/* */
-
-/*.hlo {*/
-/*  font-size: 72px;*/
-
-/*  background-color: #2a2a72;*/
-/*  background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);*/
-
-/*  -webkit-background-clip: text;*/
-/*  -webkit-text-fill-color: transparent;*/
-/*}*/
