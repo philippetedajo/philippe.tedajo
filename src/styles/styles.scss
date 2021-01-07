@@ -40,30 +40,6 @@ p {
   font-size: 80px;
 }
 
-//arrow Down ===============================================================================================
-.arrow-down {
-  position: absolute;
-  top: 88%;
-  left: calc(90% - 15px);
-  animation: scroll 2.8s infinite ease-in-out;
-  @keyframes scroll {
-    0% {
-      transform: translateY(0);
-      opacity: 0;
-    }
-    50% {
-      opacity: 1;
-    }
-    100% {
-      transform: translateY(45px) scale(0.9);
-      opacity: 0;
-    }
-  }
-  @media (max-width: 992px) {
-    left: calc(50% - 15px);
-  }
-}
-
 //cursor ===============================================================================================
 .cursor {
   position: fixed;
@@ -72,17 +48,6 @@ p {
   height: 20px;
   width: 20px;
   border-radius: 50%;
-  background-color: #ffffff;
+  background-color: #a3988d;
   z-index: 999;
-}
-
-.cursor-follower {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100px;
-  width: 100px;
-  border-radius: 50%;
-  background-color: darkred;
-  opacity: 0.6;
 }

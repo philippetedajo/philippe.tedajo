@@ -1,6 +1,5 @@
 import React from "react"
 import "../styles/home.css"
-import arrow_down from "../images/down-chevron.png"
 
 const Home = () => {
   return (
@@ -15,9 +14,6 @@ const Home = () => {
         <div className="slogan text-center text-md-left title">
           Bulding universe one pixel at a time
         </div>
-      </div>
-      <div className="arrow-down">
-        <img src={arrow_down} style={{ height: "28px" }} alt="arrow-down" />
       </div>
     </div>
   )
