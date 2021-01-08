@@ -22,12 +22,14 @@ const Index = () => {
           <span className="loader-inner" />
         </span>
       </div>
-      <Home />
-      <About />
-      <Project />
-      <footer className="text-center my-3">
-        © 2020 P. All rights reserved
-      </footer>
+      <div className="content fade-in">
+        <Home />
+        <About />
+        <Project />
+        <footer className="text-center my-3">
+          © 2020 P. All rights reserved
+        </footer>
+      </div>
     </div>
   )
 }

@@ -9,7 +9,7 @@ const Project = () => {
   ]
 
   return (
-    <div className="p-md-5">
+    <div className="projects p-md-5 fade-in">
       <h2 className="text-center text-lg-left mt-3 mt-lg-0">SOME PROJECTS</h2>
       <ul className="d-flex flex-column">
         {projects.map(p => (
