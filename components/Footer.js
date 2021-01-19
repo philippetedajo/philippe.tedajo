@@ -4,8 +4,8 @@ import { AiOutlineGithub, AiFillLinkedin } from "react-icons/ai";
 const Footer = () => {
   return (
     <div
-      style={{ height: "5vh" }}
-      className="px-10 pb-2 flex flex-col-reverse items-center lg:flex-row lg:justify-between lg:items-center"
+      style={{ height: "10vh" }}
+      className="px-10 flex flex-col-reverse items-center lg:flex-row lg:justify-between lg:items-center"
     >
       <ul className="flex flex-col text-center sm:flex-row">
         <li>
