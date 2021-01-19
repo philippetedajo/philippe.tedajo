@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Fonts */
+@font-face {
+  font-family: "arame-thin";
+  src: local("ddin"), url("/fonts/arame-Thin.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "arame";
+  src: local("ddinbold"), url("/fonts/arame.ttf") format("truetype");
+}
+
+/* General */
+body {
+  font-family: arame-thin, serif;
+  background: #0d0d0d;
+  color: #e5e5e5;
+}
+h1 {
+  @apply xl:text-6xl sm:text-5xl text-4xl h-20;
+  font-family: arame, serif;
+}
+h2 {
+  @apply text-3xl;
+}
+.btn {
+  @apply rounded py-2 px-5 uppercase text-sm font-bold text-center cursor-pointer;
+}
+.btn-form {
+  @apply border rounded py-2 px-5 uppercase text-sm;
+}
+
+.header {
+  padding-bottom: 10px;
+}
+
+.header:hover {
+  border-bottom: 2px solid white;
+}
+
+.a-header {
+  border-bottom: 2px solid white;
+}
