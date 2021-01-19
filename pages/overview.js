@@ -1,6 +1,6 @@
 import PageTemplate from "../templates/page.template";
 import { motion } from "framer-motion";
-import { container, item } from "../utils/Animation";
+import { container, text_reaveal } from "../utils/Animation";
 
 const Overview = () => {
   const overviews = [
@@ -12,7 +12,7 @@ const Overview = () => {
 
   const overviewList = overviews.map((project, index) => (
     <div className="overflow-hidden mt-6" key={index}>
-      <motion.h1 variants={item}>{project.content}</motion.h1>
+      <motion.h1 variants={text_reaveal}>{project.content}</motion.h1>
     </div>
   ));
 
