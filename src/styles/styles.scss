@@ -9,45 +9,82 @@ body {
   color: $secondary;
   background: $primary;
 }
+h1,
 h2 {
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  font-family: "ddinbold", sans-serif;
 }
 p {
   line-height: 2rem;
   letter-spacing: 1.5px;
 }
 
-//intro =======================================================================
-
-.wrapper {
-  position: fixed;
+section {
+  position: relative;
   width: 100%;
   height: 100vh;
-  background: $secondary;
-  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.loader {
-  display: inline-block;
-  width: 30px;
-  height: 30px;
-  position: relative;
-  border: 4px solid $primary;
-  animation: loader 2s infinite ease;
-  top: 47%;
-  left: 49%;
-  z-index: 2;
+section .reveal {
+  transform-origin: left;
+  transform: scaleX(1);
+  transition: 0.5s;
+  transition-delay: 0.5s;
 }
 
-.loader-inner {
-  vertical-align: top;
-  display: inline-block;
+section .reveal:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
   width: 100%;
-  background-color: $primary;
-  animation: loader-inner 2s infinite ease-in;
+  background: #fff;
+  transform-origin: right;
+  transition: 0.5s;
+  transition-delay: 0s;
 }
+
+section img {
+  height: 400px;
+  width: 550px;
+  position: relative;
+  display: block;
+}
+
+//intro =======================================================================
+
+//.wrapper {
+//  position: fixed;
+//  width: 100%;
+//  height: 100vh;
+//  background: #f8e9c7;
+//  z-index: 2;
+//}
+//
+//.loader {
+//  display: inline-block;
+//  width: 30px;
+//  height: 30px;
+//  position: relative;
+//  border: 4px solid $primary;
+//  animation: loader 2s infinite ease;
+//  top: 47%;
+//  left: 49%;
+//  z-index: 2;
+//}
+
+//.loader-inner {
+//  vertical-align: top;
+//  display: inline-block;
+//  width: 100%;
+//  background-color: $primary;
+//  animation: loader-inner 2s infinite ease-in;
+//}
 
 //cursor ===============================================================================================
 .cursor {
@@ -57,7 +94,7 @@ p {
   height: 20px;
   width: 20px;
   border-radius: 50%;
-  background-color: #a3988d;
+  background-color: $secondary;
   z-index: 999;
 }
 
