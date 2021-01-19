@@ -4,7 +4,7 @@ function PageTemplate({ children }) {
   return (
     <>
       <Header />
-      <div style={{ height: "85vh" }} className="px-10 pt-32">
+      <div style={{ height: "85vh", paddingTop: "8rem" }} className="px-10">
         {children}
       </div>
       <Footer />
