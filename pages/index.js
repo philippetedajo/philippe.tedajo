@@ -9,7 +9,7 @@ const About = () => {
 
   const textList = texts.map((text, index) => (
     <div className="overflow-hidden" key={index}>
-      <motion.h1 variants={text_reaveal}>{text.content}</motion.h1>
+      <motion.h1 className="font-cairo" variants={text_reaveal}>{text.content}</motion.h1>
     </div>
   ));
 

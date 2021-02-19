@@ -1,21 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Fonts */
-@font-face {
-  font-family: "arame-thin";
-  src: local("ddin"), url("/fonts/arame-Thin.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "arame";
-  src: local("ddinbold"), url("/fonts/arame.ttf") format("truetype");
-}
 
 /* General */
 body {
-  font-family: arame-thin, serif;
+  font-family: 'Cairo', sans-serif;
   background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
   color: #e5e5e5;
   perspective: 1000px;

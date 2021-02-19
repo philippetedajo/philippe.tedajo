@@ -10,8 +10,7 @@ module.exports = {
       fourth: "#a1a1aa",
     },
     fontFamily: {
-      ddin: ["ddin", "serif"],
-      ddinbold: ["ddinbold", "serif"],
+      cairo: ["Cairo", "serif"],
     },
   },
   variants: {

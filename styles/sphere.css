@@ -225,7 +225,7 @@
 
 @keyframes sphere {
     0% {
-        transform: scale(0) rotateY(0deg);
+        transform: scale(0) rotateY(45deg);
     }
     100% {
         transform: scale(1.4) rotateY(200deg);
