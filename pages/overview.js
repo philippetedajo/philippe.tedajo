@@ -1,6 +1,6 @@
 import PageTemplate from "../templates/page.template";
 import { motion } from "framer-motion";
-import { container, text_reaveal } from "../utils/Animation";
+import { container, text_reaveal, fade } from "../utils/Animation";
 import { Frame } from "../components"
 
 const Overview = () => {
@@ -27,7 +27,7 @@ const Overview = () => {
       <motion.div variants={container} className="md:w-1/2 lg:pl-36">
         {overviewList}
       </motion.div>
-      <div className="hidden md:block w-1/2">
+      <div  className="hidden md:block w-1/2">
         <Frame/>
       </div>
     </motion.div>

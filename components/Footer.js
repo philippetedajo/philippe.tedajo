@@ -13,14 +13,18 @@ const Footer = () => {
         </li>
       </ul>
       <ul className="flex text-center ">
-        <p className="mr-2.5 lg:mr-10">
+        <p className="mr-2.5 lg:mr-10 cursor-pointer">
           <Link href="https://www.linkedin.com/">
-            <AiOutlineGithub size={25} />
+            <a target="_blank" rel="noreferrer noopener">
+              <AiOutlineGithub size={25} />
+            </a>
           </Link>
         </p>
-        <p className="mr-2.5 lg:mr-10">
-          <Link href="https://github.com/philippetedajo">
-            <AiFillLinkedin size={25} />
+        <p className="mr-2.5 lg:mr-10 cursor-pointer">
+          <Link href="https://github.com/philippetedajo" target="_blank" rel="noreferrer noopener"> 
+            <a target="_blank" rel="noreferrer noopener">
+              <AiFillLinkedin size={25} />
+            </a>
           </Link>
         </p>
       </ul>

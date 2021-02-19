@@ -1,7 +1,7 @@
 import Head from "next/head";
 import PageTemplate from "../templates/page.template";
 import { motion } from "framer-motion";
-import { container, text_reaveal, text_reaveal_fade } from "../utils/Animation";
+import { container, fade, text_reaveal, text_reaveal_fade } from "../utils/Animation";
 import { Frame } from "../components"
 
 const About = () => {
@@ -38,7 +38,7 @@ const About = () => {
             philosophy and culture, all my life and work is design by it.
           </motion.p>
         </motion.div>
-        <div className="hidden md:block w-1/2">
+        <div  className="hidden md:block w-1/2">
             <Frame/>
         </div>
       </motion.div>
