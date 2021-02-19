@@ -2,14 +2,14 @@ import Head from "next/head";
 import PageTemplate from "../templates/page.template";
 import { motion } from "framer-motion";
 import { container, text_reaveal, text_reaveal_fade } from "../utils/Animation";
-import { Sphere } from "../components"
+import { Frame } from "../components"
 
 const About = () => {
   const texts = [{ content: "One pixel" }, { content: "Every frame" }];
 
   const textList = texts.map((text, index) => (
     <div className="overflow-hidden" key={index}>
-      <motion.h1 className="font-cairo" variants={text_reaveal}>{text.content}</motion.h1>
+      <motion.h1 className="font-cairo font-semibold" variants={text_reaveal}>{text.content}</motion.h1>
     </div>
   ));
 
@@ -39,7 +39,7 @@ const About = () => {
           </motion.p>
         </motion.div>
         <div className="hidden md:block w-1/2">
-            <Sphere/>
+            <Frame/>
         </div>
       </motion.div>
     </>

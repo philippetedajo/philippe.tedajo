@@ -8,64 +8,64 @@ const Sphere = () => {
                         <div className="camera o-z">
                             <div className="vr">
                                 <div className="vr_layer">
-                                    <div className="vr_layer_item"></div>
+                                    <div className="vr_layer_item_frame"></div>
                                 </div>
                                 <div className="vr_layer">
-                                    <div className="vr_layer_item"></div>
+                                    <div className="vr_layer_item_frame"></div>
                                 </div>
                                 <div className="vr_layer">
-                                    <div className="vr_layer_item"></div>
+                                    <div className="vr_layer_item_frame"></div>
                                 </div>
                                 <div className="vr_layer">
-                                    <div className="vr_layer_item"></div>
+                                    <div className="vr_layer_item_frame"></div>
                                 </div>
                                 <div className="vr_layer">
-                                    <div className="vr_layer_item"></div>
+                                    <div className="vr_layer_item_frame"></div>
                                 </div>
                                 <div className="vr_layer">
-                                    <div className="vr_layer_item"></div>
+                                    <div className="vr_layer_item_frame"></div>
                                 </div>
                                 <div className="vr_layer">
-                                    <div className="vr_layer_item"></div>
+                                    <div className="vr_layer_item_frame"></div>
                                 </div>
                                 <div className="vr_layer">
-                                    <div className="vr_layer_item"></div>
+                                    <div className="vr_layer_item_frame"></div>
                                 </div>
                                 <div className="vr_layer">
-                                    <div className="vr_layer_item"></div>
+                                    <div className="vr_layer_item_frame"></div>
                                 </div>
                                 <div className="vr_layer">
-                                    <div className="vr_layer_item"></div>
+                                    <div className="vr_layer_item_frame"></div>
                                 </div>
                                 <div className="vr_layer">
-                                    <div className="vr_layer_item"></div>
+                                    <div className="vr_layer_item_frame"></div>
                                 </div>
                                 <div className="vr_layer">
-                                    <div className="vr_layer_item"></div>
+                                    <div className="vr_layer_item_frame"></div>
                                 </div>
                                 <div className="vr_layer">
-                                    <div className="vr_layer_item"></div>
+                                    <div className="vr_layer_item_frame"></div>
                                 </div>
                                 <div className="vr_layer">
-                                    <div className="vr_layer_item"></div>
+                                    <div className="vr_layer_item_frame"></div>
                                 </div>
                                 <div className="vr_layer">
-                                    <div className="vr_layer_item"></div>
+                                    <div className="vr_layer_item_frame"></div>
                                 </div>
                                 <div className="vr_layer">
-                                    <div className="vr_layer_item"></div>
+                                    <div className="vr_layer_item_frame"></div>
                                 </div>
                                 <div className="vr_layer">
-                                    <div className="vr_layer_item"></div>
+                                    <div className="vr_layer_item_frame"></div>
                                 </div>
                                 <div className="vr_layer">
-                                    <div className="vr_layer_item"></div>
+                                    <div className="vr_layer_item_frame"></div>
                                 </div>
                                 <div className="vr_layer">
-                                    <div className="vr_layer_item"></div>
+                                    <div className="vr_layer_item_frame"></div>
                                 </div>
                                 <div className="vr_layer">
-                                    <div className="vr_layer_item"></div>
+                                    <div className="vr_layer_item_frame"></div>
                                 </div>
                             </div>
                         </div>

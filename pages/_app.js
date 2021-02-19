@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { Progress } from "../components";
 import { AnimatePresence } from "framer-motion";
 import "../styles/global.css";
-import "../styles/sphere.css"
+import "../styles/frame.css"
 
 function App({ Component, pageProps, router }) {
   const Template = Component.Template || EmptyTemplate;
@@ -13,7 +13,7 @@ function App({ Component, pageProps, router }) {
         <AnimatePresence exitBeforeEnter>
         <Component {...pageProps} key={router.route} />
       </AnimatePresence>
-    </Template>
+    </Template> 
   );
 }
 

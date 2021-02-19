@@ -1,6 +1,7 @@
 import PageTemplate from "../templates/page.template";
 import { motion } from "framer-motion";
 import { container, text_reaveal } from "../utils/Animation";
+import { Frame } from "../components"
 
 const Overview = () => {
   const overviews = [
@@ -27,7 +28,7 @@ const Overview = () => {
         {overviewList}
       </motion.div>
       <div className="hidden md:block w-1/2">
-        {/*<Sphere/>*/}
+        <Frame/>
       </div>
     </motion.div>
   );
