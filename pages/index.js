@@ -38,8 +38,8 @@ const About = () => {
             philosophy and culture, all my life and work is design by it.
           </motion.p>
         </motion.div>
-        <div  className="hidden md:block w-1/2">
-            <Frame/>
+        <div className="hidden md:block w-1/2">
+            <Frame radius="rounded-md"/>
         </div>
       </motion.div>
     </>

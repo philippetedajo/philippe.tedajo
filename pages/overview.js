@@ -28,7 +28,7 @@ const Overview = () => {
         {overviewList}
       </motion.div>
       <div  className="hidden md:block w-1/2">
-        <Frame/>
+        <Frame radius="rounded-full"/>
       </div>
     </motion.div>
   );

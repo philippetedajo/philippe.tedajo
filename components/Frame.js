@@ -1,5 +1,5 @@
 
-const Sphere = () => {
+const Sphere = ({radius}) => {
     return (
         <div className="container">
             <div className="monitor">
@@ -8,64 +8,64 @@ const Sphere = () => {
                         <div className="camera o-z">
                             <div className="vr">
                                 <div className="vr_layer">
-                                    <div className="vr_layer_item_frame"></div>
+                                    <div className={`vr_layer_item_frame rounded ${radius} `}></div>
                                 </div>
                                 <div className="vr_layer">
-                                    <div className="vr_layer_item_frame"></div>
+                                    <div className={`vr_layer_item_frame rounded ${radius} `} ></div>
                                 </div>
                                 <div className="vr_layer">
-                                    <div className="vr_layer_item_frame"></div>
+                                    <div className={`vr_layer_item_frame rounded ${radius} `} ></div>
                                 </div>
                                 <div className="vr_layer">
-                                    <div className="vr_layer_item_frame"></div>
+                                    <div className={`vr_layer_item_frame rounded ${radius} `} ></div>
                                 </div>
                                 <div className="vr_layer">
-                                    <div className="vr_layer_item_frame"></div>
+                                    <div className={`vr_layer_item_frame rounded ${radius} `} ></div>
                                 </div>
                                 <div className="vr_layer">
-                                    <div className="vr_layer_item_frame"></div>
+                                    <div className={`vr_layer_item_frame rounded ${radius} `} ></div>
                                 </div>
                                 <div className="vr_layer">
-                                    <div className="vr_layer_item_frame"></div>
+                                    <div className={`vr_layer_item_frame rounded ${radius} `} ></div>
                                 </div>
                                 <div className="vr_layer">
-                                    <div className="vr_layer_item_frame"></div>
+                                    <div className={`vr_layer_item_frame rounded ${radius} `} ></div>
                                 </div>
                                 <div className="vr_layer">
-                                    <div className="vr_layer_item_frame"></div>
+                                    <div className={`vr_layer_item_frame rounded ${radius} `} ></div>
                                 </div>
                                 <div className="vr_layer">
-                                    <div className="vr_layer_item_frame"></div>
+                                    <div className={`vr_layer_item_frame rounded ${radius} `} ></div>
                                 </div>
                                 <div className="vr_layer">
-                                    <div className="vr_layer_item_frame"></div>
+                                    <div className={`vr_layer_item_frame rounded ${radius} `} ></div>
                                 </div>
                                 <div className="vr_layer">
-                                    <div className="vr_layer_item_frame"></div>
+                                    <div className={`vr_layer_item_frame rounded ${radius} `} ></div>
                                 </div>
                                 <div className="vr_layer">
-                                    <div className="vr_layer_item_frame"></div>
+                                    <div className={`vr_layer_item_frame rounded ${radius} `} ></div>
                                 </div>
                                 <div className="vr_layer">
-                                    <div className="vr_layer_item_frame"></div>
+                                    <div className={`vr_layer_item_frame rounded ${radius} `} ></div>
                                 </div>
                                 <div className="vr_layer">
-                                    <div className="vr_layer_item_frame"></div>
+                                    <div className={`vr_layer_item_frame rounded ${radius} `} ></div>
                                 </div>
                                 <div className="vr_layer">
-                                    <div className="vr_layer_item_frame"></div>
+                                    <div className={`vr_layer_item_frame rounded ${radius} `} ></div>
                                 </div>
                                 <div className="vr_layer">
-                                    <div className="vr_layer_item_frame"></div>
+                                    <div className={`vr_layer_item_frame rounded ${radius} `} ></div>
                                 </div>
                                 <div className="vr_layer">
-                                    <div className="vr_layer_item_frame"></div>
+                                    <div className={`vr_layer_item_frame rounded ${radius} `} ></div>
                                 </div>
                                 <div className="vr_layer">
-                                    <div className="vr_layer_item_frame"></div>
+                                    <div className={`vr_layer_item_frame rounded ${radius} `} ></div>
                                 </div>
                                 <div className="vr_layer">
-                                    <div className="vr_layer_item_frame"></div>
+                                    <div className={`vr_layer_item_frame rounded ${radius} `} ></div>
                                 </div>
                             </div>
                         </div>

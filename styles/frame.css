@@ -198,7 +198,6 @@
     width: 80%;
     height: 80%;
     border: 3px solid #fff;
-    border-radius: 10px;
     background: rgba(0, 0, 0, 0.05);
     -webkit-animation: sphere 4000ms cubic-bezier(0.215, 0.61, 0.355, 1) alternate
     infinite,
