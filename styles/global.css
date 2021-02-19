@@ -16,9 +16,11 @@
 /* General */
 body {
   font-family: arame-thin, serif;
-  background: #0d0d0d;
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
   color: #e5e5e5;
+  perspective: 1000px;
 }
+
 h1 {
   @apply xl:text-6xl sm:text-5xl text-4xl h-20;
   font-family: arame, serif;

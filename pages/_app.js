@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { Progress } from "../components";
 import { AnimatePresence } from "framer-motion";
 import "../styles/global.css";
+import "../styles/sphere.css"
 
 function App({ Component, pageProps, router }) {
   const Template = Component.Template || EmptyTemplate;
@@ -9,7 +10,7 @@ function App({ Component, pageProps, router }) {
 
   return (
     <Template>
-      <AnimatePresence exitBeforeEnter>
+        <AnimatePresence exitBeforeEnter>
         <Component {...pageProps} key={router.route} />
       </AnimatePresence>
     </Template>

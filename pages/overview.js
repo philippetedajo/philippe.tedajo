@@ -26,7 +26,9 @@ const Overview = () => {
       <motion.div variants={container} className="md:w-1/2 lg:pl-36">
         {overviewList}
       </motion.div>
-      <div className="hidden md:block w-1/2">part 2</div>
+      <div className="hidden md:block w-1/2">
+        {/*<Sphere/>*/}
+      </div>
     </motion.div>
   );
 };
