@@ -11,11 +11,6 @@ export const container = {
   },
 };
 
-export const fade = {
-  initial: { opacity: 0},
-  animate: {  opacity: 1, transition: { duration: 0.8 } },
-  exit: { opacity: 0, transition: { duration: 0.8 } },
-};
 
 export const text_reaveal = {
   initial: { y: 80 },

@@ -5,7 +5,7 @@ import { container, fade, text_reaveal, text_reaveal_fade } from "../utils/Anima
 import { Frame } from "../components"
 
 const About = () => {
-  const texts = [{ content: "One pixel" }, { content: "Every frame" }];
+  const texts = [{ content: "Build universe one" }, { content: "pixel at a time" }];
 
   const textList = texts.map((text, index) => (
     <div className="overflow-hidden" key={index}>

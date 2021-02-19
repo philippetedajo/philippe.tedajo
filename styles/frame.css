@@ -2,8 +2,8 @@
 .container {
     position: relative;
     display: grid;
-    grid-template-rows: repeat(20, 3vh);
-    grid-template-columns: repeat(20, 3vw);
+    grid-template-rows: repeat(20, 2.5vh);
+    grid-template-columns: repeat(20, 2.5vw);
     transform-style: preserve-3d;
 }
 
@@ -158,41 +158,7 @@
     -webkit-animation-delay: -3150ms;
     animation-delay: -3150ms;
 }
-.vr_layer:nth-child(16) {
-    transform: translateZ(105px);
-}
-.vr_layer:nth-child(16) .vr_layer_item_frame {
-    -webkit-animation-delay: -3360ms;
-    animation-delay: -3360ms;
-}
-.vr_layer:nth-child(17) {
-    transform: translateZ(122.5px);
-}
-.vr_layer:nth-child(17) .vr_layer_item_frame {
-    -webkit-animation-delay: -3570ms;
-    animation-delay: -3570ms;
-}
-.vr_layer:nth-child(18) {
-    transform: translateZ(140px);
-}
-.vr_layer:nth-child(18) .vr_layer_item_frame {
-    -webkit-animation-delay: -3780ms;
-    animation-delay: -3780ms;
-}
-.vr_layer:nth-child(19) {
-    transform: translateZ(157.5px);
-}
-.vr_layer:nth-child(19) .vr_layer_item_frame {
-    -webkit-animation-delay: -3990ms;
-    animation-delay: -3990ms;
-}
-.vr_layer:nth-child(20) {
-    transform: translateZ(175px);
-}
-.vr_layer:nth-child(20) .vr_layer_item_frame {
-    -webkit-animation-delay: -4200ms;
-    animation-delay: -4200ms;
-}
+
 
 .vr_layer_item_frame {
     width: 80%;
