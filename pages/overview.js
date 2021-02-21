@@ -14,7 +14,7 @@ const Overview = () => {
 
   const overviewList = overviews.map((project, index) => (
     <div className="overflow-hidden mt-6" key={index}>
-      <Link href="https://www.rosine.tedajo.com/">
+      <Link href={project.content.link}>
         <a target="_blank" rel="noreferrer noopener" >
           <motion.div className="flex transform duration-700 hover:scale-110 hover:text-third" variants={text_reaveal}>
             <h1 className="mr-2">{project.content.title}</h1>
