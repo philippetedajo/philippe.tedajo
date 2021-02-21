@@ -16,7 +16,7 @@ const About = () => {
   return (
     <>
       <Head>
-        <title>About</title>
+        <title>Hi</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -38,7 +38,7 @@ const About = () => {
             philosophy and culture, all my life and work is design by it.
           </motion.p>
         </motion.div>
-        <div className="hidden md:block w-1/2">
+          <div  className=" opacity-20 md:opacity-100 md:static fixed md:block w-1/2">
             <Frame radius="rounded-md"/>
         </div>
       </motion.div>

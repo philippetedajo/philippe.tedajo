@@ -1,19 +1,27 @@
+import Link from "next/link";
 import PageTemplate from "../templates/page.template";
 import { motion } from "framer-motion";
 import { container, text_reaveal, fade } from "../utils/Animation";
 import { Frame } from "../components"
 
 const Overview = () => {
+
   const overviews = [
-    { content: "Flatlin" },
-    { content: "Flatlin" },
-    { content: "Rigel" },
-    { content: "Rigel" },
+    { content: {title:"Rt", link: "https://www.rosine.tedajo.com/"} },
+    { content: {title:"Nextwind", link: "https://nextwind-snowy.vercel.app/"} },
+    { content: {title:"Flatlin Shop", link: "https://flatlin.vercel.app/"} },
   ];
 
   const overviewList = overviews.map((project, index) => (
     <div className="overflow-hidden mt-6" key={index}>
-      <motion.h1 variants={text_reaveal}>{project.content}</motion.h1>
+      <Link href="https://www.rosine.tedajo.com/">
+        <a target="_blank" rel="noreferrer noopener" >
+          <motion.div className="flex transform duration-700 hover:scale-110 hover:text-third" variants={text_reaveal}>
+            <h1 className="mr-2">{project.content.title}</h1>
+            <div className="w-14 border-b"/>
+          </motion.div>
+        </a>
+      </Link>
     </div>
   ));
 
@@ -24,10 +32,10 @@ const Overview = () => {
       exit="exit"
       className="flex"
     >
-      <motion.div variants={container} className="md:w-1/2 lg:pl-36">
+      <motion.div variants={container} className="md:w-1/2 lg:pl-36 z-20">
         {overviewList}
       </motion.div>
-      <div  className="hidden md:block w-1/2">
+      <div className=" opacity-20 md:opacity-100 md:static fixed md:block w-1/2">
         <Frame radius="rounded-full"/>
       </div>
     </motion.div>
