@@ -9,7 +9,7 @@ const MenuOverlay = ({ menuState, setMenuState }) => {
     <div
       className={
         menuState
-          ? "md:hidden fixed top-0 right-0 h-full w-full z-10 text-primary"
+          ? "md:hidden fixed top-0 right-0 h-full w-full z-50 text-primary"
           : "fixed "
       }
       onClick={() => setMenuState(false)}
@@ -26,7 +26,7 @@ const MenuOverlay = ({ menuState, setMenuState }) => {
             <a className="text-6xl my-3 cursor-pointer">About</a>
           </Link>
           <Link href="/overview">
-            <a className="text-6xl my-3 cursor-pointer"> Works</a>
+            <a className="text-6xl my-3 cursor-pointer">Works</a>
           </Link>
         </div>
       </div>
