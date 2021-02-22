@@ -34,10 +34,12 @@ const About = () => {
             Bhent.inc as a front end developer for several types of projects and
             my area of expertise is <a className="text-third">ReactJs</a>,{" "}
             <a className="text-third">GraphQl</a>,{" "}
-            <a className="text-third">React Native</a>,{" "}
+            <a className="text-third">Advance Javascript</a>,{" "}
+            <a className="text-third">Scss/Css</a>,{" "}
             <a className="text-third">Redux</a>,{" "}
             <a className="text-third">TypeScript</a> and{" "}
-            <a className="text-third">Node</a> . Longly inspired by Indian
+            <a className="text-third">RestFull Api</a> and{" "}
+            <a className="text-third">NodeJs</a> . Longly inspired by Indian
             philosophy and culture, all my life and work is design by it.
           </motion.p>
         </motion.div>
