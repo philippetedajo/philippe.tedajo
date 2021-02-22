@@ -33,7 +33,10 @@ const About = () => {
             digital interfaces, offering a memorable user experience. I work at
             Bhent.inc as a front end developer for several types of projects and
             my area of expertise is <a className="text-third">ReactJs</a>,{" "}
-            <a className="text-third">React Native</a> and{" "}
+            <a className="text-third">GraphQl</a>,{" "}
+            <a className="text-third">React Native</a>,{" "}
+            <a className="text-third">Redux</a>,{" "}
+            <a className="text-third">TypeScript</a> and{" "}
             <a className="text-third">Node</a> . Longly inspired by Indian
             philosophy and culture, all my life and work is design by it.
           </motion.p>
