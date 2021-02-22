@@ -37,7 +37,7 @@ const About = () => {
             <a className="text-third">Advance Javascript</a>,{" "}
             <a className="text-third">Scss/Css</a>,{" "}
             <a className="text-third">Redux</a>,{" "}
-            <a className="text-third">TypeScript</a> and{" "}
+            <a className="text-third">TypeScript</a>,{" "}
             <a className="text-third">RestFull Api</a> and{" "}
             <a className="text-third">NodeJs</a> . Longly inspired by Indian
             philosophy and culture, all my life and work is design by it.
