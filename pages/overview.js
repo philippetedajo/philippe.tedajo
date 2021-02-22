@@ -9,7 +9,7 @@ const Overview = () => {
   const overviews = [
     { content: {title:"Rt", link: "https://www.rosine.tedajo.com/"} },
     { content: {title:"Nextwind", link: "https://nextwind-snowy.vercel.app/"} },
-    { content: {title:"Flatlin Shop", link: "https://flatlin.vercel.app/"} },
+    { content: {title:"Komexxe", link: "https://komexxe.herokuapp.com/fr"} },
   ];
 
   const overviewList = overviews.map((project, index) => (
