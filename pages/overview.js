@@ -10,6 +10,7 @@ const Overview = () => {
     { content: {title:"Komexxe", link: "https://komexxe.herokuapp.com/fr"} },
     { content: {title:"Rt", link: "https://www.rosine.tedajo.com/"} },
     { content: {title:"Nextwind", link: "https://nextwind-snowy.vercel.app/"} },
+    { content: {title:"Fortuna", link: "https://fortunatradingview.herokuapp.com/"} },
   ];
 
   const overviewList = overviews.map((project, index) => (
@@ -18,7 +19,6 @@ const Overview = () => {
         <a target="_blank" rel="noreferrer noopener" >
           <motion.div className="flex transform duration-700 hover:scale-110 hover:text-third" variants={text_reaveal}>
             <h1 className="mr-2">{project.content.title}</h1>
-            <div className="w-14 border-b"/>
           </motion.div>
         </a>
       </Link>
