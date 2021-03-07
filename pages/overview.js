@@ -7,10 +7,8 @@ import { Frame } from "../components"
 const Overview = () => {
 
   const overviews = [
-    { content: {title:"Komexxe", link: "https://komexxe.herokuapp.com/fr"} },
-    { content: {title:"Rt", link: "https://www.rosine.tedajo.com/"} },
-    { content: {title:"Nextwind", link: "https://nextwind-snowy.vercel.app/"} },
-    { content: {title:"Fortuna", link: "https://fortunatradingview.herokuapp.com/"} },
+ { content: {title:"Nextwind", link: "https://nextwind-snowy.vercel.app/"} },
+ { content: {title:"Rt", link: "https://www.rosine.tedajo.com/"} },
   ];
 
   const overviewList = overviews.map((project, index) => (
