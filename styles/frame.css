@@ -18,7 +18,15 @@
 
 @media only screen and (max-width: 768px) {
   .monitor {
-    top: 18rem;
+    top: 15rem;
+    left: 85px;
+    opacity: 0.9;
+  }
+}
+
+@media only screen and (max-width: 330px) {
+  .monitor {
+    top: 12rem;
     left: 85px;
     opacity: 0.8;
   }
@@ -187,8 +195,17 @@
 
 @media only screen and (max-width: 768px) {
   .vr_layer_item_frame {
-    width: 30%;
-    height: 30%;
+    opacity: 0.8;
+    width: 17%;
+    height: 17%;
+  }
+}
+
+@media only screen and (max-width: 330px) {
+  .vr_layer_item_frame {
+    opacity: 0.3;
+    width: 10%;
+    height: 10%;
   }
 }
 

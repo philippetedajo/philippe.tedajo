@@ -9,6 +9,7 @@ body {
   background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
   color: #e5e5e5;
   perspective: 1000px;
+  overflow: hidden;
 }
 
 h1 {
