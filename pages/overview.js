@@ -44,7 +44,7 @@ const Overview = () => {
         <motion.div variants={container} className="md:w-1/2 lg:pl-36 z-20">
           {overviewList}
         </motion.div>
-        <div className=" opacity-20 md:opacity-100 md:static fixed md:block w-1/2">
+        <div className="md:static fixed md:block w-1/2">
           <Frame radius="rounded-full" />
         </div>
       </motion.div>

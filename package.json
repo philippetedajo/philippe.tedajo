@@ -16,8 +16,10 @@
     "postcss": "^8.2.1",
     "react": "17.0.1",
     "react-dom": "17.0.1",
+    "react-howler": "^5.0.0",
     "react-icons": "^4.1.0",
-    "tailwindcss": "^2.0.2"
+    "tailwindcss": "^2.0.2",
+    "use-sound": "^2.0.1"
   },
   "devDependencies": {
     "prettier": "^2.2.1"

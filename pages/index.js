@@ -31,11 +31,11 @@ const About = () => {
           {textList}
           <motion.p variants={text_reaveal_fade}>
             I focus on user needs to build intuitive digital interfaces,
-            offering a memorable user experience. I work as a professional
-            Typescript developer for several types of projects and my area of
-            expertise is <a className="text-third">ReactJs</a>,{" "}
+            offering a memorable user experience. I am a professional Front-end
+            developer and my area of expertise is{" "}
+            <a className="text-third">ReactJs</a>,{" "}
             <a className="text-third">GraphQl</a>,{" "}
-            <a className="text-third">Typescript</a>,{" "}
+            <a className="text-third">Typescript ♥️</a>,{" "}
             <a className="text-third">Scss/Css</a>,{" "}
             <a className="text-third">Redux</a>,{" "}
             <a className="text-third">Advance Javascript</a>,{" "}
@@ -45,7 +45,7 @@ const About = () => {
             by my passion for programming.
           </motion.p>
         </motion.div>
-        <div className=" opacity-20 md:opacity-100 md:static fixed md:block w-1/2">
+        <div className="md:static fixed md:block w-1/2">
           <Frame radius="rounded-md" />
         </div>
       </motion.div>
