@@ -17,6 +17,7 @@ const SeoTags = () => {
       {/*General*/}
       <link rel="icon" href="/favicon.ico" />
       <meta name="description" content={tags.description} />
+      <meta name="author" content="Philippe Tedajo" />
 
       {/* Twitter */}
       <meta name="twitter:card" content="summary" key="twcard" />
