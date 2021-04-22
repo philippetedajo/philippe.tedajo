@@ -1,0 +1,29 @@
+{
+  "name": "nextwind",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@headlessui/react": "^1.0.0",
+    "autoprefixer": "^10.1.0",
+    "axios": "^0.21.1",
+    "framer-motion": "^4.1.6",
+    "next": "10.0.4",
+    "next-intl": "^0.4.0",
+    "next-themes": "^0.0.14",
+    "nprogress": "^0.2.0",
+    "postcss": "^8.2.1",
+    "react": "17.0.1",
+    "react-dom": "17.0.1",
+    "react-icons": "^4.1.0",
+    "sass": "^1.32.11",
+    "tailwindcss": "^2.0.2"
+  },
+  "devDependencies": {
+    "prettier": "^2.2.1"
+  }
+}
