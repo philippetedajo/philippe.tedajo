@@ -34,16 +34,16 @@ const Header = ({ onToggleSound, isPlaying }) => {
             <Image
               src="/icons/moon-fill.svg"
               alt="sound-off"
-              width={28}
-              height={28}
+              width={25}
+              height={25}
               className="transform transition duration-300 hover:scale-110"
             />
           ) : (
             <Image
               src="/icons/sun-fill.svg"
               alt="sound-off"
-              width={28}
-              height={28}
+              width={25}
+              height={25}
               className="transform transition duration-300 hover:scale-110"
             />
           )}
