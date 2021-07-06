@@ -1,4 +1,4 @@
-const Sphere = ({ radius }) => {
+export const Frame = ({ radius }) => {
   const createFrames = () => {
     let frames = [];
 
@@ -26,5 +26,3 @@ const Sphere = ({ radius }) => {
     </div>
   );
 };
-
-export default Sphere;

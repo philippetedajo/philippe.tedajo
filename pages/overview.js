@@ -1,7 +1,7 @@
 import Link from "next/link";
 import PageTemplate from "../templates/page.template";
 import { motion } from "framer-motion";
-import { container, text_reaveal, fade } from "../utils/Animation";
+import { container, text_reaveal } from "../utils/Animation";
 import { Frame } from "../components";
 import SeoTags from "../components/SeoTags";
 

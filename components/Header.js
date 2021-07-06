@@ -6,7 +6,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { IoCloseSharp } from "react-icons/io5";
 import ActiveLink from "../utils/Links";
 
-const Header = ({ onToggleSound, isPlaying }) => {
+export const Header = () => {
   const [menuState, setMenuState] = useState(false);
   const { theme, setTheme } = useTheme();
 
@@ -82,5 +82,3 @@ const Header = ({ onToggleSound, isPlaying }) => {
     </div>
   );
 };
-
-export default Header;

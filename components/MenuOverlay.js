@@ -1,9 +1,8 @@
 import React from "react";
 import Link from "next/link";
 import Router from "next/router";
-import { Frame } from "./index";
 
-const MenuOverlay = ({ menuState, setMenuState }) => {
+export const MenuOverlay = ({ menuState, setMenuState }) => {
   Router.events.on("routeChangeStart", () => setMenuState(false));
 
   return (
@@ -34,5 +33,3 @@ const MenuOverlay = ({ menuState, setMenuState }) => {
     </div>
   );
 };
-
-export default MenuOverlay;

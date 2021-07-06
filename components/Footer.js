@@ -2,7 +2,7 @@ import Link from "next/link";
 import React from "react";
 import { AiOutlineGithub, AiFillLinkedin } from "react-icons/ai";
 
-const Footer = () => {
+export const Footer = () => {
   return (
     <div
       style={{ height: "7vh" }}
@@ -32,5 +32,3 @@ const Footer = () => {
     </div>
   );
 };
-
-export default Footer;

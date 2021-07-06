@@ -28,24 +28,18 @@ h1 {
 h2 {
   @apply text-3xl;
 }
-.btn {
-  @apply rounded py-2 px-5 uppercase text-sm font-bold text-center cursor-pointer;
-}
-.btn-form {
-  @apply border rounded py-2 px-5 uppercase text-sm;
-}
 
 .header {
   padding-bottom: 10px;
 }
 
-.header:hover {
-  @apply border-b border-2;
-}
+/*.header:hover {*/
+/*  @apply border-b border-2;*/
+/*}*/
 
-.a-header {
-  border-bottom: 2px solid white;
-}
+/*.a-header {*/
+/*  border-bottom: 2px solid white;*/
+/*}*/
 
 .page-template {
   height: 83vh;
