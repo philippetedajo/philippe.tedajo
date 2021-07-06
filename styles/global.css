@@ -33,13 +33,9 @@ h2 {
   padding-bottom: 10px;
 }
 
-/*.header:hover {*/
-/*  @apply border-b border-2;*/
-/*}*/
-
-/*.a-header {*/
-/*  border-bottom: 2px solid white;*/
-/*}*/
+.a-header {
+  border-bottom: 2px solid white;
+}
 
 .page-template {
   height: 83vh;
