@@ -1,7 +1,7 @@
 import SeoTags from "../components/SeoTags";
 import PageTemplate from "../templates/page.template";
 import { motion } from "framer-motion";
-import { container, text_reaveal, text_reaveal_fade } from "../utils/Animation";
+import { container, text_reveal, text_reveal_fade } from "../utils/Animation";
 import { Frame } from "../components";
 
 const About = () => {
@@ -9,7 +9,7 @@ const About = () => {
 
   const textList = texts.map((text, index) => (
     <div className="overflow-hidden" key={index}>
-      <motion.h1 className="font-cairo font-semibold" variants={text_reaveal}>
+      <motion.h1 className="font-cairo font-semibold" variants={text_reveal}>
         {text.content}
       </motion.h1>
     </div>
@@ -26,7 +26,7 @@ const About = () => {
       >
         <motion.div variants={container} className="md:w-1/2 lg:pl-36">
           {textList}
-          <motion.p variants={text_reaveal_fade}>
+          <motion.p variants={text_reveal_fade}>
             I build intuitive digital interfaces, offering a memorable user
             experience. I am a professional Front-end developer and my area of
             expertise is <a className="text-blue-400">ReactJs 🎗</a>,{" "}

@@ -14,6 +14,7 @@ const ActiveLink = ({ children, activeClassName, ...props }) => {
       : childClassName;
 
   return (
+    // @ts-ignore
     <Link {...props}>
       {React.cloneElement(child, {
         className: className || null,

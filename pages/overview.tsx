@@ -1,7 +1,7 @@
 import Link from "next/link";
 import PageTemplate from "../templates/page.template";
 import { motion } from "framer-motion";
-import { container, text_reaveal } from "../utils/Animation";
+import { container, text_reveal } from "../utils/Animation";
 import { Frame } from "../components";
 import SeoTags from "../components/SeoTags";
 
@@ -23,7 +23,7 @@ const Overview = () => {
         <a target="_blank" rel="noreferrer noopener">
           <motion.div
             className="flex transform duration-700 hover:scale-110 hover:text-third"
-            variants={text_reaveal}
+            variants={text_reveal}
           >
             <h1 className="mr-2">{project.content.title}</h1>
           </motion.div>
