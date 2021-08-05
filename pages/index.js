@@ -38,8 +38,8 @@ const About = () => {
             <a className="text-pink-400">Javascript</a>,{" "}
             <a className="text-green-400">Algorithms and data structure</a>,{" "}
             <a className="text-pink-400">RestFull Api</a> and{" "}
-            <a className="text-blue-400">NodeJs ✨</a>. All my life and work is
-            design by my passion for programming.
+            <a className="text-blue-400">NodeJs ✨</a>.
+            My whole life is shaped around my passion for web programming.
           </motion.p>
         </motion.div>
         <div className="md:static fixed md:block w-1/2">
