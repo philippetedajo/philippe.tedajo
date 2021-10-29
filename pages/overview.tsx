@@ -9,12 +9,30 @@ const Overview = () => {
   const overviews = [
     {
       content: {
-        title: "Nextwind",
-        link: "https://nextwind-snowy.vercel.app/",
+        title: "Rigel",
+        link: "https://rigel-gumball.vercel.app/",
+        status: "beta",
+        description: "Create, Publish, Share ! Your blog as services",
+        stacks: ["Typescript", "NextJs", "React", "PostgresQL", "Graphql"],
       },
     },
-    { content: { title: "Codetree", link: "https://codetree.vercel.app/" } },
-    { content: { title: "Rt", link: "https://www.rosine.tedajo.com/" } },
+    {
+      content: {
+        title: "Codetree",
+        link: "https://codetree.vercel.app/",
+        status: "",
+        description: "Lightning fast Web base code editor",
+        stacks: [
+          "Redis",
+          "Prisma",
+          "Typescript",
+          "NextJs",
+          "React",
+          "PostgresQL",
+          "Graphql",
+        ],
+      },
+    },
   ];
 
   const overviewList = overviews.map((project, index) => (
@@ -22,10 +40,24 @@ const Overview = () => {
       <Link href={project.content.link}>
         <a target="_blank" rel="noreferrer noopener">
           <motion.div
-            className="flex transform duration-700 hover:scale-110 hover:text-third"
+            className="flex flex-col transform duration-700 hover:scale-110 hover:text-third"
             variants={text_reveal}
           >
-            <h1 className="mr-2">{project.content.title}</h1>
+            <div className="mr-2 flex">
+              <h1 className="mr-3">{project.content.title}</h1>
+              <div>{project.content.status}</div>
+            </div>
+            <h3 className="text-xl mb-2">{project.content.description}</h3>
+            <div className="flex flex-wrap w-80">
+              {project.content.stacks.map((stack, key) => (
+                <div
+                  key={key}
+                  className="mr-1 border border-third bg-transparent px-1 my-1 rounded-md"
+                >
+                  {stack}
+                </div>
+              ))}
+            </div>
           </motion.div>
         </a>
       </Link>
