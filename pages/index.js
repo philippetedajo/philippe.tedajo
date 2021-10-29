@@ -32,9 +32,10 @@ const About = () => {
           <motion.p variants={text_reveal_fade}>
             I build intuitive digital interfaces, offering a memorable user
             experience. I am a professional Front-end developer and my area of
-            expertise is <a className="text-gray-500">ReactJs 🎗</a>,{" "}
+            expertise is{" "}
+            <a className="text-gray-500">React / NextJs / Webpack</a>,{" "}
             <a className="text-gray-500">GraphQl</a>,{" "}
-            <a className="text-gray-500">Typescript ♥️</a>,{" "}
+            <a className="text-gray-500">Typescript</a>,{" "}
             <a className="text-gray-500">Scss/Css</a>,{" "}
             <a className="text-gray-500">Redux</a>,{" "}
             <a className="text-gray-500">C </a>,{" "}
