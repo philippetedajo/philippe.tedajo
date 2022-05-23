@@ -1,0 +1,264 @@
+.container {
+  position: relative;
+  display: grid;
+  grid-template-rows: repeat(20, 2.5vh);
+  grid-template-columns: repeat(20, 2.5vw);
+  transform-style: preserve-3d;
+}
+
+.monitor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  transform-style: preserve-3d;
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    animation: rotation 60s infinite linear;
+    perspective: 1200px;
+    -webkit-perspective: 1200px;
+    -moz-perspective: 1200px;
+    -ms-perspective: 1200px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .monitor {
+    top: -19rem;
+    left: 85px;
+    opacity: 0.9;
+  }
+}
+
+@media only screen and (max-width: 340px) {
+  .monitor {
+    display: none;
+  }
+}
+
+.camera {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: 500ms;
+}
+
+.camera.o-y {
+  transform: rotateY(40deg);
+}
+
+@media only screen and (max-width: 768px) {
+  .camera.o-y {
+    transform: rotateY(60deg);
+  }
+}
+
+.camera.o-x {
+  transform: rotateX(40deg);
+}
+
+.vr {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 350px;
+  height: 350px;
+  transform: translate(-50%, -50%);
+  transform-style: preserve-3d;
+}
+.vr_layer {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  transform: preserve-3d;
+}
+.vr_layer:nth-child(1) {
+  transform: translateZ(-157.5px);
+}
+.vr_layer:nth-child(1) .vr_layer_item_frame {
+  -webkit-animation-delay: -210ms;
+  animation-delay: -210ms;
+}
+.vr_layer:nth-child(2) {
+  transform: translateZ(-140px);
+}
+.vr_layer:nth-child(2) .vr_layer_item_frame {
+  -webkit-animation-delay: -420ms;
+  animation-delay: -420ms;
+}
+.vr_layer:nth-child(3) {
+  transform: translateZ(-122.5px);
+}
+.vr_layer:nth-child(3) .vr_layer_item_frame {
+  -webkit-animation-delay: -630ms;
+  animation-delay: -630ms;
+}
+.vr_layer:nth-child(4) {
+  transform: translateZ(-105px);
+}
+.vr_layer:nth-child(4) .vr_layer_item_frame {
+  -webkit-animation-delay: -840ms;
+  animation-delay: -840ms;
+}
+.vr_layer:nth-child(5) {
+  transform: translateZ(-87.5px);
+}
+.vr_layer:nth-child(5) .vr_layer_item_frame {
+  -webkit-animation-delay: -1050ms;
+  animation-delay: -1050ms;
+}
+.vr_layer:nth-child(6) {
+  transform: translateZ(-70px);
+}
+.vr_layer:nth-child(6) .vr_layer_item_frame {
+  -webkit-animation-delay: -1260ms;
+  animation-delay: -1260ms;
+}
+.vr_layer:nth-child(7) {
+  transform: translateZ(-52.5px);
+}
+.vr_layer:nth-child(7) .vr_layer_item_frame {
+  -webkit-animation-delay: -1470ms;
+  animation-delay: -1470ms;
+}
+.vr_layer:nth-child(8) {
+  transform: translateZ(-35px);
+}
+.vr_layer:nth-child(8) .vr_layer_item_frame {
+  -webkit-animation-delay: -1680ms;
+  animation-delay: -1680ms;
+}
+.vr_layer:nth-child(9) {
+  transform: translateZ(-17.5px);
+}
+.vr_layer:nth-child(9) .vr_layer_item_frame {
+  -webkit-animation-delay: -1890ms;
+  animation-delay: -1890ms;
+}
+.vr_layer:nth-child(10) {
+  transform: translateZ(0px);
+}
+.vr_layer:nth-child(10) .vr_layer_item_frame {
+  -webkit-animation-delay: -2100ms;
+  animation-delay: -2100ms;
+}
+.vr_layer:nth-child(11) {
+  transform: translateZ(17.5px);
+}
+.vr_layer:nth-child(11) .vr_layer_item_frame {
+  -webkit-animation-delay: -2310ms;
+  animation-delay: -2310ms;
+}
+.vr_layer:nth-child(12) {
+  transform: translateZ(35px);
+}
+.vr_layer:nth-child(12) .vr_layer_item_frame {
+  -webkit-animation-delay: -2520ms;
+  animation-delay: -2520ms;
+}
+.vr_layer:nth-child(13) {
+  transform: translateZ(52.5px);
+}
+.vr_layer:nth-child(13) .vr_layer_item_frame {
+  -webkit-animation-delay: -2730ms;
+  animation-delay: -2730ms;
+}
+.vr_layer:nth-child(14) {
+  transform: translateZ(70px);
+}
+.vr_layer:nth-child(14) .vr_layer_item_frame {
+  -webkit-animation-delay: -2940ms;
+  animation-delay: -2940ms;
+}
+.vr_layer:nth-child(15) {
+  transform: translateZ(87.5px);
+}
+.vr_layer:nth-child(15) .vr_layer_item_frame {
+  -webkit-animation-delay: -3150ms;
+  animation-delay: -3150ms;
+}
+
+.vr_layer_item_frame {
+  width: 80%;
+  height: 80%;
+  border: 3px solid #fff;
+  background: rgba(0, 0, 0, 0.05);
+  -webkit-animation: sphere 4000ms cubic-bezier(0.215, 0.61, 0.355, 1) alternate
+      infinite,
+    color 5000ms linear alternate infinite;
+  animation: sphere 4000ms cubic-bezier(0.215, 0.61, 0.355, 1) alternate
+      infinite,
+    color 5000ms linear alternate infinite;
+  transition: 500ms;
+}
+
+@media only screen and (max-width: 768px) {
+  .vr_layer_item_frame {
+    opacity: 0.8;
+    width: 17%;
+    height: 17%;
+  }
+}
+
+@-webkit-keyframes sphere {
+  0% {
+    transform: scale(0) rotateZ(45deg);
+  }
+  50% {
+    transform: scale(0) rotateZ(45deg);
+  }
+  100% {
+    transform: scale(1) rotateZ(45deg);
+  }
+}
+
+@keyframes sphere {
+  0% {
+    transform: scale(0) rotateY(45deg);
+  }
+  100% {
+    transform: scale(1.4) rotateY(200deg);
+  }
+}
+
+@-webkit-keyframes color {
+  0% {
+    border-color: #f55;
+  }
+  50% {
+    border-color: #55f;
+  }
+  100% {
+    border-color: #5f5;
+  }
+}
+
+@keyframes color {
+  0% {
+    border-color: #f55;
+  }
+  50% {
+    border-color: #55f;
+  }
+  100% {
+    border-color: #5f5;
+  }
+}
+
+@keyframes rotation {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
