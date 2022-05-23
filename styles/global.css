@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Cairo", sans-serif;
+  perspective: 1000px;
+  color: #e5e5e5;
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+}
+
+h1 {
+  @apply xl:text-6xl sm:text-5xl text-4xl h-20;
+}
+h2 {
+  @apply text-3xl;
+}
+
+.header {
+  padding-bottom: 10px;
+}
+
+.a-header {
+  @apply border-b-2 border-third text-third;
+}
+
+.page-template {
+  height: 83vh;
+  padding-top: 5rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .page-template {
+    height: 83vh;
+    padding-top: 14rem;
+  }
+}
+
+@media only screen and (max-width: 340px) {
+  .page-template {
+    height: 83vh;
+    padding-top: 2rem;
+  }
+}
+
+.gradient-text {
+  background-image: linear-gradient(45deg, #a78bfa, #99f6e4);
+  background-size: 100%;
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
