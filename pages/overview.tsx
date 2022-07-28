@@ -9,27 +9,10 @@ const Overview = () => {
   const overviews = [
     {
       content: {
-        title: "Unblur",
-        link: "https://www.unblur.fr/",
-        status: "",
-        description:
-          "Unblur your creativity, social network for ideas validation.",
-        stacks: [
-          "Typescript",
-          "NextJs",
-          "React",
-          "PostgresQL",
-          "Graphql",
-          "Prisma",
-        ],
-      },
-    },
-    {
-      content: {
         title: "Codetree",
         link: "https://codetree.vercel.app/",
         status: "",
-        description: "Lightning fast Web base code editor.",
+        description: "Lightning fast Web base code editor .",
         stacks: [
           "Redis",
           "Prisma",
