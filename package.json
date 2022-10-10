@@ -22,7 +22,9 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-feather": "^2.0.9",
+    "react-icons": "^4.4.0",
     "sass": "^1.32.11",
+    "tailwind": "^4.0.0",
     "tailwindcss": "^2.0.2"
   },
   "devDependencies": {

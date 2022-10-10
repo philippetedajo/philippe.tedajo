@@ -10,7 +10,8 @@ const About = () => {
   const textList = texts.map((text, index) => (
     <div className="overflow-hidden" key={index}>
       <motion.div
-        className="text-7xl mb-8 gradient-text"
+        style={{ fontSize: "5rem" }}
+        className="mb-8 gradient-text"
         variants={text_reveal}
       >
         {text.content}
@@ -33,10 +34,13 @@ const About = () => {
             variants={text_reveal_fade}
             style={{ lineHeight: "2.1rem", fontSize: "17px" }}
           >
-            I'm a Full stack Software engineer , I build intuitive digital
-            interfaces, offering a memorable user experience. I currently
-            working with React, GraphQl, Typescript, NodeJs and Prisma. My whole
-            life is shaped around my passion for programming ✨.
+            I'm a Full stack Software engineer , I build thing for the web,
+            offering a memorable user experience. Currently working with{" "}
+            <span className="gradient-text">
+              React, GraphQl, Typescript, NodeJs and Prisma
+            </span>{" "}
+            . My whole life is shaped around my passion for{" "}
+            <span className="underline-span">programming</span> .
           </motion.p>
         </motion.div>
         <div className="md:static fixed md:block w-1/2">
