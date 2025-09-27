@@ -39,8 +39,8 @@ const About = () => {
             <span className="gradient-text">
               React, GraphQl, Typescript, NodeJs and Prisma
             </span>{" "}
-            . My whole life is shaped around my passion for{" "}
-            <span className="underline-span">programming</span> .
+            . This is how you make a PR roey{" "}
+            <span className="underline-span">lol</span> .
           </motion.p>
         </motion.div>
         <div className="md:static fixed md:block w-1/2">
