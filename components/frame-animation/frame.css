@@ -1,8 +1,8 @@
 .container {
   position: relative;
   display: grid;
-  grid-template-rows: repeat(20, 2.5vh);
-  grid-template-columns: repeat(20, 2.5vw);
+  grid-template-rows: repeat(20, 1vh);
+  grid-template-columns: repeat(20, 1vw);
   transform-style: preserve-3d;
 }
 

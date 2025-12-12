@@ -1,14 +1,15 @@
 import "./frame.css";
 
 type Props = {
+  count?: number;
   radius?: string;
 };
 
-export const Frame = ({ radius }: Props) => {
+export const Frame = ({ count = 6, radius }: Props) => {
   const createFrames = () => {
     const frames = [];
 
-    for (let i = 0; i < 15; i++) {
+    for (let i = 0; i < count; i++) {
       frames.push(
         <div key={i} className="vr_layer">
           <div className={`vr_layer_item_frame rounded ${radius} `} />
