@@ -4,13 +4,13 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="flex border-r border-l min-h-screen items-center justify-center bg-neutral-50 font-sans dark:bg-black px-5 sm:px-10 max-w-2xl mx-auto">
-      <div className="flex flex-col font-medium pt-12 sm:pt-24 overflow-hidden relative">
-        <div className="absolute top-0 right-0 opacity-70">
-          <Frame radius="rounded-md" />
+    <div className="flex border-r border-l min-h-screen items-center justify-center bg-neutral-50 font-sans dark:bg-black  max-w-2xl mx-auto">
+      <div className="flex flex-col font-medium pt-12 sm:pt-38 overflow-hidden relative">
+        <div className="absolute -top-16 right-0 opacity-75">
+          <Frame radius="rounded-xl" />
         </div>
 
-        <div className="flex flex-col">
+        <div className="flex flex-col px-5 sm:px-10">
           <Image
             alt="avatar"
             src="/avatar.jpeg"
@@ -144,108 +144,150 @@ export default function Home() {
           </div>
 
           <h3 className="mt-14 text-sm text-neutral-400 mb-2">
-            Full stack projects
+            Private projects
           </h3>
 
-          <a
-            className="flex gap-x-4 px-4 -mx-4 pt-4 rounded-[12px] border-none hover:bg-neutral-50 dark:hover:bg-neutral-900 group"
-            href="https://www.gomotion.io/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <div className="bg-neutral-100 dark:bg-neutral-800 w-[36px] h-[36px] rounded-[10px] mt-[2px] flex-shrink-0 shadow-shorter overflow-hidden">
-              <div className="text-sm text-neutral-400 font-semibold flex justify-center items-center h-full">
-                <Image
-                  alt="gomotion logo"
-                  loading="lazy"
-                  width={36}
-                  height={36}
-                  decoding="async"
-                  data-nimg="1"
-                  className="w-[36px] h-[36px]"
-                  style={{ color: "transparent" }}
-                  src="/gomotion_logo.jpeg"
-                />
-              </div>
-            </div>
-            <div className="flex flex-col text-sm border-b border-neutral-100 dark:border-neutral-900 flex-auto pb-4 text-neutral-700 group-hover:border-transparent dark:text-neutral-300">
-              <div>Gomotion</div>
-              <div className="text-neutral-500 dark:text-neutral-500 flex justify-between gap-x-2 items-center">
-                <div>Your AI motion designer agent</div>
-                <div className="bg-neutral-100 border border-black border-opacity-5 px-2 text-xs rounded-full dark:bg-neutral-800 dark:text-neutral-500">
-                  Web
+          <div className="flex flex-col">
+            <a
+              className="flex gap-x-4 px-4 -mx-4 pt-4 rounded-[12px] border-none hover:bg-neutral-50 dark:hover:bg-neutral-900 group"
+              href="https://www.gomotion.io/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div className="bg-neutral-100 dark:bg-neutral-800 w-[36px] h-[36px] rounded-[10px] mt-[2px] shrink-0 shadow-shorter overflow-hidden">
+                <div className="text-sm text-neutral-400 font-semibold flex justify-center items-center h-full">
+                  <Image
+                    alt="gomotion logo"
+                    loading="lazy"
+                    width={36}
+                    height={36}
+                    decoding="async"
+                    data-nimg="1"
+                    className="w-[36px] h-[36px]"
+                    style={{ color: "transparent" }}
+                    src="/gomotion_logo.jpeg"
+                  />
                 </div>
               </div>
-            </div>
-          </a>
-
-          <a
-            className="flex gap-x-4 px-4 -mx-4 pt-4 rounded-[12px] border-none hover:bg-neutral-50 dark:hover:bg-neutral-900 group"
-            href="https://www.vibrantsnap.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <div className="bg-neutral-100 dark:bg-neutral-800 w-[36px] h-[36px] rounded-[10px] mt-[2px] flex-shrink-0 shadow-shorter overflow-hidden">
-              <div className="text-sm text-neutral-400 font-semibold flex justify-center items-center h-full">
-                <Image
-                  alt="vibrantsnap logo"
-                  loading="lazy"
-                  width={36}
-                  height={36}
-                  decoding="async"
-                  data-nimg="1"
-                  className="w-[36px] h-[36px]"
-                  style={{ color: "transparent" }}
-                  src="/vibrantsnap_logo.jpeg"
-                />
-              </div>
-            </div>
-            <div className="flex flex-col text-sm border-b border-neutral-100 dark:border-neutral-900 flex-auto pb-4 text-neutral-700 group-hover:border-transparent dark:text-neutral-300">
-              <div>Vibrantsnap</div>
-              <div className="text-neutral-500 dark:text-neutral-500 flex justify-between gap-x-2 items-center">
-                <div>Create and share videos that convert seamlessly.</div>
-                <div className="bg-neutral-100 border border-black border-opacity-5 px-2 text-xs rounded-full dark:bg-neutral-800 dark:text-neutral-500">
-                  Web
+              <div className="flex flex-col text-sm border-b border-neutral-100 dark:border-neutral-900 flex-auto pb-4 text-neutral-700 group-hover:border-transparent dark:text-neutral-300">
+                <div>Gomotion</div>
+                <div className="text-neutral-500 dark:text-neutral-500 flex justify-between gap-x-2 items-center">
+                  <div>Your AI motion designer agent</div>
+                  <div className="bg-neutral-100 border border-black border-opacity-5 px-2 text-xs rounded-full dark:bg-neutral-800 dark:text-neutral-500">
+                    Web
+                  </div>
                 </div>
               </div>
-            </div>
-          </a>
+            </a>
 
-          <a
-            className="flex gap-x-4 px-4 -mx-4 pt-4 rounded-[12px] border-none hover:bg-neutral-50 dark:hover:bg-neutral-900 group"
-            href="https://www.spikalabs.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <div className="bg-neutral-100 dark:bg-neutral-800 w-[36px] h-[36px] rounded-[10px] mt-[2px] flex-shrink-0 shadow-shorter overflow-hidden">
-              <div className="text-sm text-neutral-400 font-semibold flex justify-center items-center h-full">
-                <Image
-                  alt="spika logo"
-                  loading="lazy"
-                  width={36}
-                  height={36}
-                  decoding="async"
-                  data-nimg="1"
-                  className="w-[36px] h-[36px]"
-                  style={{ color: "transparent" }}
-                  src="/spika_logo.jpeg"
-                />
-              </div>
-            </div>
-            <div className="flex flex-col text-sm border-b border-neutral-100 dark:border-neutral-900 flex-auto pb-4 text-neutral-700 group-hover:border-transparent dark:text-neutral-300">
-              <div>Spika</div>
-              <div className="text-neutral-500 dark:text-neutral-500 flex justify-between gap-x-2 items-center">
-                <div>Turn prompts into engaging podcasts in any language.</div>
-                <div className="bg-neutral-100 border border-black border-opacity-5 px-2 text-xs rounded-full dark:bg-neutral-800 dark:text-neutral-500">
-                  Web
+            <a
+              className="flex gap-x-4 px-4 -mx-4 pt-4 rounded-[12px] border-none hover:bg-neutral-50 dark:hover:bg-neutral-900 group"
+              href="https://www.vibrantsnap.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div className="bg-neutral-100 dark:bg-neutral-800 w-[36px] h-[36px] rounded-[10px] mt-[2px] shrink-0 shadow-shorter overflow-hidden">
+                <div className="text-sm text-neutral-400 font-semibold flex justify-center items-center h-full">
+                  <Image
+                    alt="vibrantsnap logo"
+                    loading="lazy"
+                    width={36}
+                    height={36}
+                    decoding="async"
+                    data-nimg="1"
+                    className="w-[36px] h-[36px]"
+                    style={{ color: "transparent" }}
+                    src="/vibrantsnap_logo.jpeg"
+                  />
                 </div>
               </div>
-            </div>
-          </a>
+              <div className="flex flex-col text-sm border-b border-neutral-100 dark:border-neutral-900 flex-auto pb-4 text-neutral-700 group-hover:border-transparent dark:text-neutral-300">
+                <div>Vibrantsnap</div>
+                <div className="text-neutral-500 dark:text-neutral-500 flex justify-between gap-x-2 items-center">
+                  <div>Create and share videos that convert seamlessly.</div>
+                  <div className="bg-neutral-100 border border-black border-opacity-5 px-2 text-xs rounded-full dark:bg-neutral-800 dark:text-neutral-500">
+                    Web
+                  </div>
+                </div>
+              </div>
+            </a>
 
-          {/*  add a way to download cv that is in the public folder. with great ux  */}
+            <a
+              className="flex gap-x-4 px-4 -mx-4 pt-4 rounded-[12px] border-none hover:bg-neutral-50 dark:hover:bg-neutral-900 group"
+              href="https://www.spikalabs.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div className="bg-neutral-100 dark:bg-neutral-800 w-[36px] h-[36px] rounded-[10px] mt-[2px] shrink-0 shadow-shorter overflow-hidden">
+                <div className="text-sm text-neutral-400 font-semibold flex justify-center items-center h-full">
+                  <Image
+                    alt="spika logo"
+                    loading="lazy"
+                    width={36}
+                    height={36}
+                    decoding="async"
+                    data-nimg="1"
+                    className="w-[36px] h-[36px]"
+                    style={{ color: "transparent" }}
+                    src="/spika_logo.jpeg"
+                  />
+                </div>
+              </div>
+              <div className="flex flex-col text-sm border-b border-neutral-100 dark:border-neutral-900 flex-auto pb-4 text-neutral-700 group-hover:border-transparent dark:text-neutral-300">
+                <div>Spika</div>
+                <div className="text-neutral-500 dark:text-neutral-500 flex justify-between gap-x-2 items-center">
+                  <div>
+                    Turn prompts into engaging podcasts in any language.
+                  </div>
+                  <div className="bg-neutral-100 border border-black border-opacity-5 px-2 text-xs rounded-full dark:bg-neutral-800 dark:text-neutral-500">
+                    Web
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
 
-          <h3 className="mt-20 text-sm text-neutral-400 mb-2 lowercase  mb-40 ">
+          <h3 className="mt-14 text-sm text-neutral-400 mb-2">
+            Open source projects
+          </h3>
+
+          <div className="flex flex-col">
+            <a
+              className="flex gap-x-4 px-4 -mx-4 pt-4 rounded-[12px] border-none hover:bg-neutral-50 dark:hover:bg-neutral-900 group"
+              href="https://codetree.vercel.app"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div className="bg-neutral-100 dark:bg-neutral-800 w-[36px] h-[36px] rounded-[10px] mt-[2px] shrink-0 shadow-shorter overflow-hidden">
+                <div className="text-sm text-neutral-400 font-semibold flex justify-center items-center h-full">
+                  <Image
+                    alt="codetree logo"
+                    loading="lazy"
+                    width={36}
+                    height={36}
+                    decoding="async"
+                    data-nimg="1"
+                    className="w-[36px] h-[36px]"
+                    style={{ color: "transparent" }}
+                    src="/codetree_logo.jpg"
+                  />
+                </div>
+              </div>
+              <div className="flex flex-col text-sm border-b border-neutral-100 dark:border-neutral-900 flex-auto pb-4 text-neutral-700 group-hover:border-transparent dark:text-neutral-300">
+                <div>Codetree</div>
+                <div className="text-neutral-500 dark:text-neutral-500 flex justify-between gap-x-2 items-center">
+                  <div>Code edtior build using WebAssembly</div>
+                  <div className="bg-neutral-100 border border-black border-opacity-5 px-2 text-xs rounded-full dark:bg-neutral-800 dark:text-neutral-500">
+                    Web
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          {/*  add a way to download cv. With great minimalistic ux  */}
+
+          <h3 className="mt-20 text-sm text-neutral-400 lowercase mb-40 ">
             © {new Date().getFullYear()} Philippe Tedajo.
           </h3>
         </div>

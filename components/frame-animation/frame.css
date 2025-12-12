@@ -256,9 +256,9 @@
 
 @keyframes rotation {
   from {
-    transform: rotateY(0deg);
+    transform: rotateY(-60deg);
   }
   to {
-    transform: rotate(-360deg);
+    transform: rotate(-60deg);
   }
 }
